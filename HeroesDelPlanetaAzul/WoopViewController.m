@@ -36,6 +36,9 @@
     
     if ([[segue identifier] isEqualToString:@"ajustes"]) {
     }
+    
+    if ([[segue identifier] isEqualToString:@"jugar"]) {
+    }
 }
 
 
