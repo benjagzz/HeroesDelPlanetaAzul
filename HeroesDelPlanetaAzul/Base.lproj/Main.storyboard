@@ -88,8 +88,8 @@
                                 <color key="textColor" red="0.29798586264974025" green="0.84853181012839085" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="foto1.png" translatesAutoresizingMaskIntoConstraints="NO" id="IAR-6Q-P19">
-                                <rect key="frame" x="160" y="109" width="448" height="423"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="foto12.png" translatesAutoresizingMaskIntoConstraints="NO" id="IAR-6Q-P19">
+                                <rect key="frame" x="160" y="109" width="430" height="430"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFU-1n-ddx">
@@ -1001,7 +1001,7 @@
         <image name="espacioY.png" width="60" height="60"/>
         <image name="espacioZ.png" width="60" height="60"/>
         <image name="facebook.png" width="260" height="70"/>
-        <image name="foto1.png" width="510" height="420"/>
+        <image name="foto12.png" width="430" height="430"/>
         <image name="ingresaNombre.png" width="370" height="50"/>
         <image name="intrucciones.png" width="768" height="963"/>
         <image name="logo.png" width="450" height="160"/>
@@ -1025,6 +1025,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="NI7-Ao-HLp"/>
+        <segue reference="RVk-oZ-Lx5"/>
     </inferredMetricsTieBreakers>
 </document>

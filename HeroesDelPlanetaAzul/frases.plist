@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>frase</key>
+		<string>Clorar con dos gotas por litro</string>
+		<key>apoyo</key>
+		<string>Métodos para potabilizar el agua</string>
+		<key>imagen</key>
+		<string>foto1.png</string>
+	</dict>
+	<dict>
+		<key>frase</key>
+		<string>Hervir por cinco minutos</string>
+		<key>apoyo</key>
+		<string>Métodos para potabilizar el agua</string>
+		<key>imagen</key>
+		<string>foto2.png</string>
+	</dict>
+	<dict>
+		<key>frase</key>
+		<string>Usar filtro de bio arena</string>
+		<key>apoyo</key>
+		<string>Métodos para potabilizar el agua</string>
+		<key>imagen</key>
+		<string>foto3.png</string>
+	</dict>
+	<dict>
+		<key>frase</key>
+		<string>Basura en los ríos y lagos</string>
+		<key>apoyo</key>
+		<string>Fuentes de contaminación en el agua</string>
+		<key>imagen</key>
+		<string>foto4.png</string>
+	</dict>
+	<dict>
+		<key>frase</key>
+		<string>Derrames de petroleo en el mar</string>
+		<key>apoyo</key>
+		<string>Fuentes de contaminación en el agua</string>
+		<key>imagen</key>
+		<string>foto5.png</string>
+	</dict>
+	<dict>
+		<key>frase</key>
+		<string>Salida de drenaje en ríos y lagos</string>
+		<key>apoyo</key>
+		<string>Fuentes de contaminación en el agua</string>
+		<key>imagen</key>
+		<string>foto6.png</string>
+	</dict>
+	<dict>
+		<key>frase</key>
+		<string>Desecho de detergentes por el drenaje</string>
+		<key>apoyo</key>
+		<string>Fuentes de contaminación en el agua</string>
+		<key>imagen</key>
+		<string>foto7.png</string>
+	</dict>
+	<dict>
+		<key>frase</key>
+		<string>Para generar energía eléctrica</string>
+		<key>apoyo</key>
+		<string>Usos del agua</string>
+		<key>imagen</key>
+		<string>foto8.png</string>
+	</dict>
+	<dict>
+		<key>frase</key>
+		<string>Para el consumo humano</string>
+		<key>apoyo</key>
+		<string>Usos del agua</string>
+		<key>imagen</key>
+		<string>foto9.png</string>
+	</dict>
+	<dict>
+		<key>frase</key>
+		<string>En la cría de ganado</string>
+		<key>apoyo</key>
+		<string>Usos del agua</string>
+		<key>imagen</key>
+		<string>foto10.png</string>
+	</dict>
+	<dict>
+		<key>frase</key>
+		<string>En el cultivo de agricultura</string>
+		<key>apoyo</key>
+		<string>Usos del agua</string>
+		<key>imagen</key>
+		<string>foto11.png</string>
+	</dict>
+	<dict>
+		<key>frase</key>
+		<string>En la higiene y limpieza</string>
+		<key>apoyo</key>
+		<string>Usos del agua</string>
+		<key>imagen</key>
+		<string>foto12.png</string>
+	</dict>
+</array>
+</plist>
