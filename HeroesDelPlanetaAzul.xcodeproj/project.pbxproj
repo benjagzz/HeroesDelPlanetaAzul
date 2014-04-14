@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		158978CF18E526CA002F61DF /* botoninstrucciones.png in Resources */ = {isa = PBXBuildFile; fileRef = 158978CE18E526CA002F61DF /* botoninstrucciones.png */; };
 		158978D118E529A3002F61DF /* botonInstruccion.png in Resources */ = {isa = PBXBuildFile; fileRef = 158978D018E529A3002F61DF /* botonInstruccion.png */; };
+		FA4004B418FC409000D74A56 /* escudos.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA4004B318FC409000D74A56 /* escudos.plist */; };
 		FA65E45318E2607D00260BA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA65E45218E2607D00260BA6 /* Foundation.framework */; };
 		FA65E45518E2607D00260BA6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA65E45418E2607D00260BA6 /* CoreGraphics.framework */; };
 		FA65E45718E2607D00260BA6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA65E45618E2607D00260BA6 /* UIKit.framework */; };
@@ -138,6 +139,7 @@
 /* Begin PBXFileReference section */
 		158978CE18E526CA002F61DF /* botoninstrucciones.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = botoninstrucciones.png; path = Recursos/botoninstrucciones.png; sourceTree = SOURCE_ROOT; };
 		158978D018E529A3002F61DF /* botonInstruccion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = botonInstruccion.png; path = Recursos/botonInstruccion.png; sourceTree = SOURCE_ROOT; };
+		FA4004B318FC409000D74A56 /* escudos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = escudos.plist; sourceTree = "<group>"; };
 		FA65E44F18E2607D00260BA6 /* HeroesDelPlanetaAzul.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeroesDelPlanetaAzul.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA65E45218E2607D00260BA6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FA65E45418E2607D00260BA6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -360,6 +362,7 @@
 				FA65E45918E2607D00260BA6 /* Supporting Files */,
 				FAC7DE2618E3AE9D0097B4F4 /* guardarViewController.h */,
 				FAC7DE2718E3AE9D0097B4F4 /* guardarViewController.m */,
+				FA4004B318FC409000D74A56 /* escudos.plist */,
 			);
 			path = HeroesDelPlanetaAzul;
 			sourceTree = "<group>";
@@ -636,6 +639,7 @@
 				FA8DD55718FB5C1000D97219 /* foto8.png in Resources */,
 				FAC7DE1A18E3A4720097B4F4 /* escudo.png in Resources */,
 				FAC7DE2E18E3B4090097B4F4 /* botonGuardar.png in Resources */,
+				FA4004B418FC409000D74A56 /* escudos.plist in Resources */,
 				FA8DD55218FB5C1000D97219 /* foto3.png in Resources */,
 				FAC7DE1318E3A12D0097B4F4 /* num5.png in Resources */,
 				FA65E48E18E2688800260BA6 /* botonPuntajes.png in Resources */,
