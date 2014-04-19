@@ -67,6 +67,11 @@
 		FAC7DE3018E3BA150097B4F4 /* intrucciones.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC7DE2F18E3BA150097B4F4 /* intrucciones.png */; };
 		FAC7DE3218E3BAD90097B4F4 /* botonSaltar.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC7DE3118E3BAD90097B4F4 /* botonSaltar.png */; };
 		FAC7DE3518E3BB360097B4F4 /* InstrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC7DE3418E3BB360097B4F4 /* InstrViewController.m */; };
+		FACC108F1902EC9C002F5C64 /* Modelo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FACC108D1902EC9C002F5C64 /* Modelo.xcdatamodeld */; };
+		FACC10921902EFB6002F5C64 /* Frase.m in Sources */ = {isa = PBXBuildFile; fileRef = FACC10911902EFB6002F5C64 /* Frase.m */; };
+		FACC10951902EFB7002F5C64 /* Partida.m in Sources */ = {isa = PBXBuildFile; fileRef = FACC10941902EFB7002F5C64 /* Partida.m */; };
+		FACC10981902EFB7002F5C64 /* Juego.m in Sources */ = {isa = PBXBuildFile; fileRef = FACC10971902EFB7002F5C64 /* Juego.m */; };
+		FACC109B1902EFB7002F5C64 /* Escudo.m in Sources */ = {isa = PBXBuildFile; fileRef = FACC109A1902EFB7002F5C64 /* Escudo.m */; };
 		FAE1001B18E385520066B4E6 /* espacioA.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE1000018E385520066B4E6 /* espacioA.png */; };
 		FAE1001C18E385520066B4E6 /* espacioB.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE1000118E385520066B4E6 /* espacioB.png */; };
 		FAE1001D18E385520066B4E6 /* espacioC.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE1000218E385520066B4E6 /* espacioC.png */; };
@@ -205,6 +210,15 @@
 		FAC7DE3118E3BAD90097B4F4 /* botonSaltar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = botonSaltar.png; path = Recursos/botonSaltar.png; sourceTree = SOURCE_ROOT; };
 		FAC7DE3318E3BB360097B4F4 /* InstrViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstrViewController.h; sourceTree = "<group>"; };
 		FAC7DE3418E3BB360097B4F4 /* InstrViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstrViewController.m; sourceTree = "<group>"; };
+		FACC108E1902EC9C002F5C64 /* Modelo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Modelo.xcdatamodel; sourceTree = "<group>"; };
+		FACC10901902EFB6002F5C64 /* Frase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Frase.h; sourceTree = "<group>"; };
+		FACC10911902EFB6002F5C64 /* Frase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Frase.m; sourceTree = "<group>"; };
+		FACC10931902EFB7002F5C64 /* Partida.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Partida.h; sourceTree = "<group>"; };
+		FACC10941902EFB7002F5C64 /* Partida.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Partida.m; sourceTree = "<group>"; };
+		FACC10961902EFB7002F5C64 /* Juego.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Juego.h; sourceTree = "<group>"; };
+		FACC10971902EFB7002F5C64 /* Juego.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Juego.m; sourceTree = "<group>"; };
+		FACC10991902EFB7002F5C64 /* Escudo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Escudo.h; sourceTree = "<group>"; };
+		FACC109A1902EFB7002F5C64 /* Escudo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Escudo.m; sourceTree = "<group>"; };
 		FAE1000018E385520066B4E6 /* espacioA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = espacioA.png; path = Recursos/espacioA.png; sourceTree = SOURCE_ROOT; };
 		FAE1000118E385520066B4E6 /* espacioB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = espacioB.png; path = Recursos/espacioB.png; sourceTree = SOURCE_ROOT; };
 		FAE1000218E385520066B4E6 /* espacioC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = espacioC.png; path = Recursos/espacioC.png; sourceTree = SOURCE_ROOT; };
@@ -324,6 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				FA8DD55E18FB5C9600D97219 /* frases.plist */,
+				FACC109C1902EFC2002F5C64 /* Modelo y Clases */,
 				FA8DD54318FB5BF600D97219 /* Fotos Frase */,
 				158978CE18E526CA002F61DF /* botoninstrucciones.png */,
 				FAC7DE3118E3BAD90097B4F4 /* botonSaltar.png */,
@@ -430,6 +445,22 @@
 				FAC7DE0E18E3A12D0097B4F4 /* num10.png */,
 			);
 			name = Numeros;
+			sourceTree = "<group>";
+		};
+		FACC109C1902EFC2002F5C64 /* Modelo y Clases */ = {
+			isa = PBXGroup;
+			children = (
+				FACC108D1902EC9C002F5C64 /* Modelo.xcdatamodeld */,
+				FACC10991902EFB7002F5C64 /* Escudo.h */,
+				FACC109A1902EFB7002F5C64 /* Escudo.m */,
+				FACC10961902EFB7002F5C64 /* Juego.h */,
+				FACC10971902EFB7002F5C64 /* Juego.m */,
+				FACC10931902EFB7002F5C64 /* Partida.h */,
+				FACC10941902EFB7002F5C64 /* Partida.m */,
+				FACC10901902EFB6002F5C64 /* Frase.h */,
+				FACC10911902EFB6002F5C64 /* Frase.m */,
+			);
+			name = "Modelo y Clases";
 			sourceTree = "<group>";
 		};
 		FAE1003618E3857A0066B4E6 /* Espacios Letras */ = {
@@ -715,13 +746,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FACC10981902EFB7002F5C64 /* Juego.m in Sources */,
 				FA65E46918E2607D00260BA6 /* WoopViewController.m in Sources */,
 				FAE1003918E387E50066B4E6 /* JuegoViewController.m in Sources */,
 				FAC7DE1D18E3A8770097B4F4 /* AjustesViewController.m in Sources */,
 				FA65E45F18E2607D00260BA6 /* main.m in Sources */,
 				FA65E46318E2607D00260BA6 /* WoopAppDelegate.m in Sources */,
+				FACC10921902EFB6002F5C64 /* Frase.m in Sources */,
 				FAE1003C18E395EB0066B4E6 /* PuntajesViewController.m in Sources */,
+				FACC10951902EFB7002F5C64 /* Partida.m in Sources */,
+				FACC108F1902EC9C002F5C64 /* Modelo.xcdatamodeld in Sources */,
 				FAC7DE2818E3AE9D0097B4F4 /* guardarViewController.m in Sources */,
+				FACC109B1902EFB7002F5C64 /* Escudo.m in Sources */,
 				FAC7DE3518E3BB360097B4F4 /* InstrViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -941,6 +977,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FACC108D1902EC9C002F5C64 /* Modelo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FACC108E1902EC9C002F5C64 /* Modelo.xcdatamodel */,
+			);
+			currentVersion = FACC108E1902EC9C002F5C64 /* Modelo.xcdatamodel */;
+			path = Modelo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FA65E44718E2607D00260BA6 /* Project object */;
 }
