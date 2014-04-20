@@ -337,7 +337,7 @@
 		FA65E45818E2607D00260BA6 /* HeroesDelPlanetaAzul */ = {
 			isa = PBXGroup;
 			children = (
-				FA8DD55E18FB5C9600D97219 /* frases.plist */,
+				FACC109D1902F097002F5C64 /* Plist */,
 				FACC109C1902EFC2002F5C64 /* Modelo y Clases */,
 				FA8DD54318FB5BF600D97219 /* Fotos Frase */,
 				158978CE18E526CA002F61DF /* botoninstrucciones.png */,
@@ -374,10 +374,9 @@
 				FAC7DE3318E3BB360097B4F4 /* InstrViewController.h */,
 				FAC7DE3418E3BB360097B4F4 /* InstrViewController.m */,
 				FA65E46A18E2607E00260BA6 /* Images.xcassets */,
-				FA65E45918E2607D00260BA6 /* Supporting Files */,
 				FAC7DE2618E3AE9D0097B4F4 /* guardarViewController.h */,
 				FAC7DE2718E3AE9D0097B4F4 /* guardarViewController.m */,
-				FA4004B318FC409000D74A56 /* escudos.plist */,
+				FA65E45918E2607D00260BA6 /* Supporting Files */,
 			);
 			path = HeroesDelPlanetaAzul;
 			sourceTree = "<group>";
@@ -461,6 +460,15 @@
 				FACC10911902EFB6002F5C64 /* Frase.m */,
 			);
 			name = "Modelo y Clases";
+			sourceTree = "<group>";
+		};
+		FACC109D1902F097002F5C64 /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				FA8DD55E18FB5C9600D97219 /* frases.plist */,
+				FA4004B318FC409000D74A56 /* escudos.plist */,
+			);
+			name = Plist;
 			sourceTree = "<group>";
 		};
 		FAE1003618E3857A0066B4E6 /* Espacios Letras */ = {
