@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="QWw-p5-aY4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="lwx-UQ-MB7">
+            <objects>
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="QWw-p5-aY4" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7KZ-n1-waX">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="41S-ad-qvG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xLm-FN-VSo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2235" y="-985"/>
+        </scene>
         <!--Woop View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -23,7 +39,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Txn-Fm-SqM" kind="modal" identifier="jugar" id="jFH-HQ-T2Y"/>
+                                    <segue destination="Txn-Fm-SqM" kind="push" identifier="jugar" id="9d6-iZ-d8N"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dqk-h4-yKT">
@@ -33,7 +49,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="bp3-mR-mKl" kind="modal" identifier="puntajes" id="fkx-1J-2Sz"/>
+                                    <segue destination="bp3-mR-mKl" kind="push" identifier="puntajes" id="iey-3G-YSw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMK-Kt-0fA">
@@ -43,7 +59,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="gbv-TJ-u57" kind="modal" identifier="ajustes" id="h0V-3x-JvW"/>
+                                    <segue destination="gbv-TJ-u57" kind="push" identifier="ajustes" id="6t6-gb-6pj"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="cWW-Rb-de8">
@@ -57,17 +73,18 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="z7E-us-JNJ" kind="modal" identifier="instrucciones" id="NHg-Kd-YWE"/>
+                                    <segue destination="z7E-us-JNJ" kind="push" identifier="instrucciones" id="OCy-rx-DRE"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="ch0-UE-jqK"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-668" y="-979"/>
+            <point key="canvasLocation" x="-1228" y="-971"/>
         </scene>
         <!--Juego View Controller-->
         <scene sceneID="zAc-fD-8FK">
@@ -517,7 +534,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" identifier="inicio" modalTransitionStyle="coverVertical" id="RVk-oZ-Lx5"/>
+                                    <action selector="regresarButton:" destination="Txn-Fm-SqM" eventType="touchUpInside" id="x3N-Ol-d8E"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -565,12 +582,12 @@
                         <outlet property="imageView7" destination="AFE-UB-0o9" id="bM1-Sp-Ylh"/>
                         <outlet property="imageView8" destination="8W4-pl-fUU" id="cXG-LB-Tsh"/>
                         <outlet property="imageView9" destination="8li-kT-RUt" id="7iW-bp-cU1"/>
-                        <segue destination="aYM-xf-B2N" kind="modal" identifier="guardar" id="9c6-ej-oMy"/>
+                        <segue destination="aYM-xf-B2N" kind="push" identifier="guardar" id="9c6-ej-oMy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14v-WP-3GW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1487" y="-1203"/>
+            <point key="canvasLocation" x="-236" y="-1311"/>
         </scene>
         <!--Guardar View Controller-->
         <scene sceneID="MP5-cj-A2n">
@@ -616,7 +633,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" identifier="inicio" id="IyK-RJ-wON"/>
+                                    <action selector="guardarButton:" destination="aYM-xf-B2N" eventType="touchUpInside" id="3dV-uk-f8a"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -626,7 +643,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K3l-eW-S0p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2591" y="-547"/>
+            <point key="canvasLocation" x="759" y="-1311"/>
         </scene>
         <!--Instr View Controller-->
         <scene sceneID="adB-dH-Tpq">
@@ -651,7 +668,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" identifier="menu" id="NI7-Ao-HLp"/>
+                                    <action selector="regresarButton:" destination="z7E-us-JNJ" eventType="touchUpInside" id="daT-AN-cM9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -661,12 +678,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CbD-8Z-S4O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="568" y="-1755"/>
+            <point key="canvasLocation" x="-236" y="-2463"/>
         </scene>
-        <!--View Controller-->
+        <!--Ajustes View Controller-->
         <scene sceneID="N7d-oY-zB4">
             <objects>
-                <viewController id="gbv-TJ-u57" sceneMemberID="viewController">
+                <viewController id="gbv-TJ-u57" customClass="AjustesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MDk-vV-o6K"/>
                         <viewControllerLayoutGuide type="bottom" id="v9c-HP-VR7"/>
@@ -688,7 +705,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" id="6ha-Hd-2Yl"/>
+                                    <action selector="regresarButton:" destination="gbv-TJ-u57" eventType="touchUpInside" id="4y6-0b-Plt"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3qd-Ip-tnC">
@@ -724,10 +741,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="lI8-fA-NTu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AgO-uT-zCR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="693" y="1254"/>
+            <point key="canvasLocation" x="-225" y="1142"/>
         </scene>
         <!--Puntajes View Controller-->
         <scene sceneID="x66-ot-NEF">
@@ -974,16 +992,17 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" identifier="inicio" id="6ZW-aj-llm"/>
+                                    <action selector="regresarButton:" destination="bp3-mR-mKl" eventType="touchUpInside" id="ynV-yh-8g3"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="8qb-8p-aZH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EuG-RN-OE3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1235" y="50"/>
+            <point key="canvasLocation" x="-225" y="-26"/>
         </scene>
     </scenes>
     <resources>
@@ -1045,7 +1064,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="RVk-oZ-Lx5"/>
-    </inferredMetricsTieBreakers>
 </document>

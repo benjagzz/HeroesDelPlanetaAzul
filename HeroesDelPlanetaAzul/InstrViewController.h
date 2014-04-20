@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ProtocoloGuardar.h"
 
 @interface InstrViewController : UIViewController
+
+@property (strong, nonatomic) id detailItem;
+- (IBAction)regresarButton:(id)sender;
 
 @end

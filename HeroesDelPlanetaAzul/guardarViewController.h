@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ProtocoloGuardar.h"
 
 @interface guardarViewController : UIViewController
+
+@property (strong, nonatomic) id detailItem;
+- (IBAction)guardarButton:(id)sender;
 
 @end

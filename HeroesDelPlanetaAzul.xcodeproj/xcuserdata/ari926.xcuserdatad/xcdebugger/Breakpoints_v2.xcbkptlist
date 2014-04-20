@@ -9,29 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HeroesDelPlanetaAzul/JuegoViewController.m"
-            timestampString = "419718255.298842"
+            filePath = "HeroesDelPlanetaAzul/WoopViewController.m"
+            timestampString = "419722066.57492"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "345"
-            endingLineNumber = "345"
-            landmarkName = "-terminaJuego"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HeroesDelPlanetaAzul/JuegoViewController.m"
-            timestampString = "419718255.298842"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "344"
-            endingLineNumber = "344"
-            landmarkName = "-terminaJuego"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "-removerVista"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

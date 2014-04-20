@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		158978CF18E526CA002F61DF /* botoninstrucciones.png in Resources */ = {isa = PBXBuildFile; fileRef = 158978CE18E526CA002F61DF /* botoninstrucciones.png */; };
 		158978D118E529A3002F61DF /* botonInstruccion.png in Resources */ = {isa = PBXBuildFile; fileRef = 158978D018E529A3002F61DF /* botonInstruccion.png */; };
+		FA03A9371904680900C8D8F0 /* BDmanejo.m in Sources */ = {isa = PBXBuildFile; fileRef = FA03A9361904680900C8D8F0 /* BDmanejo.m */; };
 		FA4004B418FC409000D74A56 /* escudos.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA4004B318FC409000D74A56 /* escudos.plist */; };
 		FA65E45318E2607D00260BA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA65E45218E2607D00260BA6 /* Foundation.framework */; };
 		FA65E45518E2607D00260BA6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA65E45418E2607D00260BA6 /* CoreGraphics.framework */; };
@@ -144,6 +145,9 @@
 /* Begin PBXFileReference section */
 		158978CE18E526CA002F61DF /* botoninstrucciones.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = botoninstrucciones.png; path = Recursos/botoninstrucciones.png; sourceTree = SOURCE_ROOT; };
 		158978D018E529A3002F61DF /* botonInstruccion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = botonInstruccion.png; path = Recursos/botonInstruccion.png; sourceTree = SOURCE_ROOT; };
+		FA03A9351904680900C8D8F0 /* BDmanejo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDmanejo.h; sourceTree = "<group>"; };
+		FA03A9361904680900C8D8F0 /* BDmanejo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDmanejo.m; sourceTree = "<group>"; };
+		FA03A97A19046DDE00C8D8F0 /* ProtocoloGuardar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProtocoloGuardar.h; sourceTree = "<group>"; };
 		FA4004B318FC409000D74A56 /* escudos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = escudos.plist; sourceTree = "<group>"; };
 		FA65E44F18E2607D00260BA6 /* HeroesDelPlanetaAzul.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeroesDelPlanetaAzul.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA65E45218E2607D00260BA6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -377,6 +381,7 @@
 				FAC7DE2618E3AE9D0097B4F4 /* guardarViewController.h */,
 				FAC7DE2718E3AE9D0097B4F4 /* guardarViewController.m */,
 				FA65E45918E2607D00260BA6 /* Supporting Files */,
+				FA03A97A19046DDE00C8D8F0 /* ProtocoloGuardar.h */,
 			);
 			path = HeroesDelPlanetaAzul;
 			sourceTree = "<group>";
@@ -458,6 +463,8 @@
 				FACC10941902EFB7002F5C64 /* Partida.m */,
 				FACC10901902EFB6002F5C64 /* Frase.h */,
 				FACC10911902EFB6002F5C64 /* Frase.m */,
+				FA03A9351904680900C8D8F0 /* BDmanejo.h */,
+				FA03A9361904680900C8D8F0 /* BDmanejo.m */,
 			);
 			name = "Modelo y Clases";
 			sourceTree = "<group>";
@@ -767,6 +774,7 @@
 				FAC7DE2818E3AE9D0097B4F4 /* guardarViewController.m in Sources */,
 				FACC109B1902EFB7002F5C64 /* Escudo.m in Sources */,
 				FAC7DE3518E3BB360097B4F4 /* InstrViewController.m in Sources */,
+				FA03A9371904680900C8D8F0 /* BDmanejo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -52,4 +52,7 @@
 }
 */
 
+- (IBAction)regresarButton:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end

@@ -7,6 +7,11 @@
 //
 
 #import "WoopViewController.h"
+#import "InstrViewController.h"
+#import "AjustesViewController.h"
+#import "PuntajesViewController.h"
+#import "JuegoViewController.h"
+#import "guardarViewController.h"
 
 @interface WoopViewController ()
 
@@ -24,6 +29,10 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) removerVista {
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

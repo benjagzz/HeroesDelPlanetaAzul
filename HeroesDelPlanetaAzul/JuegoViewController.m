@@ -11,7 +11,6 @@
 @interface JuegoViewController (){
     NSMutableArray *letrasArray;
     NSString *nombreFoto;
-    Boolean *fin;
     int errores; //cantidad de errores cometidos
 }
 
@@ -200,7 +199,6 @@
     }
 }
 
-
 - (void)buscaLetra:(NSString*) letra{  //busca la letra que se tecleó en el arreglo y las despliega en los imageView
     
     int encontradas = 0;
@@ -340,7 +338,7 @@
     }
 }
 
-- (void)terminaJuego{
+- (void)terminaJuego{  //revisa la cantidad de errores cometidos
     if(errores == 6){
         [self performSegueWithIdentifier:@"guardar" sender:self];
     }
@@ -548,5 +546,8 @@
     theButton.enabled = NO;
     [self buscaLetra:@"Z"];
     [self terminaJuego];
+}
+- (IBAction)regresarButton:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end

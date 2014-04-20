@@ -58,4 +58,7 @@
 }
 */
 
+- (IBAction)guardarButton:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 @end

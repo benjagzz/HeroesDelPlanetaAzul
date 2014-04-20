@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ProtocoloGuardar.h"
 
 @interface WoopViewController : UIViewController
 
