@@ -6,16 +6,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HeroesDelPlanetaAzul/JuegoViewController.m"
-            timestampString = "419716158.012826"
+            timestampString = "419718255.298842"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "345"
+            endingLineNumber = "345"
+            landmarkName = "-terminaJuego"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HeroesDelPlanetaAzul/JuegoViewController.m"
+            timestampString = "419718255.298842"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "344"
+            endingLineNumber = "344"
+            landmarkName = "-terminaJuego"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

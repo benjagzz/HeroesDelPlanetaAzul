@@ -11,11 +11,14 @@
 @interface JuegoViewController (){
     NSMutableArray *letrasArray;
     NSString *nombreFoto;
+    Boolean *fin;
+    int errores; //cantidad de errores cometidos
 }
 
 - (void)preparaArreglo;
 - (void)acomodaLetras;
 - (void)buscaLetra:(NSString*) letra;
+- (void)terminaJuego;
 
 @end
 
@@ -34,9 +37,13 @@
 {
     [super viewDidLoad];
     
+    errores = 0;
+    
     [self preparaArreglo];
     
     [self acomodaLetras];
+    
+    
     
    // self.fraseLabel.font = [UIFont fontWithName:@"SnackerComic_PersonalUseOnly"size:48];
     
@@ -62,13 +69,12 @@
 
 - (void)acomodaLetras{
     
-    //acomoda los lables para que desplieguen las letras del arreglo
+    //acomoda los lables para que desplieguen los espacios vacios de las letras del arreglo
     for (int i = 0; i < letrasArray.count; i++){
         
         if([[letrasArray objectAtIndex:i] isEqualToString:@" "]){
-            //nombreFoto = [NSString stringWithFormat:@""];
         }
-        else{
+        else{  //Si el arreglo contiene una letra despliega un espacio vacío en el imageView
             nombreFoto = [NSString stringWithFormat:@"espacioVacio.png"];
         
             switch (i) {
@@ -195,13 +201,17 @@
 }
 
 
-- (void)buscaLetra:(NSString*) letra{
+- (void)buscaLetra:(NSString*) letra{  //busca la letra que se tecleó en el arreglo y las despliega en los imageView
+    
+    int encontradas = 0;
     
     for (int i = 0; i < letrasArray.count; i++){
         
         if([[letrasArray objectAtIndex:i] isEqualToString:letra]){
             
             nombreFoto = [NSString stringWithFormat:@"espacio%@.png", letra];
+            
+            encontradas++;
             
             switch (i) {
                 case 0:
@@ -325,8 +335,17 @@
         }
         
     }
+    if (encontradas == 0) {
+        errores++;  //se suma un error porque no se encontró la letra
+    }
 }
 
+- (void)terminaJuego{
+    if(errores == 6){
+        [self performSegueWithIdentifier:@"guardar" sender:self];
+    }
+    
+}
 
 - (void)didReceiveMemoryWarning {
     
@@ -346,162 +365,188 @@
 
 
 
-
 #pragma mark - Botones
 
 - (IBAction)botonA:(id)sender {
+    
     UIButton *theButton = (UIButton *)sender;
     theButton.enabled = NO;
     [self buscaLetra:@"A"];
+    [self terminaJuego];
 }
 
 - (IBAction)botonB:(id)sender {
     UIButton *theButton = (UIButton *)sender;
     theButton.enabled = NO;
     [self buscaLetra:@"B"];
+    [self terminaJuego];
 }
 
 - (IBAction)botonC:(id)sender {
     UIButton *theButton = (UIButton *)sender;
     theButton.enabled = NO;
     [self buscaLetra:@"C"];
+    [self terminaJuego];
 }
 
 - (IBAction)botonD:(id)sender {
     UIButton *theButton = (UIButton *)sender;
     theButton.enabled = NO;
     [self buscaLetra:@"D"];
+    [self terminaJuego];
 }
 
 - (IBAction)botonE:(id)sender {
     UIButton *theButton = (UIButton *)sender;
     theButton.enabled = NO;
     [self buscaLetra:@"E"];
+    [self terminaJuego];
 }
 
 - (IBAction)botonF:(id)sender {
     UIButton *theButton = (UIButton *)sender;
     theButton.enabled = NO;
     [self buscaLetra:@"F"];
+    [self terminaJuego];
 }
 
 - (IBAction)botonG:(id)sender {
     UIButton *theButton = (UIButton *)sender;
     theButton.enabled = NO;
     [self buscaLetra:@"G"];
+    [self terminaJuego];
 }
 
 - (IBAction)botonH:(id)sender {
     UIButton *theButton = (UIButton *)sender;
     theButton.enabled = NO;
     [self buscaLetra:@"H"];
+    [self terminaJuego];
 }
 
 - (IBAction)botonI:(id)sender {
     UIButton *theButton = (UIButton *)sender;
     theButton.enabled = NO;
     [self buscaLetra:@"I"];
+    [self terminaJuego];
 }
 
 - (IBAction)botonJ:(id)sender {
     UIButton *theButton = (UIButton *)sender;
     theButton.enabled = NO;
     [self buscaLetra:@"J"];
+    [self terminaJuego];
 }
 
 - (IBAction)botonK:(id)sender {
     UIButton *theButton = (UIButton *)sender;
     theButton.enabled = NO;
     [self buscaLetra:@"K"];
+    [self terminaJuego];
 }
 
 - (IBAction)botonL:(id)sender {
     UIButton *theButton = (UIButton *)sender;
     theButton.enabled = NO;
     [self buscaLetra:@"L"];
+    [self terminaJuego];
 }
 
 - (IBAction)botonM:(id)sender {
     UIButton *theButton = (UIButton *)sender;
     theButton.enabled = NO;
     [self buscaLetra:@"M"];
+    [self terminaJuego];
 }
 
 - (IBAction)botonN:(id)sender {
     UIButton *theButton = (UIButton *)sender;
     theButton.enabled = NO;
     [self buscaLetra:@"N"];
+    [self terminaJuego];
 }
 
 - (IBAction)botonO:(id)sender {
     UIButton *theButton = (UIButton *)sender;
     theButton.enabled = NO;
     [self buscaLetra:@"O"];
+    [self terminaJuego];
 }
 
 - (IBAction)botonP:(id)sender {
     UIButton *theButton = (UIButton *)sender;
     theButton.enabled = NO;
     [self buscaLetra:@"P"];
+    [self terminaJuego];
 }
 
 - (IBAction)botonQ:(id)sender {
     UIButton *theButton = (UIButton *)sender;
     theButton.enabled = NO;
     [self buscaLetra:@"Q"];
+    [self terminaJuego];
 }
 
 - (IBAction)botonR:(id)sender {
     UIButton *theButton = (UIButton *)sender;
     theButton.enabled = NO;
     [self buscaLetra:@"R"];
+    [self terminaJuego];
 }
 
 - (IBAction)botonS:(id)sender {
     UIButton *theButton = (UIButton *)sender;
     theButton.enabled = NO;
     [self buscaLetra:@"S"];
+    [self terminaJuego];
 }
 
 - (IBAction)botonT:(id)sender {
     UIButton *theButton = (UIButton *)sender;
     theButton.enabled = NO;
     [self buscaLetra:@"T"];
+    [self terminaJuego];
 }
 
 - (IBAction)botonU:(id)sender {
     UIButton *theButton = (UIButton *)sender;
     theButton.enabled = NO;
     [self buscaLetra:@"U"];
+    [self terminaJuego];
 }
 
 - (IBAction)botonV:(id)sender {
     UIButton *theButton = (UIButton *)sender;
     theButton.enabled = NO;
     [self buscaLetra:@"V"];
+    [self terminaJuego];
 }
 
 - (IBAction)botonW:(id)sender {
     UIButton *theButton = (UIButton *)sender;
     theButton.enabled = NO;
     [self buscaLetra:@"W"];
+    [self terminaJuego];
 }
 
 - (IBAction)botonX:(id)sender {
     UIButton *theButton = (UIButton *)sender;
     theButton.enabled = NO;
     [self buscaLetra:@"X"];
+    [self terminaJuego];
 }
 
 - (IBAction)botonY:(id)sender {
     UIButton *theButton = (UIButton *)sender;
     theButton.enabled = NO;
     [self buscaLetra:@"Y"];
+    [self terminaJuego];
 }
 
 - (IBAction)botonZ:(id)sender {
     UIButton *theButton = (UIButton *)sender;
     theButton.enabled = NO;
     [self buscaLetra:@"Z"];
+    [self terminaJuego];
 }
 @end

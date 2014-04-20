@@ -520,16 +520,6 @@
                                     <segue destination="BYZ-38-t0r" kind="modal" identifier="inicio" modalTransitionStyle="coverVertical" id="RVk-oZ-Lx5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uVy-Pc-tex">
-                                <rect key="frame" x="707" y="67" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="FIN">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="aYM-xf-B2N" kind="modal" identifier="guadar" id="w0H-Wa-b7h"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -575,6 +565,7 @@
                         <outlet property="imageView7" destination="AFE-UB-0o9" id="bM1-Sp-Ylh"/>
                         <outlet property="imageView8" destination="8W4-pl-fUU" id="cXG-LB-Tsh"/>
                         <outlet property="imageView9" destination="8li-kT-RUt" id="7iW-bp-cU1"/>
+                        <segue destination="aYM-xf-B2N" kind="modal" identifier="guardar" id="9c6-ej-oMy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14v-WP-3GW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -631,6 +622,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="gWB-fI-aK5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K3l-eW-S0p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
