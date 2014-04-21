@@ -7,12 +7,18 @@
 //
 
 #import "WoopAppDelegate.h"
+#import "BDmanejo.h"
 
 @implementation WoopAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    BDmanejo *servicios = [BDmanejo instancia];
+    [servicios cargarFrases];
+    //[servicios cargarVacunas];
+    
     return YES;
 }
 							

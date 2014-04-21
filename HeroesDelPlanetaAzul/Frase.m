@@ -7,6 +7,7 @@
 //
 
 #import "Frase.h"
+#import "Partida.h"
 
 
 @implementation Frase

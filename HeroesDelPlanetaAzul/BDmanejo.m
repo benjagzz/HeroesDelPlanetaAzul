@@ -11,6 +11,7 @@
 #import "Juego.h"
 #import "Partida.h"
 #import "Frase.h"
+#import "WoopViewController.h"
 
 @implementation BDmanejo
 
@@ -51,7 +52,7 @@
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Model" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Modelo" withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
 }
@@ -62,7 +63,7 @@
         return _persistentStoreCoordinator;
     }
     
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Model.sqlite"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Modelo.sqlite"];
     
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
@@ -85,7 +86,7 @@
 - (id)init
 {
 	if(self = [super init]){
-		//[self setListaMascotas:[[NSMutableArray alloc] init]];
+		[self setListaFrases:[[NSMutableArray alloc] init]];
 		//[self setListaVacunas:[[NSMutableArray alloc]init]];
 	}
 	
@@ -101,6 +102,51 @@
 	});
 	
 	return _instancia;
+}
+
+-(void) insertarFrase:(id)datosFrase
+{
+	NSManagedObjectContext *context = self.managedObjectContext;
+	Frase *nueva = [NSEntityDescription insertNewObjectForEntityForName:@"Frase" inManagedObjectContext:context];
+	
+	NSDictionary *frase = (NSDictionary *)datosFrase;
+	nueva.frase = [frase objectForKey:@"frase"];
+	nueva.apoyo = [frase objectForKey:@"apoyo"];
+    nueva.imagen = [frase objectForKey:@"imagen"];
+    
+    [self saveContext];
+    
+}
+
+-(NSMutableArray*)cargarFrases
+{
+    NSManagedObjectContext *context = self.managedObjectContext;
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Frase" inManagedObjectContext:context];
+	[request setEntity:entity];
+	
+	NSError *error;
+	NSMutableArray *results = (NSMutableArray*)[context executeFetchRequest:request error:&error];
+    Frase *temp;
+	
+	if(results.count==0){
+		NSLog(@"No hay frases guardadas...");
+        return NULL;
+	}else{
+        if (_listaFrases) {
+            _listaFrases = [[NSMutableArray alloc] init];
+        }
+        for (int i = 0; i < results.count; i++) {
+            temp = results[i];
+            NSMutableDictionary *miDicc = [[NSMutableDictionary alloc]initWithObjectsAndKeys:
+                                           [temp valueForKey:@"frase"], @"frase",
+                                           [temp valueForKey:@"apoyo"], @"apoyo",
+                                           [temp valueForKey:@"imagen"], @"imagen", nil];
+            
+            [self.listaFrases addObject:miDicc];
+        }
+        return self.listaFrases;
+	}
 }
 
 

@@ -587,7 +587,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14v-WP-3GW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-236" y="-1311"/>
+            <point key="canvasLocation" x="-236" y="-1199"/>
         </scene>
         <!--Guardar View Controller-->
         <scene sceneID="MP5-cj-A2n">
@@ -643,7 +643,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K3l-eW-S0p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="759" y="-1311"/>
+            <point key="canvasLocation" x="759" y="-1199"/>
         </scene>
         <!--Instr View Controller-->
         <scene sceneID="adB-dH-Tpq">
@@ -724,20 +724,6 @@
                                 <rect key="frame" x="232" y="422" width="210" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nw0-Ku-VMe">
-                                <rect key="frame" x="254" y="567" width="260" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="facebook.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6t-cY-red">
-                                <rect key="frame" x="254" y="683" width="260" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="twitter.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -1040,7 +1026,6 @@
         <image name="botonPuntajes2.png" width="530" height="90"/>
         <image name="botonRegresar.png" width="155" height="50"/>
         <image name="escudo.png" width="294" height="297"/>
-        <image name="facebook.png" width="260" height="70"/>
         <image name="foto12.png" width="430" height="430"/>
         <image name="ingresaNombre.png" width="370" height="50"/>
         <image name="intrucciones.png" width="768" height="963"/>
@@ -1057,7 +1042,6 @@
         <image name="num8.png" width="70" height="70"/>
         <image name="num9.png" width="70" height="70"/>
         <image name="sonido.png" width="210" height="70"/>
-        <image name="twitter.png" width="260" height="70"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
