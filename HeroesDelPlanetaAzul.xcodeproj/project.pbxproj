@@ -75,12 +75,14 @@
 		FAC7DE3218E3BAD90097B4F4 /* botonSaltar.png in Resources */ = {isa = PBXBuildFile; fileRef = FAC7DE3118E3BAD90097B4F4 /* botonSaltar.png */; };
 		FAC7DE3518E3BB360097B4F4 /* InstrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC7DE3418E3BB360097B4F4 /* InstrViewController.m */; };
 		FACC108F1902EC9C002F5C64 /* Modelo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FACC108D1902EC9C002F5C64 /* Modelo.xcdatamodeld */; };
-		FACC10921902EFB6002F5C64 /* Frase.m in Sources */ = {isa = PBXBuildFile; fileRef = FACC10911902EFB6002F5C64 /* Frase.m */; };
-		FACC10951902EFB7002F5C64 /* Partida.m in Sources */ = {isa = PBXBuildFile; fileRef = FACC10941902EFB7002F5C64 /* Partida.m */; };
-		FACC10981902EFB7002F5C64 /* Juego.m in Sources */ = {isa = PBXBuildFile; fileRef = FACC10971902EFB7002F5C64 /* Juego.m */; };
-		FACC109B1902EFB7002F5C64 /* Escudo.m in Sources */ = {isa = PBXBuildFile; fileRef = FACC109A1902EFB7002F5C64 /* Escudo.m */; };
 		FAD2A3CF1905F0B300E3EF84 /* botonSiguiente.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD2A3CE1905F0B200E3EF84 /* botonSiguiente.png */; };
 		FAD2A3D11905FA5000E3EF84 /* planeta.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD2A3D01905FA5000E3EF84 /* planeta.png */; };
+		FAD2A3D71905FCB200E3EF84 /* Juego.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD2A3D61905FCB200E3EF84 /* Juego.m */; };
+		FAD2A3DA1905FCB300E3EF84 /* Partida.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD2A3D91905FCB300E3EF84 /* Partida.m */; };
+		FAD2A3DD1905FCB300E3EF84 /* Escudo.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD2A3DC1905FCB300E3EF84 /* Escudo.m */; };
+		FAD2A3E01905FCB300E3EF84 /* Frase.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD2A3DF1905FCB300E3EF84 /* Frase.m */; };
+		FAD2A3E31906117700E3EF84 /* facebookIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD2A3E11906117700E3EF84 /* facebookIcon.png */; };
+		FAD2A3E41906117700E3EF84 /* twitterIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD2A3E21906117700E3EF84 /* twitterIcon.png */; };
 		FAE1001B18E385520066B4E6 /* espacioA.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE1000018E385520066B4E6 /* espacioA.png */; };
 		FAE1001C18E385520066B4E6 /* espacioB.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE1000118E385520066B4E6 /* espacioB.png */; };
 		FAE1001D18E385520066B4E6 /* espacioC.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE1000218E385520066B4E6 /* espacioC.png */; };
@@ -229,16 +231,18 @@
 		FAC7DE3318E3BB360097B4F4 /* InstrViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstrViewController.h; sourceTree = "<group>"; };
 		FAC7DE3418E3BB360097B4F4 /* InstrViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstrViewController.m; sourceTree = "<group>"; };
 		FACC108E1902EC9C002F5C64 /* Modelo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Modelo.xcdatamodel; sourceTree = "<group>"; };
-		FACC10901902EFB6002F5C64 /* Frase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Frase.h; sourceTree = "<group>"; };
-		FACC10911902EFB6002F5C64 /* Frase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Frase.m; sourceTree = "<group>"; };
-		FACC10931902EFB7002F5C64 /* Partida.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Partida.h; sourceTree = "<group>"; };
-		FACC10941902EFB7002F5C64 /* Partida.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Partida.m; sourceTree = "<group>"; };
-		FACC10961902EFB7002F5C64 /* Juego.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Juego.h; sourceTree = "<group>"; };
-		FACC10971902EFB7002F5C64 /* Juego.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Juego.m; sourceTree = "<group>"; };
-		FACC10991902EFB7002F5C64 /* Escudo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Escudo.h; sourceTree = "<group>"; };
-		FACC109A1902EFB7002F5C64 /* Escudo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Escudo.m; sourceTree = "<group>"; };
 		FAD2A3CE1905F0B200E3EF84 /* botonSiguiente.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = botonSiguiente.png; path = Recursos/botonSiguiente.png; sourceTree = SOURCE_ROOT; };
 		FAD2A3D01905FA5000E3EF84 /* planeta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = planeta.png; path = Recursos/planeta.png; sourceTree = SOURCE_ROOT; };
+		FAD2A3D51905FCB200E3EF84 /* Juego.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Juego.h; sourceTree = "<group>"; };
+		FAD2A3D61905FCB200E3EF84 /* Juego.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Juego.m; sourceTree = "<group>"; };
+		FAD2A3D81905FCB300E3EF84 /* Partida.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Partida.h; sourceTree = "<group>"; };
+		FAD2A3D91905FCB300E3EF84 /* Partida.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Partida.m; sourceTree = "<group>"; };
+		FAD2A3DB1905FCB300E3EF84 /* Escudo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Escudo.h; sourceTree = "<group>"; };
+		FAD2A3DC1905FCB300E3EF84 /* Escudo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Escudo.m; sourceTree = "<group>"; };
+		FAD2A3DE1905FCB300E3EF84 /* Frase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Frase.h; sourceTree = "<group>"; };
+		FAD2A3DF1905FCB300E3EF84 /* Frase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Frase.m; sourceTree = "<group>"; };
+		FAD2A3E11906117700E3EF84 /* facebookIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = facebookIcon.png; path = Recursos/facebookIcon.png; sourceTree = SOURCE_ROOT; };
+		FAD2A3E21906117700E3EF84 /* twitterIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitterIcon.png; path = Recursos/twitterIcon.png; sourceTree = SOURCE_ROOT; };
 		FAE1000018E385520066B4E6 /* espacioA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = espacioA.png; path = Recursos/espacioA.png; sourceTree = SOURCE_ROOT; };
 		FAE1000118E385520066B4E6 /* espacioB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = espacioB.png; path = Recursos/espacioB.png; sourceTree = SOURCE_ROOT; };
 		FAE1000218E385520066B4E6 /* espacioC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = espacioC.png; path = Recursos/espacioC.png; sourceTree = SOURCE_ROOT; };
@@ -378,6 +382,8 @@
 				FA03A97A19046DDE00C8D8F0 /* ProtocoloGuardar.h */,
 				158978CE18E526CA002F61DF /* botoninstrucciones.png */,
 				FAD2A3CE1905F0B200E3EF84 /* botonSiguiente.png */,
+				FAD2A3E11906117700E3EF84 /* facebookIcon.png */,
+				FAD2A3E21906117700E3EF84 /* twitterIcon.png */,
 				FAC7DE3118E3BAD90097B4F4 /* botonSaltar.png */,
 				FAC7DE2F18E3BA150097B4F4 /* intrucciones.png */,
 				FAC7DE2D18E3B4090097B4F4 /* botonGuardar.png */,
@@ -487,14 +493,14 @@
 			isa = PBXGroup;
 			children = (
 				FACC108D1902EC9C002F5C64 /* Modelo.xcdatamodeld */,
-				FACC10991902EFB7002F5C64 /* Escudo.h */,
-				FACC109A1902EFB7002F5C64 /* Escudo.m */,
-				FACC10961902EFB7002F5C64 /* Juego.h */,
-				FACC10971902EFB7002F5C64 /* Juego.m */,
-				FACC10931902EFB7002F5C64 /* Partida.h */,
-				FACC10941902EFB7002F5C64 /* Partida.m */,
-				FACC10901902EFB6002F5C64 /* Frase.h */,
-				FACC10911902EFB6002F5C64 /* Frase.m */,
+				FAD2A3DE1905FCB300E3EF84 /* Frase.h */,
+				FAD2A3DF1905FCB300E3EF84 /* Frase.m */,
+				FAD2A3DB1905FCB300E3EF84 /* Escudo.h */,
+				FAD2A3DC1905FCB300E3EF84 /* Escudo.m */,
+				FAD2A3D81905FCB300E3EF84 /* Partida.h */,
+				FAD2A3D91905FCB300E3EF84 /* Partida.m */,
+				FAD2A3D51905FCB200E3EF84 /* Juego.h */,
+				FAD2A3D61905FCB200E3EF84 /* Juego.m */,
 				FA03A9351904680900C8D8F0 /* BDmanejo.h */,
 				FA03A9361904680900C8D8F0 /* BDmanejo.m */,
 			);
@@ -678,6 +684,7 @@
 				FA65E48818E2655E00260BA6 /* logo.png in Resources */,
 				FAC7DE0F18E3A12D0097B4F4 /* num1.png in Resources */,
 				158978CF18E526CA002F61DF /* botoninstrucciones.png in Resources */,
+				FAD2A3E31906117700E3EF84 /* facebookIcon.png in Resources */,
 				FAE1FFE418E37E610066B4E6 /* botonLetraE.png in Resources */,
 				FAE1FFF218E37E610066B4E6 /* botonLetraS.png in Resources */,
 				FAE1002E18E385520066B4E6 /* espacioS.png in Resources */,
@@ -690,6 +697,7 @@
 				FA65E48D18E2688800260BA6 /* botonJugar.png in Resources */,
 				FAE1001B18E385520066B4E6 /* espacioA.png in Resources */,
 				FAC7DE1518E3A12D0097B4F4 /* num7.png in Resources */,
+				FAD2A3E41906117700E3EF84 /* twitterIcon.png in Resources */,
 				FA03A9851904769E00C8D8F0 /* escudo76.png in Resources */,
 				FAE1002918E385520066B4E6 /* espacioN.png in Resources */,
 				FAE1FFE518E37E610066B4E6 /* botonLetraF.png in Resources */,
@@ -801,20 +809,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FACC10981902EFB7002F5C64 /* Juego.m in Sources */,
 				FA65E46918E2607D00260BA6 /* WoopViewController.m in Sources */,
 				FAE1003918E387E50066B4E6 /* JuegoViewController.m in Sources */,
 				FAC7DE1D18E3A8770097B4F4 /* AjustesViewController.m in Sources */,
 				FA65E45F18E2607D00260BA6 /* main.m in Sources */,
+				FAD2A3DD1905FCB300E3EF84 /* Escudo.m in Sources */,
 				FA65E46318E2607D00260BA6 /* WoopAppDelegate.m in Sources */,
-				FACC10921902EFB6002F5C64 /* Frase.m in Sources */,
 				FAE1003C18E395EB0066B4E6 /* PuntajesViewController.m in Sources */,
-				FACC10951902EFB7002F5C64 /* Partida.m in Sources */,
 				FACC108F1902EC9C002F5C64 /* Modelo.xcdatamodeld in Sources */,
+				FAD2A3D71905FCB200E3EF84 /* Juego.m in Sources */,
 				FAC7DE2818E3AE9D0097B4F4 /* guardarViewController.m in Sources */,
-				FACC109B1902EFB7002F5C64 /* Escudo.m in Sources */,
 				FAC7DE3518E3BB360097B4F4 /* InstrViewController.m in Sources */,
 				FA03A9371904680900C8D8F0 /* BDmanejo.m in Sources */,
+				FAD2A3DA1905FCB300E3EF84 /* Partida.m in Sources */,
+				FAD2A3E01905FCB300E3EF84 /* Frase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

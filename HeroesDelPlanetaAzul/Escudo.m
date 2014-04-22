@@ -2,7 +2,7 @@
 //  Escudo.m
 //  HeroesDelPlanetaAzul
 //
-//  Created by Ari Flores on 19/04/14.
+//  Created by Ari Flores on 21/04/14.
 //  Copyright (c) 2014 AriFlores. All rights reserved.
 //
 
@@ -12,10 +12,10 @@
 
 @implementation Escudo
 
-@dynamic nombre;
 @dynamic foto;
-@dynamic rangomin;
+@dynamic nombre;
 @dynamic rangomax;
+@dynamic rangomin;
 @dynamic juegoRel;
 
 @end

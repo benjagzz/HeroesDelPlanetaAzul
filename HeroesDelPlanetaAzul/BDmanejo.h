@@ -15,6 +15,7 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (strong, nonatomic) NSMutableArray *listaFrases;
+@property (strong, nonatomic) NSMutableArray *listaPartidas;
 //@property (strong, nonatomic) NSMutableArray *listaVacunas;
 //@property (strong, nonatomic) NSMutableArray *listaMascotas;
 
@@ -28,10 +29,12 @@
 
 //Metodos para  insertar en la base de datos
 - (void) insertarFrase:(id) datosFrase;  //inserta frases del Plist al Core Data
+- (void) insertarPartida:(id) datosPartida;
 //- (void) insertarMascota:(id) datosMascota vacunas:(NSArray *) misVacunas;
 
 //Metodos para cargar los datos de la Base de datos
 -(NSMutableArray*)cargarFrases;
+-(NSMutableArray*)cargarPartida;
 //-(NSMutableArray*)cargarFrases;
 //- (void) cargarVacunas;
 

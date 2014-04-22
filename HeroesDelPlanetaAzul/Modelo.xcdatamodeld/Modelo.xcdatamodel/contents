@@ -19,14 +19,15 @@
         <relationship name="partidaRel" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Partida" inverseName="juegoRel" inverseEntity="Partida" syncable="YES"/>
     </entity>
     <entity name="Partida" representedClassName="Partida" syncable="YES">
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="puntaje" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <relationship name="fraseRel" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Frase" inverseName="partidaRel" inverseEntity="Frase" syncable="YES"/>
         <relationship name="juegoRel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Juego" inverseName="partidaRel" inverseEntity="Juego" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Frase" positionX="-47" positionY="153" width="128" height="103"/>
         <element name="Escudo" positionX="286" positionY="-108" width="128" height="118"/>
-        <element name="Partida" positionX="-90" positionY="2" width="128" height="88"/>
+        <element name="Frase" positionX="-47" positionY="153" width="128" height="103"/>
         <element name="Juego" positionX="63" positionY="-108" width="128" height="88"/>
+        <element name="Partida" positionX="-90" positionY="2" width="128" height="103"/>
     </elements>
 </model>

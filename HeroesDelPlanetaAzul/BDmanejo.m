@@ -87,6 +87,7 @@
 {
 	if(self = [super init]){
 		[self setListaFrases:[[NSMutableArray alloc] init]];
+        [self setListaPartidas:[[NSMutableArray alloc] init]];
 		//[self setListaVacunas:[[NSMutableArray alloc]init]];
 	}
 	
@@ -113,6 +114,19 @@
 	nueva.frase = [frase objectForKey:@"frase"];
 	nueva.apoyo = [frase objectForKey:@"apoyo"];
     nueva.imagen = [frase objectForKey:@"imagen"];
+    
+    [self saveContext];
+    
+}
+
+- (void) insertarPartida:(id) datosPartida
+{
+    NSManagedObjectContext *context = self.managedObjectContext;
+	Partida *nueva = [NSEntityDescription insertNewObjectForEntityForName:@"Partida" inManagedObjectContext:context];
+	
+	NSDictionary *partida = (NSDictionary *)datosPartida;
+	nueva.nombre = [partida objectForKey:@"nombre"];
+	nueva.puntaje = [partida objectForKey:@"puntos"];
     
     [self saveContext];
     
@@ -147,6 +161,37 @@
         }
         return self.listaFrases;
 	}
+}
+
+-(NSMutableArray*)cargarPartida{
+    
+    NSManagedObjectContext *context = self.managedObjectContext;
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Partida" inManagedObjectContext:context];
+	[request setEntity:entity];
+	
+	NSError *error;
+	NSMutableArray *results = (NSMutableArray*)[context executeFetchRequest:request error:&error];
+    Partida *temp;
+	
+	if(results.count==0){
+		NSLog(@"No hay partidas guardadas...");
+        return NULL;
+	}else{
+        if (_listaPartidas) {
+            _listaPartidas = [[NSMutableArray alloc] init];
+        }
+        for (int i = 0; i < results.count; i++) {
+            temp = results[i];
+            NSMutableDictionary *miDicc = [[NSMutableDictionary alloc]initWithObjectsAndKeys:
+                                           [temp valueForKey:@"nombre"], @"nombre",
+                                           [temp valueForKey:@"puntaje"], @"puntaje", nil];
+            
+            [self.listaPartidas addObject:miDicc];
+        }
+        return self.listaPartidas;
+	}
+
 }
 
 

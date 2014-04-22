@@ -9,18 +9,21 @@
 #import "JuegoViewController.h"
 
 @interface JuegoViewController (){
+    
     NSMutableArray *letrasArray;  //Arreglo que contendra la frase a adivinar guardando una letra por casilla
     NSString *nombreFoto;
     NSString *nombreImagen;
     NSMutableArray *listaFrases;  //arreglo de diccionarios que contendrá todas las frases
-    int errores; //cantidad de errores cometidos
-    int puntos;  //variable que lleva el acumulado de puntos
-    int x; //variable que controla guarda el indice del arreglo de frase
-    int cont; //variable que lleva el acumulado de letras
+    NSDictionary *datosPartida;
+    
+    int errores;     //cantidad de errores cometidos
+    int puntos;      //variable que lleva el acumulado de puntos
+    int x;           //variable que controla guarda el indice del arreglo de frase
+    int cont;        //variable que lleva el acumulado de letras
     int totalLetras; //varibale que sirve de control para saber si ya adivino todas las letras
     int encontradas; //varibale que sirve de control para saber si ya adivino todas las letras
-    bool activo; //variable que permite picarle a un boton o no
-    //bool sigue; //variable que controla si sigue el siguiente nivel
+    bool activo;     //variable que permite picarle a un boton o no
+    
 }
 
 - (void)preparaVista: (int)num;
@@ -491,7 +494,13 @@
     
     if(errores == 0){
         //sigue = false;
+        
+       NSNumber  *punt = [NSNumber numberWithInteger: puntos];
+        
+       datosPartida = [[NSDictionary alloc] initWithObjectsAndKeys: punt, @"puntos", nil];
+        
         [self performSegueWithIdentifier:@"guardar" sender:self];
+        
     }
     
     if (totalLetras == cont){
@@ -507,17 +516,6 @@
     [super didReceiveMemoryWarning];
     
 }
-
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([[segue identifier] isEqualToString:@"inicio"]) {
-    }
-    
-    if ([[segue identifier] isEqualToString:@"guardar"]) {
-    }
-}
-
 
 
 #pragma mark - Botones
@@ -757,10 +755,29 @@
 }
 
 - (IBAction)regresarButton:(id)sender {
+    
     [self.navigationController popViewControllerAnimated:YES];
+
 }
+
 - (IBAction)siguienteButton:(id)sender {  //boton que sirve para ir a la siguiente frase
+
     x++;
     [self preparaVista:x];
+
+}
+
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"inicio"]) {
+    }
+    
+    if ([[segue identifier] isEqualToString:@"guardar"]) {
+        
+        [[segue destinationViewController] setDetailItem:datosPartida];
+        
+    }
 }
 @end

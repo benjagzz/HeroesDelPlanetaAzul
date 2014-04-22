@@ -8,7 +8,9 @@
 
 #import "guardarViewController.h"
 
-@interface guardarViewController ()
+@interface guardarViewController (){
+    NSMutableArray *listaPartidas;
+}
 
 @end
 
@@ -23,6 +25,13 @@
     return self;
 }
 
+- (void)setdetailItem:(id)newObjectMostrar
+{
+    if (_detailItem != newObjectMostrar) {
+        _detailItem = newObjectMostrar;
+    }
+}
+
 -(void)dismissKeyboard {            //esconder el teclado
     [self.view endEditing:YES];
 }
@@ -33,6 +42,9 @@
     // Do any additional setup after loading the view.
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
+    
+    
+    self.puntosLabel.text = [NSString stringWithFormat:@"%@",[self.detailItem valueForKey:@"puntos"]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,6 +71,13 @@
 */
 
 - (IBAction)guardarButton:(id)sender {
+    
+    NSDictionary *partidaEntidad = [[NSDictionary alloc] initWithObjectsAndKeys: [self.detailItem valueForKey:@"puntos"], @"puntos",self.nombreTF.text, @"nombre", nil];
+    
+    BDmanejo *servicios = [BDmanejo instancia];
+    
+    [servicios insertarPartida:partidaEntidad];
+    
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 @end

@@ -2,7 +2,7 @@
 //  Escudo.h
 //  HeroesDelPlanetaAzul
 //
-//  Created by Ari Flores on 19/04/14.
+//  Created by Ari Flores on 21/04/14.
 //  Copyright (c) 2014 AriFlores. All rights reserved.
 //
 
@@ -13,10 +13,10 @@
 
 @interface Escudo : NSManagedObject
 
-@property (nonatomic, retain) NSString * nombre;
 @property (nonatomic, retain) NSString * foto;
-@property (nonatomic, retain) NSNumber * rangomin;
+@property (nonatomic, retain) NSString * nombre;
 @property (nonatomic, retain) NSNumber * rangomax;
+@property (nonatomic, retain) NSNumber * rangomin;
 @property (nonatomic, retain) NSSet *juegoRel;
 @end
 

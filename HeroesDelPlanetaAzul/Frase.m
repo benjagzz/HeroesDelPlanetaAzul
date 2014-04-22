@@ -2,7 +2,7 @@
 //  Frase.m
 //  HeroesDelPlanetaAzul
 //
-//  Created by Ari Flores on 19/04/14.
+//  Created by Ari Flores on 21/04/14.
 //  Copyright (c) 2014 AriFlores. All rights reserved.
 //
 
@@ -12,8 +12,8 @@
 
 @implementation Frase
 
-@dynamic frase;
 @dynamic apoyo;
+@dynamic frase;
 @dynamic imagen;
 @dynamic partidaRel;
 
