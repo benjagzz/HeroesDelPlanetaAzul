@@ -567,14 +567,22 @@
                                 <color key="textColor" red="0.22745099660000001" green="0.85098046059999999" blue="0.98431378599999997" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qGP-UM-YyX">
-                                <rect key="frame" x="698" y="403" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKy-4p-caJ">
+                                <rect key="frame" x="698" y="410" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gIh-47-9a3">
-                                <rect key="frame" x="698" y="467" width="50" height="50"/>
+                                <state key="normal" title="Button" image="facebookIcon.png"/>
+                                <connections>
+                                    <action selector="postFacebook:" destination="Txn-Fm-SqM" eventType="touchUpInside" id="Few-qD-Jce"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dt5-X9-IjH">
+                                <rect key="frame" x="698" y="478" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <state key="normal" title="Button" image="twitterIcon.png"/>
+                                <connections>
+                                    <action selector="postTwitter:" destination="Txn-Fm-SqM" eventType="touchUpInside" id="DCd-wq-u80"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -607,6 +615,7 @@
                         <outlet property="botonY" destination="yLN-ef-LFO" id="cC8-SB-mOb"/>
                         <outlet property="botonZ" destination="b7B-br-2zz" id="01B-1o-IAn"/>
                         <outlet property="erroresLabel" destination="Ihy-PL-LZZ" id="01c-k3-oiN"/>
+                        <outlet property="facebookButton" destination="zKy-4p-caJ" id="L5n-P1-A97"/>
                         <outlet property="fotoImageView" destination="IAR-6Q-P19" id="SPu-hR-jKs"/>
                         <outlet property="fraseLabel" destination="5LT-pL-b91" id="aq9-38-LrN"/>
                         <outlet property="imageView1" destination="hPk-j9-kI9" id="ghr-En-Sgk"/>
@@ -649,7 +658,9 @@
                         <outlet property="imageView8" destination="8W4-pl-fUU" id="cXG-LB-Tsh"/>
                         <outlet property="imageView9" destination="8li-kT-RUt" id="7iW-bp-cU1"/>
                         <outlet property="puntosLabel" destination="41o-R7-jkc" id="Kmf-ba-o0j"/>
+                        <outlet property="regresarButton" destination="I3v-i7-2Ew" id="aJS-BJ-veg"/>
                         <outlet property="siguienteButton" destination="Vbi-8q-M5L" id="X4t-sK-MMI"/>
+                        <outlet property="twitterButton" destination="dt5-X9-IjH" id="ChN-pN-QP6"/>
                         <segue destination="aYM-xf-B2N" kind="push" identifier="guardar" id="9c6-ej-oMy"/>
                     </connections>
                 </viewController>
@@ -1121,6 +1132,7 @@
         <image name="botonRegresar.png" width="155" height="50"/>
         <image name="botonSiguiente.png" width="155" height="50"/>
         <image name="escudo.png" width="294" height="297"/>
+        <image name="facebookIcon.png" width="50" height="50"/>
         <image name="foto12.png" width="430" height="430"/>
         <image name="ingresaNombre.png" width="370" height="50"/>
         <image name="intrucciones.png" width="768" height="963"/>
@@ -1138,6 +1150,7 @@
         <image name="num9.png" width="70" height="70"/>
         <image name="planeta.png" width="512" height="512"/>
         <image name="sonido.png" width="210" height="70"/>
+        <image name="twitterIcon.png" width="50" height="50"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

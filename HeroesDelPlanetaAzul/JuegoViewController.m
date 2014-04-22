@@ -7,6 +7,8 @@
 //
 
 #import "JuegoViewController.h"
+#import <Social/Social.h>
+
 
 @interface JuegoViewController (){
     
@@ -765,6 +767,93 @@
     x++;
     [self preparaVista:x];
 
+}
+
+- (IBAction)postFacebook:(id)sender {
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
+    {
+        SLComposeViewController *fbComposer = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+        
+        self.erroresLabel.hidden = YES;
+        self.puntosLabel.hidden = YES;
+        self.regresarButton.hidden = YES;
+        self.facebookButton.hidden = YES;
+        self.twitterButton.hidden = YES;
+        
+        CGRect rect = [self.view bounds];
+        UIGraphicsBeginImageContext(rect.size);
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        [self.view.layer renderInContext:context];
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        self.erroresLabel.hidden = NO;
+        self.puntosLabel.hidden = NO;
+        self.regresarButton.hidden = NO;
+        self.facebookButton.hidden = NO;
+        self.twitterButton.hidden = NO;
+        
+        //set the initial text message
+        [fbComposer setInitialText:@"¿Cúal es la frase?"];
+        [fbComposer addImage: image];
+        
+        //present the composer to the user
+        [self presentViewController:fbComposer animated:YES completion:nil];
+        
+    }else {
+        UIAlertView *alertView = [[UIAlertView alloc]
+                                  initWithTitle:@"Facebook Error"
+                                  message:@"You may not have set up facebook service on your device or\n                                  You may not connected to internent.\nPlease check ..."
+                                  delegate:self
+                                  cancelButtonTitle:@"OK"
+                                  otherButtonTitles: nil];
+        [alertView show];
+        
+    }
+}
+
+- (IBAction)postTwitter:(id)sender {
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
+    {
+        SLComposeViewController *tweetController = [SLComposeViewController
+                                                    composeViewControllerForServiceType:SLServiceTypeTwitter];
+        
+        self.erroresLabel.hidden = YES;
+        self.puntosLabel.hidden = YES;
+        self.regresarButton.hidden = YES;
+        self.facebookButton.hidden = YES;
+        self.twitterButton.hidden = YES;
+        
+        CGRect rect = [self.view bounds];
+        UIGraphicsBeginImageContext(rect.size);
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        [self.view.layer renderInContext:context];
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        self.erroresLabel.hidden = NO;
+        self.puntosLabel.hidden = NO;
+        self.regresarButton.hidden = NO;
+        self.facebookButton.hidden = NO;
+        self.twitterButton.hidden = NO;
+        
+        //set the initial text message
+        [tweetController setInitialText:@"¿Cúal es la frase?"];
+        [tweetController addImage:image];
+        
+        //present the controller to the user
+        [self presentViewController:tweetController animated:YES completion:nil];
+    }
+    else{
+        UIAlertView *alertView = [[UIAlertView alloc]
+                                  initWithTitle:@"twitter Error"
+                                  message:@"You may not have set up twitter service on your device or\n                                  You may not connected to internent.\nPlease check ..."
+                                  delegate:self
+                                  cancelButtonTitle:@"OK"
+                                  otherButtonTitles: nil];
+        [alertView show];
+        
+    }
 }
 
 

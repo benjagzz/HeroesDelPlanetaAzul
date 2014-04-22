@@ -20,6 +20,13 @@
 
 - (IBAction)siguienteButton:(id)sender;
 
+- (IBAction)postFacebook:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *facebookButton;
+@property (weak, nonatomic) IBOutlet UIButton *twitterButton;
+@property (weak, nonatomic) IBOutlet UIButton *regresarButton;
+
+- (IBAction)postTwitter:(id)sender;
+
 @property (weak, nonatomic) IBOutlet UIImageView *fotoImageView;
 
 @property (weak, nonatomic) IBOutlet UILabel *erroresLabel;
