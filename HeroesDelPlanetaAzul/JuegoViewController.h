@@ -8,11 +8,23 @@
 
 #import <UIKit/UIKit.h>
 #import "ProtocoloGuardar.h"
+#import "BDmanejo.h"
 
 @interface JuegoViewController : UIViewController
 
 @property (strong, nonatomic) id detailItem;
+
 - (IBAction)regresarButton:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UIButton *siguienteButton;
+
+- (IBAction)siguienteButton:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UIImageView *fotoImageView;
+
+@property (weak, nonatomic) IBOutlet UILabel *erroresLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *puntosLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *fraseLabel;
 
@@ -55,6 +67,34 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView37;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView38;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView39;
+
+@property (weak, nonatomic) IBOutlet UIButton *botonA;
+@property (weak, nonatomic) IBOutlet UIButton *botonB;
+@property (weak, nonatomic) IBOutlet UIButton *botonC;
+@property (weak, nonatomic) IBOutlet UIButton *botonD;
+@property (weak, nonatomic) IBOutlet UIButton *botonE;
+@property (weak, nonatomic) IBOutlet UIButton *botonF;
+@property (weak, nonatomic) IBOutlet UIButton *botonG;
+@property (weak, nonatomic) IBOutlet UIButton *botonH;
+@property (weak, nonatomic) IBOutlet UIButton *botonI;
+@property (weak, nonatomic) IBOutlet UIButton *botonJ;
+@property (weak, nonatomic) IBOutlet UIButton *botonK;
+@property (weak, nonatomic) IBOutlet UIButton *botonL;
+@property (weak, nonatomic) IBOutlet UIButton *botonM;
+@property (weak, nonatomic) IBOutlet UIButton *botonN;
+@property (weak, nonatomic) IBOutlet UIButton *botonO;
+@property (weak, nonatomic) IBOutlet UIButton *botonP;
+@property (weak, nonatomic) IBOutlet UIButton *botonQ;
+@property (weak, nonatomic) IBOutlet UIButton *botonR;
+@property (weak, nonatomic) IBOutlet UIButton *botonS;
+@property (weak, nonatomic) IBOutlet UIButton *botonT;
+@property (weak, nonatomic) IBOutlet UIButton *botonU;
+@property (weak, nonatomic) IBOutlet UIButton *botonV;
+@property (weak, nonatomic) IBOutlet UIButton *botonW;
+@property (weak, nonatomic) IBOutlet UIButton *botonX;
+@property (weak, nonatomic) IBOutlet UIButton *botonY;
+@property (weak, nonatomic) IBOutlet UIButton *botonZ;
+
 
 - (IBAction)botonA:(id)sender;
 - (IBAction)botonB:(id)sender;

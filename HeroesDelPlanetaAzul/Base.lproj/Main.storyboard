@@ -33,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1h-nJ-gy4">
-                                <rect key="frame" x="119" y="435" width="530" height="90"/>
+                                <rect key="frame" x="119" y="303" width="530" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="botonJugar2.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -43,7 +43,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dqk-h4-yKT">
-                                <rect key="frame" x="119" y="688" width="530" height="90"/>
+                                <rect key="frame" x="119" y="550" width="530" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="botonPuntajes2.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -53,7 +53,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMK-Kt-0fA">
-                                <rect key="frame" x="119" y="844" width="530" height="90"/>
+                                <rect key="frame" x="119" y="669" width="530" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="botonAjustes2.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -62,12 +62,8 @@
                                     <segue destination="gbv-TJ-u57" kind="push" identifier="ajustes" id="6t6-gb-6pj"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="cWW-Rb-de8">
-                                <rect key="frame" x="35" y="107" width="698" height="247"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pcu-zZ-rZr">
-                                <rect key="frame" x="119" y="556" width="530" height="90"/>
+                                <rect key="frame" x="119" y="418" width="530" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="botonInstruccion.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -76,6 +72,14 @@
                                     <segue destination="z7E-us-JNJ" kind="push" identifier="instrucciones" id="OCy-rx-DRE"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="planeta.png" translatesAutoresizingMaskIntoConstraints="NO" id="bEI-UH-xUs">
+                                <rect key="frame" x="225" y="732" width="318" height="318"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="cWW-Rb-de8">
+                                <rect key="frame" x="35" y="14" width="698" height="247"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -98,8 +102,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Usos del agua" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5LT-pL-b91">
-                                <rect key="frame" x="56" y="36" width="657" height="80"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Usos del agua" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5LT-pL-b91">
+                                <rect key="frame" x="56" y="78" width="657" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="56"/>
                                 <color key="textColor" red="0.29798586264974025" green="0.84853181012839085" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -526,7 +530,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I3v-i7-2Ew">
-                                <rect key="frame" x="11" y="41" width="155" height="50"/>
+                                <rect key="frame" x="11" y="20" width="155" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
                                 <state key="normal" title="Regresar" image="botonRegresar.png">
@@ -537,11 +541,65 @@
                                     <action selector="regresarButton:" destination="Txn-Fm-SqM" eventType="touchUpInside" id="x3N-Ol-d8E"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbi-8q-M5L">
+                                <rect key="frame" x="593" y="20" width="155" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                <state key="normal" title="Regresar" image="botonSiguiente.png">
+                                    <color key="titleColor" red="0.29798586259999998" green="0.84853181010000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="siguienteButton:" destination="Txn-Fm-SqM" eventType="touchUpInside" id="yge-YJ-tGj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Puntos:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="41o-R7-jkc">
+                                <rect key="frame" x="353" y="512" width="230" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Errores restantes:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ihy-PL-LZZ">
+                                <rect key="frame" x="56" y="512" width="230" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="DjV-Q3-q9t"/>
                     <connections>
+                        <outlet property="botonA" destination="OFU-1n-ddx" id="6nF-bj-zp6"/>
+                        <outlet property="botonB" destination="hlZ-NR-e3i" id="P2N-JS-zvM"/>
+                        <outlet property="botonC" destination="8nO-vj-yM0" id="Yzd-7C-wbN"/>
+                        <outlet property="botonD" destination="Yte-CY-f5H" id="v9s-BO-mWj"/>
+                        <outlet property="botonE" destination="QJK-36-RcB" id="v6i-TT-5dt"/>
+                        <outlet property="botonF" destination="EZ0-nJ-Sdp" id="Wuo-aJ-RIP"/>
+                        <outlet property="botonG" destination="jwC-Ul-9DA" id="TwH-VY-i05"/>
+                        <outlet property="botonH" destination="kDX-aR-o5g" id="u2B-A3-L8P"/>
+                        <outlet property="botonI" destination="RnD-Lt-XeI" id="QSD-xD-Psw"/>
+                        <outlet property="botonJ" destination="2l0-hN-TOa" id="dKo-JQ-eBU"/>
+                        <outlet property="botonK" destination="coh-vp-M47" id="qWf-S2-hSO"/>
+                        <outlet property="botonL" destination="f4B-f2-8bD" id="0no-Ij-Fve"/>
+                        <outlet property="botonM" destination="mSC-N1-M6v" id="xg2-aq-4Np"/>
+                        <outlet property="botonN" destination="e7d-Lz-sXX" id="MCS-4A-zZk"/>
+                        <outlet property="botonO" destination="0We-sF-ik7" id="7Ts-lV-cSi"/>
+                        <outlet property="botonP" destination="ecx-5a-Q0w" id="EqT-yk-cLu"/>
+                        <outlet property="botonQ" destination="sRg-Hf-Jq9" id="TJK-yq-A7j"/>
+                        <outlet property="botonR" destination="5mY-ou-ytN" id="UsW-iZ-eXk"/>
+                        <outlet property="botonS" destination="b4v-Lh-iBF" id="Xjr-iw-PMs"/>
+                        <outlet property="botonT" destination="tnJ-nj-mL5" id="6Vp-WH-YCw"/>
+                        <outlet property="botonU" destination="N8k-NU-im9" id="aD5-tj-VXl"/>
+                        <outlet property="botonV" destination="j5h-iS-Zv7" id="nC3-fq-mZo"/>
+                        <outlet property="botonW" destination="8Rz-Mw-Ssh" id="qfa-T3-BEP"/>
+                        <outlet property="botonX" destination="Lwy-e1-qzj" id="rt5-kq-GTf"/>
+                        <outlet property="botonY" destination="yLN-ef-LFO" id="cC8-SB-mOb"/>
+                        <outlet property="botonZ" destination="b7B-br-2zz" id="01B-1o-IAn"/>
+                        <outlet property="erroresLabel" destination="Ihy-PL-LZZ" id="01c-k3-oiN"/>
+                        <outlet property="fotoImageView" destination="IAR-6Q-P19" id="SPu-hR-jKs"/>
                         <outlet property="fraseLabel" destination="5LT-pL-b91" id="aq9-38-LrN"/>
                         <outlet property="imageView1" destination="hPk-j9-kI9" id="ghr-En-Sgk"/>
                         <outlet property="imageView10" destination="At1-Kp-wwn" id="RRK-vt-2Qx"/>
@@ -582,6 +640,8 @@
                         <outlet property="imageView7" destination="AFE-UB-0o9" id="bM1-Sp-Ylh"/>
                         <outlet property="imageView8" destination="8W4-pl-fUU" id="cXG-LB-Tsh"/>
                         <outlet property="imageView9" destination="8li-kT-RUt" id="7iW-bp-cU1"/>
+                        <outlet property="puntosLabel" destination="41o-R7-jkc" id="Kmf-ba-o0j"/>
+                        <outlet property="siguienteButton" destination="Vbi-8q-M5L" id="X4t-sK-MMI"/>
                         <segue destination="aYM-xf-B2N" kind="push" identifier="guardar" id="9c6-ej-oMy"/>
                     </connections>
                 </viewController>
@@ -1025,6 +1085,7 @@
         <image name="botonLetraZ.png" width="70" height="70"/>
         <image name="botonPuntajes2.png" width="530" height="90"/>
         <image name="botonRegresar.png" width="155" height="50"/>
+        <image name="botonSiguiente.png" width="155" height="50"/>
         <image name="escudo.png" width="294" height="297"/>
         <image name="foto12.png" width="430" height="430"/>
         <image name="ingresaNombre.png" width="370" height="50"/>
@@ -1041,6 +1102,7 @@
         <image name="num7.png" width="70" height="70"/>
         <image name="num8.png" width="70" height="70"/>
         <image name="num9.png" width="70" height="70"/>
+        <image name="planeta.png" width="512" height="512"/>
         <image name="sonido.png" width="210" height="70"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -9,29 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HeroesDelPlanetaAzul/WoopViewController.m"
-            timestampString = "419791048.372987"
+            filePath = "HeroesDelPlanetaAzul/JuegoViewController.m"
+            timestampString = "419821865.908648"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HeroesDelPlanetaAzul/BDmanejo.m"
-            timestampString = "419791589.343769"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
-            landmarkName = "-cargarFrases"
+            startingLineNumber = "475"
+            endingLineNumber = "475"
+            landmarkName = "-buscaLetra:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

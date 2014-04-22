@@ -79,6 +79,8 @@
 		FACC10951902EFB7002F5C64 /* Partida.m in Sources */ = {isa = PBXBuildFile; fileRef = FACC10941902EFB7002F5C64 /* Partida.m */; };
 		FACC10981902EFB7002F5C64 /* Juego.m in Sources */ = {isa = PBXBuildFile; fileRef = FACC10971902EFB7002F5C64 /* Juego.m */; };
 		FACC109B1902EFB7002F5C64 /* Escudo.m in Sources */ = {isa = PBXBuildFile; fileRef = FACC109A1902EFB7002F5C64 /* Escudo.m */; };
+		FAD2A3CF1905F0B300E3EF84 /* botonSiguiente.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD2A3CE1905F0B200E3EF84 /* botonSiguiente.png */; };
+		FAD2A3D11905FA5000E3EF84 /* planeta.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD2A3D01905FA5000E3EF84 /* planeta.png */; };
 		FAE1001B18E385520066B4E6 /* espacioA.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE1000018E385520066B4E6 /* espacioA.png */; };
 		FAE1001C18E385520066B4E6 /* espacioB.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE1000118E385520066B4E6 /* espacioB.png */; };
 		FAE1001D18E385520066B4E6 /* espacioC.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE1000218E385520066B4E6 /* espacioC.png */; };
@@ -235,6 +237,8 @@
 		FACC10971902EFB7002F5C64 /* Juego.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Juego.m; sourceTree = "<group>"; };
 		FACC10991902EFB7002F5C64 /* Escudo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Escudo.h; sourceTree = "<group>"; };
 		FACC109A1902EFB7002F5C64 /* Escudo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Escudo.m; sourceTree = "<group>"; };
+		FAD2A3CE1905F0B200E3EF84 /* botonSiguiente.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = botonSiguiente.png; path = Recursos/botonSiguiente.png; sourceTree = SOURCE_ROOT; };
+		FAD2A3D01905FA5000E3EF84 /* planeta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = planeta.png; path = Recursos/planeta.png; sourceTree = SOURCE_ROOT; };
 		FAE1000018E385520066B4E6 /* espacioA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = espacioA.png; path = Recursos/espacioA.png; sourceTree = SOURCE_ROOT; };
 		FAE1000118E385520066B4E6 /* espacioB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = espacioB.png; path = Recursos/espacioB.png; sourceTree = SOURCE_ROOT; };
 		FAE1000218E385520066B4E6 /* espacioC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = espacioC.png; path = Recursos/espacioC.png; sourceTree = SOURCE_ROOT; };
@@ -373,12 +377,14 @@
 				FA03A97B1904769000C8D8F0 /* Escudos */,
 				FA03A97A19046DDE00C8D8F0 /* ProtocoloGuardar.h */,
 				158978CE18E526CA002F61DF /* botoninstrucciones.png */,
+				FAD2A3CE1905F0B200E3EF84 /* botonSiguiente.png */,
 				FAC7DE3118E3BAD90097B4F4 /* botonSaltar.png */,
 				FAC7DE2F18E3BA150097B4F4 /* intrucciones.png */,
 				FAC7DE2D18E3B4090097B4F4 /* botonGuardar.png */,
 				FAC7DE2B18E3B1950097B4F4 /* ingresaNombre.png */,
 				FAC7DE2918E3B04C0097B4F4 /* TuPuntajeEs.png */,
 				FAC7DE2218E3ABD10097B4F4 /* facebook.png */,
+				FAD2A3D01905FA5000E3EF84 /* planeta.png */,
 				FAC7DE2318E3ABD10097B4F4 /* twitter.png */,
 				FAC7DE1E18E3AA310097B4F4 /* musica.png */,
 				158978D018E529A3002F61DF /* botonInstruccion.png */,
@@ -720,6 +726,7 @@
 				FA03A9861904769E00C8D8F0 /* escudo80.png in Resources */,
 				FA65E48E18E2688800260BA6 /* botonPuntajes.png in Resources */,
 				FA8DD55818FB5C1000D97219 /* foto9.png in Resources */,
+				FAD2A3CF1905F0B300E3EF84 /* botonSiguiente.png in Resources */,
 				FAE1FFE618E37E610066B4E6 /* botonLetraG.png in Resources */,
 				FAE1004118E39A3B0066B4E6 /* SnackerComic_PerosnalUseOnly.ttf in Resources */,
 				FAE1001D18E385520066B4E6 /* espacioC.png in Resources */,
@@ -771,6 +778,7 @@
 				FAE1003418E385520066B4E6 /* espacioY.png in Resources */,
 				FAC7DE1718E3A12D0097B4F4 /* num9.png in Resources */,
 				FAE1001F18E385520066B4E6 /* espacioE.png in Resources */,
+				FAD2A3D11905FA5000E3EF84 /* planeta.png in Resources */,
 				FAC7DE2518E3ABD10097B4F4 /* twitter.png in Resources */,
 				FA8DD55518FB5C1000D97219 /* foto6.png in Resources */,
 				FAE1002D18E385520066B4E6 /* espacioR.png in Resources */,
