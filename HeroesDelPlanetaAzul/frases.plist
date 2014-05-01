@@ -28,7 +28,7 @@
 	</dict>
 	<dict>
 		<key>frase</key>
-		<string>Basura en los ríos y lagos</string>
+		<string>Basura en los rios y lagos</string>
 		<key>apoyo</key>
 		<string>Fuentes de contaminación en el agua</string>
 		<key>imagen</key>
@@ -44,7 +44,7 @@
 	</dict>
 	<dict>
 		<key>frase</key>
-		<string>Salida de drenaje en ríos y lagos</string>
+		<string>Salida de drenaje en rios y lagos</string>
 		<key>apoyo</key>
 		<string>Fuentes de contaminación en el agua</string>
 		<key>imagen</key>
@@ -60,7 +60,7 @@
 	</dict>
 	<dict>
 		<key>frase</key>
-		<string>Para generar energía eléctrica</string>
+		<string>Para generar energia electrica</string>
 		<key>apoyo</key>
 		<string>Usos del agua</string>
 		<key>imagen</key>
@@ -76,7 +76,7 @@
 	</dict>
 	<dict>
 		<key>frase</key>
-		<string>En la cría de ganado</string>
+		<string>En la cria de ganado</string>
 		<key>apoyo</key>
 		<string>Usos del agua</string>
 		<key>imagen</key>
