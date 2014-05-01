@@ -10,7 +10,10 @@
 
 @interface guardarViewController (){
     NSMutableArray *listaPartidas;
+    NSMutableArray *listaEscudos;  //contiene las frases obtenidas del CoreData
 }
+
+-(void) cargarEscudo;
 
 @end
 
@@ -43,8 +46,39 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
     
+    if (!listaEscudos) {
+        listaEscudos= [[NSMutableArray alloc] init];
+    }
+    
+    BDmanejo *servicios = [BDmanejo instancia];
+
+    [servicios cargarEscudos];
+    
+    listaEscudos = servicios.listaEscudos;
+    
+    [self cargarEscudo];
     
     self.puntosLabel.text = [NSString stringWithFormat:@"%@",[self.detailItem valueForKey:@"puntos"]];
+}
+
+-(void) cargarEscudo{
+    
+    NSNumber  *punt = [NSNumber numberWithInteger: [[self.detailItem valueForKey:@"puntos"] intValue]];
+    
+    if ([punt integerValue] <= 715){
+        NSString *nombreFoto = [NSString stringWithFormat:@"escudoBronce.png"];
+        self.escudoImageView.image = [UIImage imageNamed:nombreFoto];
+    }
+    else if ([punt integerValue] <= 1430 && [punt integerValue] >= 716){
+        NSString *nombreFoto = [NSString stringWithFormat:@"escudoPlata.png"];
+        self.escudoImageView.image = [UIImage imageNamed:nombreFoto];
+    }
+    else if ([punt integerValue] >= 1431){
+        NSString *nombreFoto = [NSString stringWithFormat:@"escudoOro.png"];
+        self.escudoImageView.image = [UIImage imageNamed:nombreFoto];
+    }
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -72,6 +106,19 @@
 
 - (IBAction)guardarButton:(id)sender {
     
+    
+    if([self.nombreTF.text isEqualToString:@""]){
+        UIAlertView *error = [[UIAlertView alloc]
+                              initWithTitle:@"ERROR"
+                              message:@"Ingresa un nombre"
+                              delegate:self
+                              cancelButtonTitle:@"OK"
+                              otherButtonTitles:nil];
+        [error show];
+        
+    }
+    else{
+    
     NSDictionary *partidaEntidad = [[NSDictionary alloc] initWithObjectsAndKeys: [self.detailItem valueForKey:@"puntos"], @"puntos",self.nombreTF.text, @"nombre", nil];
     
     BDmanejo *servicios = [BDmanejo instancia];
@@ -79,5 +126,6 @@
     [servicios insertarPartida:partidaEntidad];
     
     [self.navigationController popToRootViewControllerAnimated:YES];
+}
 }
 @end

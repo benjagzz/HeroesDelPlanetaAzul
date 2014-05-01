@@ -14,6 +14,7 @@
 
 - (void)ordenaArreglo;
 - (void)desplegarPuntajes;
+- (NSString*)cargarEscudos:(int) puntos;
 
 @end
 
@@ -46,6 +47,8 @@
     [self ordenaArreglo];
     
     [self desplegarPuntajes];
+    
+    //[self cargarEscudos];
 }
 
 -(void)ordenaArreglo{
@@ -67,46 +70,74 @@
             case 0:
                 self.nombre1Label.text = nombre;
                 self.puntaje1Label.text = puntaje;
+                self.escudo1Imagen.image = [UIImage imageNamed:[self cargarEscudos:[[objeto valueForKey:@"puntaje" ] integerValue]]];
                 break;
             case 1:
                 self.nombre2Label.text = nombre;
                 self.puntaje2Label.text = puntaje;
+                self.escudo2Imagen.image = [UIImage imageNamed:[self cargarEscudos:[[objeto valueForKey:@"puntaje" ] integerValue]]];
                 break;
             case 2:
                 self.nombre3Label.text = nombre;
                 self.puntaje3Label.text = puntaje;
+                self.escudo3Imagen.image = [UIImage imageNamed:[self cargarEscudos:[[objeto valueForKey:@"puntaje" ] integerValue]]];
                 break;
             case 3:
                 self.nombre4Label.text = nombre;
                 self.puntaje4Label.text = puntaje;
+                self.escudo4Imagen.image = [UIImage imageNamed:[self cargarEscudos:[[objeto valueForKey:@"puntaje" ] integerValue]]];
                 break;
             case 4:
                 self.nombre5Label.text = nombre;
                 self.puntaje5Label.text = puntaje;
+                self.escudo5Imagen.image = [UIImage imageNamed:[self cargarEscudos:[[objeto valueForKey:@"puntaje" ] integerValue]]];
                 break;
             case 5:
                 self.nombre6Label.text = nombre;
                 self.puntaje6Label.text = puntaje;
+                self.escudo6Imagen.image = [UIImage imageNamed:[self cargarEscudos:[[objeto valueForKey:@"puntaje" ] integerValue]]];
                 break;
             case 6:
                 self.nombre7Label.text = nombre;
                 self.puntaje7Label.text = puntaje;
+                self.escudo7Imagen.image = [UIImage imageNamed:[self cargarEscudos:[[objeto valueForKey:@"puntaje" ] integerValue]]];
                 break;
             case 7:
                 self.nombre8Label.text = nombre;
                 self.puntaje8Label.text = puntaje;
+                self.escudo8Imagen.image = [UIImage imageNamed:[self cargarEscudos:[[objeto valueForKey:@"puntaje" ] integerValue]]];
                 break;
             case 8:
                 self.nombre9Label.text = nombre;
                 self.puntaje9Label.text = puntaje;
+                self.escudo9Imagen.image = [UIImage imageNamed:[self cargarEscudos:[[objeto valueForKey:@"puntaje" ] integerValue]]];
                 break;
             case 9:
                 self.nombre10Label.text = nombre;
                 self.puntaje10Label.text = puntaje;
+                self.escudo10Imagen.image = [UIImage imageNamed:[self cargarEscudos:[[objeto valueForKey:@"puntaje" ] integerValue]]];
                 break;
         }
     }
     
+}
+
+- (NSString*)cargarEscudos:(int) puntos{
+    
+    NSNumber  *punt = [NSNumber numberWithInteger: puntos];
+    NSString *nombreFoto;
+    
+    if ([punt integerValue] <= 715){
+         nombreFoto = [NSString stringWithFormat:@"escudoBronce.png"];
+    }
+    else if ([punt integerValue] <= 1430 && [punt integerValue] >= 716){
+        nombreFoto = [NSString stringWithFormat:@"escudoPlata.png"];
+    }
+    else if ([punt integerValue] >= 1431){
+        nombreFoto = [NSString stringWithFormat:@"escudoOro.png"];
+    }
+    
+    return nombreFoto;
 }
 
 - (void)didReceiveMemoryWarning

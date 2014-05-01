@@ -14,11 +14,15 @@
 #import "guardarViewController.h"
 
 @interface WoopViewController (){
-    NSMutableArray *lista;        //sirve para verificar que haya datos en el CoreData
+    NSMutableArray *lista;        //sirve para verificar que haya datos de las frases en el CoreData
+    NSMutableArray *lista2;       //sirve para verificar que haya datos de los escudos en el CoreData
     NSMutableArray *listaFrases;  //contiene las frases obtenidas del CoreData
+    NSMutableArray *listaEscudos;  //contiene las frases obtenidas del CoreData
+    
 }
 
 -(void) cargarFrasesPlist;
+-(void) cargarEscudosPlist;
 
 @end
 
@@ -32,17 +36,31 @@
         lista = [[NSMutableArray alloc] init];
     }
     
+    if (!lista2) {
+        lista2 = [[NSMutableArray alloc] init];
+    }
+    
     [self cargarFrasesPlist]; //se cargan las frases del Plist al Core Data
+    
+    [self cargarEscudosPlist];
     
     if (!listaFrases) {
         listaFrases = [[NSMutableArray alloc] init];
+    }
+    
+    if (!listaEscudos) {
+        listaEscudos= [[NSMutableArray alloc] init];
     }
     
     BDmanejo *servicios = [BDmanejo instancia];
     
     [servicios cargarFrases];
     
+    [servicios cargarEscudos];
+    
     listaFrases = servicios.listaFrases;  //se guarda en listaFrases la lista de frases obtenidas del coreData
+    
+    listaEscudos = servicios.listaEscudos;
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -77,6 +95,42 @@
             BDmanejo *servicios = [BDmanejo instancia];
             
             [servicios insertarFrase:fraseEntidad];  //se insertan los datos de la frase leída al CoreData
+        }
+    }
+}
+
+
+-(void) cargarEscudosPlist{
+    
+    BDmanejo *servicios = [BDmanejo instancia];
+    
+    lista2 = [servicios cargarEscudos];
+    
+    if (!lista2) {
+        
+        lista2 = [[NSMutableArray alloc]init];
+        
+        NSBundle *miBundle = [NSBundle mainBundle];
+        
+        NSString *path = [miBundle pathForResource:@"escudos" ofType:@"plist"];
+        
+        NSMutableArray *misEscudos = [NSMutableArray arrayWithContentsOfFile:path];
+        
+        for (int i = 0; i < [misEscudos count]; i++)
+        {
+            [lista2 addObject:misEscudos[i]];
+        }
+        
+        for (int i = 0; i < [misEscudos count]; i++)
+        {
+            NSDictionary *object = lista2[i];
+            
+            //inserta los datos de la lista en el CoreData
+            NSDictionary *escudoEntidad = [[NSDictionary alloc] initWithObjectsAndKeys: [object objectForKey:@"nombre"], @"nombre",[object objectForKey:@"foto"], @"foto", [object objectForKey:@"rangomin"], @"rangomin",[object objectForKey:@"rangomax"], @"rangomax", nil];
+            
+            BDmanejo *servicios = [BDmanejo instancia];
+            
+            [servicios insertarEscudo:escudoEntidad];  //se insertan los datos de la frase leída al CoreData
         }
     }
 }

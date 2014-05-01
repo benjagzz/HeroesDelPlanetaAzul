@@ -16,5 +16,6 @@
 - (IBAction)guardarButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *puntosLabel;
 @property (weak, nonatomic) IBOutlet UITextField *nombreTF;
+@property (weak, nonatomic) IBOutlet UIImageView *escudoImageView;
 
 @end

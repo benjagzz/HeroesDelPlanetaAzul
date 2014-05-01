@@ -4,13 +4,33 @@
 <array>
 	<dict>
 		<key>nombre</key>
-		<string></string>
+		<string>oro</string>
 		<key>foto</key>
-		<string></string>
+		<string>escudoOro.png</string>
+		<key>rangomin</key>
+		<integer>1431</integer>
+		<key>rangomax</key>
+		<integer>2145</integer>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>plata</string>
+		<key>foto</key>
+		<string>escudoPlata.png</string>
+		<key>rangomin</key>
+		<integer>716</integer>
+		<key>rangomax</key>
+		<integer>1430</integer>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>bronce</string>
+		<key>foto</key>
+		<string>escudoBronce.png</string>
 		<key>rangomin</key>
 		<integer>0</integer>
 		<key>rangomax</key>
-		<integer>0</integer>
+		<integer>715</integer>
 	</dict>
 </array>
 </plist>

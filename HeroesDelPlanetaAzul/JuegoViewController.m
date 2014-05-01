@@ -67,7 +67,7 @@
     
     //sigue = true;
     
-    self.erroresLabel.text = [NSString stringWithFormat:@"Errores restantes: %d", errores];
+    self.erroresLabel.text = [NSString stringWithFormat:@"%d", errores];
    
     BDmanejo *servicios = [BDmanejo instancia];
     
@@ -92,6 +92,8 @@
     activo = true;
     
     self.siguienteButton.hidden = true;
+    
+    self.felicidadesImageView.hidden = true;
 
     self.fraseLabel.text = [NSString stringWithFormat:@"%@", [[listaFrases objectAtIndex:num] valueForKey:@"apoyo"]];
     
@@ -101,13 +103,18 @@
     
     errores = 6;
     
-    self.erroresLabel.text = [NSString stringWithFormat:@"Errores restantes: %d", errores];
+    self.erroresLabel.text = [NSString stringWithFormat:@"%d", errores];
     
     totalLetras = 0;
     
     encontradas = 0;
     
     cont = 0;
+    
+    self.fotoImageView.hidden = false;
+    self.fraseLabel.hidden = false;
+    self.facebookButton.hidden = false;
+    self.twitterButton.hidden = false;
     
     self.botonA.enabled = YES;
     self.botonB.enabled = YES;
@@ -476,17 +483,17 @@
     if (encontradas == 0) {
         errores--;  //se suma un error porque no se encontró la letra
         
-        self.erroresLabel.text = [NSString stringWithFormat:@"Errores restantes: %d", errores];
+        self.erroresLabel.text = [NSString stringWithFormat:@"%d", errores];
         
         puntos = puntos - 10;
         
-        self.puntosLabel.text = [NSString stringWithFormat:@"Puntos: %d", puntos];
+        self.puntosLabel.text = [NSString stringWithFormat:@"%d", puntos];
     }
     
     else {  //si se encontró la letra, se suman 15 por letra
         puntos = puntos + 15;
         
-        self.puntosLabel.text = [NSString stringWithFormat:@"Puntos: %d", puntos];
+        self.puntosLabel.text = [NSString stringWithFormat:@"%d", puntos];
         
         encontradas = 0;
     }
@@ -508,6 +515,11 @@
     if (totalLetras == cont){
         //[self performSegueWithIdentifier:@"guardar" sender:self];
         self.siguienteButton.hidden = false;
+        self.felicidadesImageView.hidden = false;
+        self.fotoImageView.hidden = true;
+        self.fraseLabel.hidden = true;
+        self.facebookButton.hidden = true;
+        self.twitterButton.hidden = true;
         activo = false;
     }
     
@@ -763,10 +775,43 @@
 }
 
 - (IBAction)siguienteButton:(id)sender {  //boton que sirve para ir a la siguiente frase
+    
+    if(x<listaFrases.count-1){
+        x++;
+        [self preparaVista:x];
+    }
+    else{
+        NSNumber  *punt = [NSNumber numberWithInteger: puntos];
+        
+        datosPartida = [[NSDictionary alloc] initWithObjectsAndKeys: punt, @"puntos", nil];
+        
+        [self performSegueWithIdentifier:@"guardar" sender:self];
+    }
 
-    x++;
-    [self preparaVista:x];
+}
 
+- (IBAction)salirButton:(id)sender {
+    
+    NSNumber  *punt = [NSNumber numberWithInteger: puntos];
+    
+    datosPartida = [[NSDictionary alloc] initWithObjectsAndKeys: punt, @"puntos", nil];
+    
+    [self performSegueWithIdentifier:@"guardar" sender:self];
+    
+}
+
+- (IBAction)saltarFraseButton:(id)sender {
+    if(x<listaFrases.count-1){
+        x++;
+        [self preparaVista:x];
+    }
+    else{
+        NSNumber  *punt = [NSNumber numberWithInteger: puntos];
+        
+        datosPartida = [[NSDictionary alloc] initWithObjectsAndKeys: punt, @"puntos", nil];
+        
+        [self performSegueWithIdentifier:@"guardar" sender:self];
+    }
 }
 
 - (IBAction)postFacebook:(id)sender {
@@ -779,6 +824,10 @@
         self.regresarButton.hidden = YES;
         self.facebookButton.hidden = YES;
         self.twitterButton.hidden = YES;
+        self.gotaImageView.hidden = YES;
+        self.monedaImageVew.hidden = YES;
+        self.salirButton.hidden = YES;
+        self.saltarFraseButton.hidden = YES;
         
         CGRect rect = [self.view bounds];
         UIGraphicsBeginImageContext(rect.size);
@@ -792,6 +841,10 @@
         self.regresarButton.hidden = NO;
         self.facebookButton.hidden = NO;
         self.twitterButton.hidden = NO;
+        self.gotaImageView.hidden = NO;
+        self.monedaImageVew.hidden = NO;
+        self.salirButton.hidden = NO;
+        self.saltarFraseButton.hidden = NO;
         
         //set the initial text message
         [fbComposer setInitialText:@"¿Cúal es la frase?"];
@@ -823,6 +876,11 @@
         self.regresarButton.hidden = YES;
         self.facebookButton.hidden = YES;
         self.twitterButton.hidden = YES;
+        self.gotaImageView.hidden = YES;
+        self.monedaImageVew.hidden = YES;
+        self.salirButton.hidden = YES;
+        self.saltarFraseButton.hidden = YES;
+        
         
         CGRect rect = [self.view bounds];
         UIGraphicsBeginImageContext(rect.size);
@@ -836,6 +894,10 @@
         self.regresarButton.hidden = NO;
         self.facebookButton.hidden = NO;
         self.twitterButton.hidden = NO;
+        self.gotaImageView.hidden = NO;
+        self.monedaImageVew.hidden = NO;
+        self.salirButton.hidden = NO;
+        self.saltarFraseButton.hidden = NO;
         
         //set the initial text message
         [tweetController setInitialText:@"¿Cúal es la frase?"];

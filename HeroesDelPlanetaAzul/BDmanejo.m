@@ -88,6 +88,7 @@
 	if(self = [super init]){
 		[self setListaFrases:[[NSMutableArray alloc] init]];
         [self setListaPartidas:[[NSMutableArray alloc] init]];
+        [self setListaEscudos:[[NSMutableArray alloc] init]];
 		//[self setListaVacunas:[[NSMutableArray alloc]init]];
 	}
 	
@@ -114,6 +115,21 @@
 	nueva.frase = [frase objectForKey:@"frase"];
 	nueva.apoyo = [frase objectForKey:@"apoyo"];
     nueva.imagen = [frase objectForKey:@"imagen"];
+    
+    [self saveContext];
+    
+}
+
+-(void) insertarEscudo:(id)datosEscudo
+{
+	NSManagedObjectContext *context = self.managedObjectContext;
+	Escudo *nueva = [NSEntityDescription insertNewObjectForEntityForName:@"Escudo" inManagedObjectContext:context];
+	
+	NSDictionary *frase = (NSDictionary *)datosEscudo;
+	nueva.nombre = [frase objectForKey:@"nombre"];
+	nueva.foto = [frase objectForKey:@"foto"];
+    nueva.rangomin = [frase objectForKey:@"rangomin"];
+    nueva.rangomax = [frase objectForKey:@"rangomax"];
     
     [self saveContext];
     
@@ -192,6 +208,38 @@
         return self.listaPartidas;
 	}
 
+}
+
+-(NSMutableArray*)cargarEscudos
+{
+    NSManagedObjectContext *context = self.managedObjectContext;
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Escudo" inManagedObjectContext:context];
+	[request setEntity:entity];
+	
+	NSError *error;
+	NSMutableArray *results = (NSMutableArray*)[context executeFetchRequest:request error:&error];
+    Frase *temp;
+	
+	if(results.count==0){
+		NSLog(@"No hay frases guardadas...");
+        return NULL;
+	}else{
+        if (_listaEscudos) {
+            _listaEscudos = [[NSMutableArray alloc] init];
+        }
+        for (int i = 0; i < results.count; i++) {
+            temp = results[i];
+            NSMutableDictionary *miDicc = [[NSMutableDictionary alloc]initWithObjectsAndKeys:
+                                           [temp valueForKey:@"nombre"], @"nombre",
+                                           [temp valueForKey:@"foto"], @"foto",
+                                           [temp valueForKey:@"rangomin"], @"rangomin",
+                                           [temp valueForKey:@"rangomax"], @"rangomax", nil];
+            
+            [self.listaEscudos addObject:miDicc];
+        }
+        return self.listaEscudos;
+	}
 }
 
 

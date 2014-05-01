@@ -19,13 +19,20 @@
 @property (weak, nonatomic) IBOutlet UIButton *siguienteButton;
 
 - (IBAction)siguienteButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *saltarFraseButton;
+@property (weak, nonatomic) IBOutlet UIButton *salirButton;
+- (IBAction)salirButton:(id)sender;
+- (IBAction)saltarFraseButton:(id)sender;
 
 - (IBAction)postFacebook:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *facebookButton;
 @property (weak, nonatomic) IBOutlet UIButton *twitterButton;
 @property (weak, nonatomic) IBOutlet UIButton *regresarButton;
+@property (weak, nonatomic) IBOutlet UIImageView *monedaImageVew;
+@property (weak, nonatomic) IBOutlet UIImageView *gotaImageView;
 
 - (IBAction)postTwitter:(id)sender;
+@property (weak, nonatomic) IBOutlet UIImageView *felicidadesImageView;
 
 @property (weak, nonatomic) IBOutlet UIImageView *fotoImageView;
 
