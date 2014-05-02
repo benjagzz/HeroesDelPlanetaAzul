@@ -67,9 +67,9 @@
     if(sonido){
         [audioPlayer play];
     }
-    
-    [self.navigationController popViewControllerAnimated:YES];
      */
+    [self.navigationController popViewControllerAnimated:YES];
+    
 }
 
 - (IBAction)sonidoSwitch:(id)sender {
