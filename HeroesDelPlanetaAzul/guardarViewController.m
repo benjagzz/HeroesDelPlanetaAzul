@@ -7,10 +7,14 @@
 //
 
 #import "guardarViewController.h"
+#import <Social/Social.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface guardarViewController (){
     NSMutableArray *listaPartidas;
     NSMutableArray *listaEscudos;  //contiene las frases obtenidas del CoreData
+    AVAudioPlayer *audioPlayer;
 }
 
 -(void) cargarEscudo;
@@ -59,6 +63,11 @@
     [self cargarEscudo];
     
     self.puntosLabel.text = [NSString stringWithFormat:@"%@",[self.detailItem valueForKey:@"puntos"]];
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"click" ofType:@"mp3"];
+    
+    audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+
 }
 
 -(void) cargarEscudo{
@@ -106,6 +115,7 @@
 
 - (IBAction)guardarButton:(id)sender {
     
+    [audioPlayer play];
     
     if([self.nombreTF.text isEqualToString:@""]){
         UIAlertView *error = [[UIAlertView alloc]
@@ -127,5 +137,82 @@
     
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
+}
+- (IBAction)postFacebook:(id)sender {
+    
+    [audioPlayer play];
+    
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
+    {
+        SLComposeViewController *fbComposer = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+
+ /*
+        CGRect rect = [self.view bounds];
+        UIGraphicsBeginImageContext(rect.size);
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        [self.view.layer renderInContext:context];
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+*/
+        
+        //set the initial text message
+        NSString *texto = [NSString stringWithFormat:@"He obtenido %@ puntos. !Intenta vencerme!", [self.detailItem valueForKey:@"puntos"]];
+        UIImage *image = self.escudoImageView.image;
+        [fbComposer setInitialText:texto];
+        [fbComposer addImage: image];
+        
+        //present the composer to the user
+        [self presentViewController:fbComposer animated:YES completion:nil];
+        
+    }else {
+        UIAlertView *alertView = [[UIAlertView alloc]
+                                  initWithTitle:@"Facebook Error"
+                                  message:@"You may not have set up facebook service on your device or\n                                  You may not connected to internent.\nPlease check ..."
+                                  delegate:self
+                                  cancelButtonTitle:@"OK"
+                                  otherButtonTitles: nil];
+        [alertView show];
+        
+    }
+}
+
+- (IBAction)postTwitter:(id)sender {
+    
+    [audioPlayer play];
+    
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
+    {
+        SLComposeViewController *tweetController = [SLComposeViewController
+                                                    composeViewControllerForServiceType:SLServiceTypeTwitter];
+        
+        
+        /*
+        CGRect rect = [self.view bounds];
+        UIGraphicsBeginImageContext(rect.size);
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        [self.view.layer renderInContext:context];
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+         */
+        
+        //set the initial text message
+        NSString *texto = [NSString stringWithFormat:@"He obtenido %@ puntos. !Intenta vencerme!", [self.detailItem valueForKey:@"puntos"]];
+        UIImage *image = self.escudoImageView.image;
+        [tweetController setInitialText:texto];
+        [tweetController addImage:image];
+        
+        //present the controller to the user
+        [self presentViewController:tweetController animated:YES completion:nil];
+    }
+    else{
+        UIAlertView *alertView = [[UIAlertView alloc]
+                                  initWithTitle:@"twitter Error"
+                                  message:@"You may not have set up twitter service on your device or\n                                  You may not connected to internent.\nPlease check ..."
+                                  delegate:self
+                                  cancelButtonTitle:@"OK"
+                                  otherButtonTitles: nil];
+        [alertView show];
+        
+    }
 }
 @end

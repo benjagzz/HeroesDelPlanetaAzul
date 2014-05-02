@@ -8,6 +8,8 @@
 
 #import "JuegoViewController.h"
 #import <Social/Social.h>
+#import <MediaPlayer/MediaPlayer.h>
+#import <AVFoundation/AVFoundation.h>
 
 
 @interface JuegoViewController (){
@@ -17,6 +19,11 @@
     NSString *nombreImagen;
     NSMutableArray *listaFrases;  //arreglo de diccionarios que contendrá todas las frases
     NSDictionary *datosPartida;
+    
+    MPMoviePlayerViewController *moviePlayer;
+    AVAudioPlayer *audioPlayer;
+    AVAudioPlayer *audioEncontrado;
+    AVAudioPlayer *audioNoEncontrado;
     
     int errores;     //cantidad de errores cometidos
     int puntos;      //variable que lleva el acumulado de puntos
@@ -84,6 +91,20 @@
     [self preparaArreglo:x];
     
     [self acomodaLetras];
+    
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"click" ofType:@"mp3"];
+    
+    audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+
+    NSString *path1 = [[NSBundle mainBundle] pathForResource:@"gotItem" ofType:@"mp3"];
+    
+    audioEncontrado = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path1] error:NULL];
+
+    NSString *path2 = [[NSBundle mainBundle] pathForResource:@"lostItem" ofType:@"mp3"];
+    
+    audioNoEncontrado = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path2] error:NULL];
+
     
 }
 
@@ -481,6 +502,9 @@
         
     }
     if (encontradas == 0) {
+        
+        [audioNoEncontrado play];
+        
         errores--;  //se suma un error porque no se encontró la letra
         
         self.erroresLabel.text = [NSString stringWithFormat:@"%d", errores];
@@ -491,6 +515,9 @@
     }
     
     else {  //si se encontró la letra, se suman 15 por letra
+        
+        [audioEncontrado play];
+        
         puntos = puntos + 15;
         
         self.puntosLabel.text = [NSString stringWithFormat:@"%d", puntos];
@@ -770,14 +797,21 @@
 
 - (IBAction)regresarButton:(id)sender {
     
+    [audioPlayer play];
+    
     [self.navigationController popViewControllerAnimated:YES];
 
 }
 
 - (IBAction)siguienteButton:(id)sender {  //boton que sirve para ir a la siguiente frase
     
+    [audioPlayer play];
+    
     if(x<listaFrases.count-1){
         x++;
+        if(x == listaFrases.count-1){
+            self.saltarFraseButton.hidden = YES;
+        }
         [self preparaVista:x];
     }
     else{
@@ -792,6 +826,8 @@
 
 - (IBAction)salirButton:(id)sender {
     
+    [audioPlayer play];
+    
     NSNumber  *punt = [NSNumber numberWithInteger: puntos];
     
     datosPartida = [[NSDictionary alloc] initWithObjectsAndKeys: punt, @"puntos", nil];
@@ -801,8 +837,14 @@
 }
 
 - (IBAction)saltarFraseButton:(id)sender {
+    
+    [audioPlayer play];
+    
     if(x<listaFrases.count-1){
         x++;
+        if(x == listaFrases.count-1){
+            self.saltarFraseButton.hidden = YES;
+        }
         [self preparaVista:x];
     }
     else{
@@ -815,6 +857,9 @@
 }
 
 - (IBAction)postFacebook:(id)sender {
+    
+    [audioPlayer play];
+    
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
     {
         SLComposeViewController *fbComposer = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
@@ -866,6 +911,9 @@
 }
 
 - (IBAction)postTwitter:(id)sender {
+    
+    [audioPlayer play];
+    
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
     {
         SLComposeViewController *tweetController = [SLComposeViewController

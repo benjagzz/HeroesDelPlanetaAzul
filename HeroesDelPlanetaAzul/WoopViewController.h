@@ -11,5 +11,11 @@
 #import "BDmanejo.h"
 
 @interface WoopViewController : UIViewController
+- (IBAction)playButton:(id)sender;
+- (IBAction)instrButton:(id)sender;
+- (IBAction)puntButton:(id)sender;
+- (IBAction)ajustButton:(id)sender;
+- (IBAction)creditosButton:(id)sender;
+
 
 @end

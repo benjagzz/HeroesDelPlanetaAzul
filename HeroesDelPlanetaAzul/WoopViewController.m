@@ -12,12 +12,15 @@
 #import "PuntajesViewController.h"
 #import "JuegoViewController.h"
 #import "guardarViewController.h"
+#import <MediaPlayer/MediaPlayer.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface WoopViewController (){
     NSMutableArray *lista;        //sirve para verificar que haya datos de las frases en el CoreData
     NSMutableArray *lista2;       //sirve para verificar que haya datos de los escudos en el CoreData
     NSMutableArray *listaFrases;  //contiene las frases obtenidas del CoreData
     NSMutableArray *listaEscudos;  //contiene las frases obtenidas del CoreData
+    AVAudioPlayer *audioPlayer;
     
 }
 
@@ -62,6 +65,11 @@
     
     listaEscudos = servicios.listaEscudos;
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"click" ofType:@"mp3"];
+    
+    audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+    
 }
 
 -(void) cargarFrasesPlist{
@@ -162,4 +170,33 @@
 
 
 
+- (IBAction)playButton:(id)sender {
+    
+    [audioPlayer play];
+    
+}
+
+- (IBAction)instrButton:(id)sender {
+    
+    [audioPlayer play];
+    
+}
+
+- (IBAction)puntButton:(id)sender {
+    
+    [audioPlayer play];
+    
+}
+
+- (IBAction)ajustButton:(id)sender {
+    
+    [audioPlayer play];
+    
+}
+
+- (IBAction)creditosButton:(id)sender {
+    
+    [audioPlayer play];
+    
+}
 @end

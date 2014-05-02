@@ -17,5 +17,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *puntosLabel;
 @property (weak, nonatomic) IBOutlet UITextField *nombreTF;
 @property (weak, nonatomic) IBOutlet UIImageView *escudoImageView;
+- (IBAction)postFacebook:(id)sender;
+- (IBAction)postTwitter:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *facebookButton;
+@property (weak, nonatomic) IBOutlet UIButton *twitterButton;
 
 @end

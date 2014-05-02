@@ -7,8 +7,12 @@
 //
 
 #import "AjustesViewController.h"
+#import <MediaPlayer/MediaPlayer.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface AjustesViewController ()
+@interface AjustesViewController (){
+    AVAudioPlayer *audioPlayer;
+}
 
 @end
 
@@ -26,7 +30,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"click" ofType:@"mp3"];
+    
+    audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,6 +63,35 @@
 */
 
 - (IBAction)regresarButton:(id)sender {
+    /*
+    if(sonido){
+        [audioPlayer play];
+    }
+    
     [self.navigationController popViewControllerAnimated:YES];
+     */
+}
+
+- (IBAction)sonidoSwitch:(id)sender {
+    
+    /*
+     if(self.sonidoOutlet.on){
+        sonido = true;
+    }
+    else {
+        sonido = false;
+    }
+     */
+}
+
+- (IBAction)musicaSwitch:(id)sender {
+    /*
+    if(self.musicaOutlet.on){
+        musica = true;
+    }
+    else {
+        musica = false;
+    }
+     */
 }
 @end

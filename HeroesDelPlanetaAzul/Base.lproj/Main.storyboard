@@ -18,7 +18,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xLm-FN-VSo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2235" y="-985"/>
+            <point key="canvasLocation" x="-2235" y="-1199"/>
         </scene>
         <!--Woop View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -43,6 +43,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="playButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="euS-fE-iOA"/>
                                     <segue destination="Txn-Fm-SqM" kind="push" identifier="jugar" id="9d6-iZ-d8N"/>
                                 </connections>
                             </button>
@@ -53,6 +54,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="puntButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sFs-KW-48x"/>
                                     <segue destination="bp3-mR-mKl" kind="push" identifier="puntajes" id="iey-3G-YSw"/>
                                 </connections>
                             </button>
@@ -63,6 +65,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="ajustButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ycJ-Dc-f28"/>
                                     <segue destination="gbv-TJ-u57" kind="push" identifier="ajustes" id="6t6-gb-6pj"/>
                                 </connections>
                             </button>
@@ -73,6 +76,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="instrButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CUG-So-Smk"/>
                                     <segue destination="z7E-us-JNJ" kind="push" identifier="instrucciones" id="OCy-rx-DRE"/>
                                 </connections>
                             </button>
@@ -84,6 +88,17 @@
                                 <rect key="frame" x="35" y="14" width="698" height="247"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TV5-7c-nBQ">
+                                <rect key="frame" x="687" y="954" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="botonCreditos.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="creditosButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lF0-3u-H3J"/>
+                                    <segue destination="4bG-TH-uQs" kind="push" identifier="creditos" id="Fsk-Wh-Vmb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -92,7 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1238" y="-977"/>
+            <point key="canvasLocation" x="-1242" y="-1199"/>
         </scene>
         <!--Juego View Controller-->
         <scene sceneID="zAc-fD-8FK">
@@ -586,7 +601,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Puntos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="41o-R7-jkc">
-                                <rect key="frame" x="599" y="454" width="115" height="26"/>
+                                <rect key="frame" x="616" y="437" width="115" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
                                 <color key="textColor" red="0.22745099663734436" green="0.85098046064376831" blue="0.98431378602981567" alpha="1" colorSpace="deviceRGB"/>
@@ -613,7 +628,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="moneda.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bdt-bZ-pjh">
-                                <rect key="frame" x="621" y="376" width="70" height="70"/>
+                                <rect key="frame" x="583" y="432" width="35" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ihy-PL-LZZ">
@@ -733,6 +748,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iah-tL-uYx">
+                                <rect key="frame" x="673" y="486" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="twitterIcon.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="postTwitter:" destination="aYM-xf-B2N" eventType="touchUpInside" id="bYq-bh-VEA"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="NdG-E5-dGr">
                                 <rect key="frame" x="208" y="594" width="367" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -768,14 +793,26 @@
                                     <action selector="guardarButton:" destination="aYM-xf-B2N" eventType="touchUpInside" id="3dV-uk-f8a"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I72-WI-kEL">
+                                <rect key="frame" x="601" y="486" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="facebookIcon.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="postFacebook:" destination="aYM-xf-B2N" eventType="touchUpInside" id="udX-Qy-EWs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="gWB-fI-aK5"/>
                     <connections>
                         <outlet property="escudoImageView" destination="Mb4-WZ-nSc" id="cLW-3a-ifz"/>
+                        <outlet property="facebookButton" destination="I72-WI-kEL" id="9Dw-jz-jnT"/>
                         <outlet property="nombreTF" destination="NdG-E5-dGr" id="o41-Rd-HQQ"/>
                         <outlet property="puntosLabel" destination="w64-pr-GGs" id="ntZ-AU-L2X"/>
+                        <outlet property="twitterButton" destination="iah-tL-uYx" id="S37-dt-uQ2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K3l-eW-S0p" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -794,12 +831,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondoVacio.png" translatesAutoresizingMaskIntoConstraints="NO" id="YPW-9y-K90">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="intrucciones.png" translatesAutoresizingMaskIntoConstraints="NO" id="jny-1E-h6n">
                                 <rect key="frame" x="18" y="59" width="732" height="918"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FI7-mz-VTs">
-                                <rect key="frame" x="538" y="934" width="210" height="70"/>
+                                <rect key="frame" x="0.0" y="20" width="210" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="botonRegresar.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -817,6 +858,45 @@
             </objects>
             <point key="canvasLocation" x="-236" y="-2463"/>
         </scene>
+        <!--Creditos View Controller-->
+        <scene sceneID="msg-RO-Kuw">
+            <objects>
+                <viewController id="4bG-TH-uQs" customClass="creditosViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0rm-5P-Tz6"/>
+                        <viewControllerLayoutGuide type="bottom" id="CP0-hd-W0C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0SX-aS-E2D">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondoVacio.png" translatesAutoresizingMaskIntoConstraints="NO" id="L0R-LX-vds">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="creditos.png" translatesAutoresizingMaskIntoConstraints="NO" id="Znh-Zn-XB1">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4X-Oc-Vei">
+                                <rect key="frame" x="20" y="20" width="155" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="botonRegresar.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="regresarButton:" destination="4bG-TH-uQs" eventType="touchUpInside" id="9lx-io-PEL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7rb-7F-rPB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="scy-gg-fkx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-225" y="2304"/>
+        </scene>
         <!--Ajustes View Controller-->
         <scene sceneID="N7d-oY-zB4">
             <objects>
@@ -829,6 +909,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondoVacio.png" translatesAutoresizingMaskIntoConstraints="NO" id="PvV-pF-yU2">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AjustesTitulo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zcg-HZ-fhs">
                                 <rect key="frame" x="43" y="100" width="682" height="126"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -848,10 +932,16 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3qd-Ip-tnC">
                                 <rect key="frame" x="488" y="314" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sonidoSwitch:" destination="gbv-TJ-u57" eventType="valueChanged" id="l1Z-RF-4aa"/>
+                                </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YA8-DQ-OtS">
                                 <rect key="frame" x="488" y="441" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="musicaSwitch:" destination="gbv-TJ-u57" eventType="valueChanged" id="B5c-Dl-rbO"/>
+                                </connections>
                             </switch>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sonido.png" translatesAutoresizingMaskIntoConstraints="NO" id="7D6-1z-BqR">
                                 <rect key="frame" x="232" y="295" width="210" height="70"/>
@@ -865,6 +955,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="lI8-fA-NTu"/>
+                    <connections>
+                        <outlet property="musicaOutlet" destination="YA8-DQ-OtS" id="h0Q-wu-faJ"/>
+                        <outlet property="sonidoOutlet" destination="3qd-Ip-tnC" id="7uB-M5-DCR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AgO-uT-zCR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -883,7 +977,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondoVacio.png" translatesAutoresizingMaskIntoConstraints="NO" id="hBt-Nx-7IN">
-                                <rect key="frame" x="-15" y="0.0" width="768" height="1024"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PuntajesTitulo.png" translatesAutoresizingMaskIntoConstraints="NO" id="wtB-WO-UI4">
@@ -1161,7 +1255,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EuG-RN-OE3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-261" y="-46"/>
+            <point key="canvasLocation" x="-236" y="-46"/>
         </scene>
     </scenes>
     <resources>
@@ -1169,6 +1263,7 @@
         <image name="PuntajesTitulo.png" width="530" height="90"/>
         <image name="TuPuntajeEs.png" width="660" height="130"/>
         <image name="botonAjustes2.png" width="90" height="90"/>
+        <image name="botonCreditos.png" width="60" height="60"/>
         <image name="botonGuardar.png" width="240" height="80"/>
         <image name="botonInstruccion.png" width="90" height="90"/>
         <image name="botonJugar2.png" width="90" height="90"/>
@@ -1203,6 +1298,7 @@
         <image name="botonSalir.png" width="155" height="50"/>
         <image name="botonSaltarFrase.png" width="300" height="50"/>
         <image name="botonSiguiente.png" width="155" height="50"/>
+        <image name="creditos.png" width="768" height="1024"/>
         <image name="escudoOro.png" width="300" height="300"/>
         <image name="facebookIcon.png" width="50" height="50"/>
         <image name="felicidades.png" width="350" height="80"/>
