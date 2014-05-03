@@ -12,11 +12,39 @@
 
 @interface AjustesViewController (){
     AVAudioPlayer *audioPlayer;
+    AVAudioPlayer *audioFondo;
 }
 
 @end
 
 @implementation AjustesViewController
+
+- (void)sonidoFondo
+{
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"fondo" ofType:@"mp3"];
+    audioFondo = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+    audioFondo.numberOfLoops = -1; //infinite
+    
+    [audioFondo play];
+}
+
+- (void)sonidoStopFondo
+{
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"fondo" ofType:@"mp3"];
+    audioFondo = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+    audioFondo.numberOfLoops = -1; //infinite
+    
+    [audioFondo stop];
+}
+
+- (void)setMusicaFondo:(id)newmusicaFondo
+{
+    if (_musicaFondo != newmusicaFondo) {
+        _musicaFondo = newmusicaFondo;
+        
+        [self viewDidLoad];
+    }
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -74,24 +102,31 @@
 
 - (IBAction)sonidoSwitch:(id)sender {
     
-    /*
+    
      if(self.sonidoOutlet.on){
-        sonido = true;
+         NSLog(@"true");
+         //sonido = true;
     }
     else {
-        sonido = false;
+        NSLog(@"false");
+        //sonido = false;
     }
-     */
+    
 }
 
 - (IBAction)musicaSwitch:(id)sender {
-    /*
+    
     if(self.musicaOutlet.on){
-        musica = true;
+            //[self sonidoFondo];
+            NSLog(@"true");
+            //musica = true;
     }
     else {
-        musica = false;
+        [_musicaFondo stop];
+        //[self sonidoStopFondo];
+        NSLog(@"false");
+        //musica = false;
     }
-     */
+    
 }
 @end

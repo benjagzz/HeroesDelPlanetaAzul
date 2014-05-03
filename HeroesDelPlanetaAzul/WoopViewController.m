@@ -22,7 +22,6 @@
     NSMutableArray *listaEscudos;  //contiene las frases obtenidas del CoreData
     AVAudioPlayer *audioPlayer;
     AVAudioPlayer *audioFondo;
-    
 }
 
 -(void) cargarFrasesPlist;
@@ -32,7 +31,7 @@
 
 @implementation WoopViewController
 
-- (void)sonidoIntro
+- (void)sonidoFondo
 {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"fondo" ofType:@"mp3"];
     audioFondo = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
@@ -43,7 +42,7 @@
 
 - (void)viewDidLoad
 {
-    [self sonidoIntro];
+    [self sonidoFondo];
     [super viewDidLoad];
     
     if (!lista) {
@@ -173,6 +172,8 @@
     }
     
     if ([[segue identifier] isEqualToString:@"ajustes"]) {
+        AVAudioPlayer *object = audioFondo;
+        [[segue destinationViewController] setMusicaFondo:object];
     }
     
     if ([[segue identifier] isEqualToString:@"jugar"]) {
@@ -208,6 +209,5 @@
 - (IBAction)creditosButton:(id)sender {
     
     [audioPlayer play];
-    
 }
 @end
