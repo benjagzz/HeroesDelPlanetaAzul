@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		155175F019159FA900F1710C /* intro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 155175EF19159FA900F1710C /* intro.mp3 */; };
+		155175F41915A33600F1710C /* fondo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 155175F31915A33600F1710C /* fondo.mp3 */; };
 		FA03A9371904680900C8D8F0 /* BDmanejo.m in Sources */ = {isa = PBXBuildFile; fileRef = FA03A9361904680900C8D8F0 /* BDmanejo.m */; };
 		FA4004B418FC409000D74A56 /* escudos.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA4004B318FC409000D74A56 /* escudos.plist */; };
 		FA65E45318E2607D00260BA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA65E45218E2607D00260BA6 /* Foundation.framework */; };
@@ -168,6 +170,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		155175EF19159FA900F1710C /* intro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = intro.mp3; path = Recursos/intro.mp3; sourceTree = SOURCE_ROOT; };
+		155175F31915A33600F1710C /* fondo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fondo.mp3; sourceTree = "<group>"; };
 		FA03A9351904680900C8D8F0 /* BDmanejo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDmanejo.h; sourceTree = "<group>"; };
 		FA03A9361904680900C8D8F0 /* BDmanejo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDmanejo.m; sourceTree = "<group>"; };
 		FA03A97A19046DDE00C8D8F0 /* ProtocoloGuardar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProtocoloGuardar.h; sourceTree = "<group>"; };
@@ -517,11 +521,13 @@
 		FAD968201912BFA700C11F6F /* Sonidos */ = {
 			isa = PBXGroup;
 			children = (
+				155175F31915A33600F1710C /* fondo.mp3 */,
 				FAD9691A191379C000C11F6F /* water.mp3 */,
 				FAD969181913791B00C11F6F /* CLDBossLevelFA.mp3 */,
 				FAD968211912C5A300C11F6F /* gotItem.mp3 */,
 				FAD968221912C5A300C11F6F /* lostItem.mp3 */,
 				FAD9681E1912BF9B00C11F6F /* click.mp3 */,
+				155175EF19159FA900F1710C /* intro.mp3 */,
 			);
 			name = Sonidos;
 			sourceTree = "<group>";
@@ -760,6 +766,7 @@
 				FAE1FFE918E37E610066B4E6 /* botonLetraJ.png in Resources */,
 				FAD967F819120C5E00C11F6F /* planeta.png in Resources */,
 				FAD969191913791B00C11F6F /* CLDBossLevelFA.mp3 in Resources */,
+				155175F019159FA900F1710C /* intro.mp3 in Resources */,
 				FAD968011912188B00C11F6F /* fondo.png in Resources */,
 				FAD967B819120C5E00C11F6F /* escudo152.png in Resources */,
 				FAD967BB19120C5E00C11F6F /* escudo58.png in Resources */,
@@ -804,6 +811,7 @@
 				FAE1002118E385520066B4E6 /* espacioF.png in Resources */,
 				FAD967FD19120C5E00C11F6F /* twitterIcon.png in Resources */,
 				FAE1002B18E385520066B4E6 /* espacioP.png in Resources */,
+				155175F41915A33600F1710C /* fondo.mp3 in Resources */,
 				FAD967E119120C5E00C11F6F /* foto2.png in Resources */,
 				FA65E46618E2607D00260BA6 /* Main.storyboard in Resources */,
 				FA4004B418FC409000D74A56 /* escudos.plist in Resources */,
