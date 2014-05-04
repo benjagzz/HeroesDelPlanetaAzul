@@ -12,30 +12,12 @@
 
 @interface AjustesViewController (){
     AVAudioPlayer *audioPlayer;
-    AVAudioPlayer *audioFondo;
+    NSString *sonidoA;
 }
 
 @end
 
 @implementation AjustesViewController
-
-- (void)sonidoFondo
-{
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"fondo" ofType:@"mp3"];
-    audioFondo = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
-    audioFondo.numberOfLoops = -1; //infinite
-    
-    [audioFondo play];
-}
-
-- (void)sonidoStopFondo
-{
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"fondo" ofType:@"mp3"];
-    audioFondo = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
-    audioFondo.numberOfLoops = -1; //infinite
-    
-    [audioFondo stop];
-}
 
 - (void)setMusicaFondo:(id)newmusicaFondo
 {
@@ -44,6 +26,29 @@
         
         [self viewDidLoad];
     }
+}
+
+-(void)setSonido:(id)newsonido
+{
+    if (_sonido != newsonido) {
+        _sonido = newsonido;
+        sonidoA = _sonido;
+        
+        [self viewDidLoad];
+    }
+    
+}
+
+- (void) sonidoBoton
+{
+    if ([sonidoA isEqualToString:@"on"]) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"click" ofType:@"mp3"];
+        
+        audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+        
+        [audioPlayer play];
+    }
+    
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -96,6 +101,7 @@
         [audioPlayer play];
     }
      */
+    [self sonidoBoton];
     [self.navigationController popViewControllerAnimated:YES];
     
 }
@@ -104,12 +110,12 @@
     
     
      if(self.sonidoOutlet.on){
+         sonidoA = @"on";
          NSLog(@"true");
-         //sonido = true;
     }
     else {
+        sonidoA = @"off";
         NSLog(@"false");
-        //sonido = false;
     }
     
 }
@@ -117,15 +123,10 @@
 - (IBAction)musicaSwitch:(id)sender {
     
     if(self.musicaOutlet.on){
-            //[self sonidoFondo];
-            NSLog(@"true");
-            //musica = true;
+            [_musicaFondo setVolume:1];
     }
     else {
-        [_musicaFondo stop];
-        //[self sonidoStopFondo];
-        NSLog(@"false");
-        //musica = false;
+            [_musicaFondo setVolume:0];
     }
     
 }
