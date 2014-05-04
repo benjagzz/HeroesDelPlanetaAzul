@@ -12,7 +12,6 @@
 
 @interface AjustesViewController (){
     AVAudioPlayer *audioPlayer;
-    NSString *sonidoA;
 }
 
 @end
@@ -26,29 +25,6 @@
         
         [self viewDidLoad];
     }
-}
-
--(void)setSonido:(id)newsonido
-{
-    if (_sonido != newsonido) {
-        _sonido = newsonido;
-        sonidoA = _sonido;
-        
-        [self viewDidLoad];
-    }
-    
-}
-
-- (void) sonidoBoton
-{
-    if ([sonidoA isEqualToString:@"on"]) {
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"click" ofType:@"mp3"];
-        
-        audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
-        
-        [audioPlayer play];
-    }
-    
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -101,7 +77,7 @@
         [audioPlayer play];
     }
      */
-    [self sonidoBoton];
+    [audioPlayer play];
     [self.navigationController popViewControllerAnimated:YES];
     
 }
@@ -110,11 +86,9 @@
     
     
      if(self.sonidoOutlet.on){
-         sonidoA = @"on";
          NSLog(@"true");
     }
     else {
-        sonidoA = @"off";
         NSLog(@"false");
     }
     

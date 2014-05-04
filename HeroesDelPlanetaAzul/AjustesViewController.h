@@ -13,7 +13,6 @@
 @interface AjustesViewController : UIViewController
 
 @property (strong, nonatomic) id musicaFondo;
-@property (strong, nonatomic) id sonido;
 - (IBAction)regresarButton:(id)sender;
 - (IBAction)sonidoSwitch:(id)sender;
 - (IBAction)musicaSwitch:(id)sender;

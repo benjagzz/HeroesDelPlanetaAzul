@@ -22,7 +22,6 @@
     NSMutableArray *listaEscudos;  //contiene las frases obtenidas del CoreData
     AVAudioPlayer *audioPlayer;
     AVAudioPlayer *audioFondo;
-    NSString *sonido;
 }
 -(void) cargarFrasesPlist;
 -(void) cargarEscudosPlist;
@@ -38,21 +37,8 @@
     audioFondo = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
     audioFondo.numberOfLoops = -1; //infinite
     [audioFondo setVolume:1];
-    sonido = @"on";
     [audioFondo play];
     }
-
-- (void) sonidoBoton
-{
-    if ([sonido isEqualToString:@"on"]) {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"click" ofType:@"mp3"];
-    
-    audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
-    
-    [audioPlayer play];
-    }
-    
-}
 
 - (void)viewDidLoad
 {
@@ -89,6 +75,10 @@
     
     listaEscudos = servicios.listaEscudos;
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"click" ofType:@"mp3"];
+    
+    audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
 }
 
 -(void) cargarFrasesPlist{
@@ -183,9 +173,6 @@
     if ([[segue identifier] isEqualToString:@"ajustes"]) {
         AVAudioPlayer *object = audioFondo;
         [[segue destinationViewController] setMusicaFondo:object];
-        
-        NSString *object2 = sonido;
-        [[segue destinationViewController] setSonido:object2];
     }
     
     if ([[segue identifier] isEqualToString:@"jugar"]) {
@@ -196,30 +183,30 @@
 
 - (IBAction)playButton:(id)sender {
     
-    [self sonidoBoton];
+    [audioPlayer play];
     
 }
 
 - (IBAction)instrButton:(id)sender {
     
-    [self sonidoBoton];
+    [audioPlayer play];
     
 }
 
 - (IBAction)puntButton:(id)sender {
     
-    [self sonidoBoton];
+    [audioPlayer play];
     
 }
 
 - (IBAction)ajustButton:(id)sender {
     
-    [self sonidoBoton];
+    [audioPlayer play];
     
 }
 
 - (IBAction)creditosButton:(id)sender {
     
-    [self sonidoBoton];
+    [audioPlayer play];
 }
 @end
