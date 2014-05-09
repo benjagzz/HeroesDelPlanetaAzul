@@ -115,6 +115,8 @@
     self.siguienteButton.hidden = true;
     
     self.felicidadesImageView.hidden = true;
+    
+    self.videoButton.hidden = true;
 
     self.fraseLabel.text = [NSString stringWithFormat:@"%@", [[listaFrases objectAtIndex:num] valueForKey:@"apoyo"]];
     
@@ -543,6 +545,7 @@
         //[self performSegueWithIdentifier:@"guardar" sender:self];
         self.siguienteButton.hidden = false;
         self.felicidadesImageView.hidden = false;
+        self.videoButton.hidden = false;
         self.fotoImageView.hidden = true;
         self.fraseLabel.hidden = true;
         self.facebookButton.hidden = true;
@@ -976,6 +979,9 @@
     if ([[segue identifier] isEqualToString:@"guardar"]) {
         
         [[segue destinationViewController] setDetailItem:datosPartida];
+        
+    }
+    if ([[segue identifier] isEqualToString:@"video"]) {
         
     }
 }

@@ -24,6 +24,8 @@
 		FA65E47418E2607E00260BA6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA65E45618E2607D00260BA6 /* UIKit.framework */; };
 		FA65E47C18E2607E00260BA6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA65E47A18E2607E00260BA6 /* InfoPlist.strings */; };
 		FA65E47E18E2607E00260BA6 /* HeroesDelPlanetaAzulTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA65E47D18E2607E00260BA6 /* HeroesDelPlanetaAzulTests.m */; };
+		FA6C4CBD191CA08E0074EB52 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6C4CBC191CA08E0074EB52 /* VideoViewController.m */; };
+		FA6C4CBF191CAB420074EB52 /* video.png in Resources */ = {isa = PBXBuildFile; fileRef = FA6C4CBE191CAB420074EB52 /* video.png */; };
 		FA8DD55F18FB5C9600D97219 /* frases.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA8DD55E18FB5C9600D97219 /* frases.plist */; };
 		FAC7DE1D18E3A8770097B4F4 /* AjustesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC7DE1C18E3A8770097B4F4 /* AjustesViewController.m */; };
 		FAC7DE2818E3AE9D0097B4F4 /* guardarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC7DE2718E3AE9D0097B4F4 /* guardarViewController.m */; };
@@ -193,6 +195,9 @@
 		FA65E47918E2607E00260BA6 /* HeroesDelPlanetaAzulTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HeroesDelPlanetaAzulTests-Info.plist"; sourceTree = "<group>"; };
 		FA65E47B18E2607E00260BA6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FA65E47D18E2607E00260BA6 /* HeroesDelPlanetaAzulTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeroesDelPlanetaAzulTests.m; sourceTree = "<group>"; };
+		FA6C4CBB191CA08D0074EB52 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		FA6C4CBC191CA08E0074EB52 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
+		FA6C4CBE191CAB420074EB52 /* video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video.png; sourceTree = "<group>"; };
 		FA8DD55E18FB5C9600D97219 /* frases.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = frases.plist; sourceTree = "<group>"; };
 		FAC7DE1B18E3A8770097B4F4 /* AjustesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AjustesViewController.h; sourceTree = "<group>"; };
 		FAC7DE1C18E3A8770097B4F4 /* AjustesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AjustesViewController.m; sourceTree = "<group>"; };
@@ -409,6 +414,8 @@
 				FA65E46818E2607D00260BA6 /* WoopViewController.m */,
 				FAE1003718E387E50066B4E6 /* JuegoViewController.h */,
 				FAE1003818E387E50066B4E6 /* JuegoViewController.m */,
+				FA6C4CBB191CA08D0074EB52 /* VideoViewController.h */,
+				FA6C4CBC191CA08E0074EB52 /* VideoViewController.m */,
 				FAC7DE2618E3AE9D0097B4F4 /* guardarViewController.h */,
 				FAC7DE2718E3AE9D0097B4F4 /* guardarViewController.m */,
 				FAC7DE3318E3BB360097B4F4 /* InstrViewController.h */,
@@ -551,6 +558,7 @@
 		FAD969141913728300C11F6F /* Otros */ = {
 			isa = PBXGroup;
 			children = (
+				FA6C4CBE191CAB420074EB52 /* video.png */,
 				FAD9678D19120C5E00C11F6F /* TuPuntajeEs.png */,
 				FAD9678C19120C5E00C11F6F /* sonido.png */,
 				FAD9678A19120C5E00C11F6F /* planeta.png */,
@@ -767,6 +775,7 @@
 				FAD967B819120C5E00C11F6F /* escudo152.png in Resources */,
 				FAD967BB19120C5E00C11F6F /* escudo58.png in Resources */,
 				FAD967DF19120C5E00C11F6F /* foto11.png in Resources */,
+				FA6C4CBF191CAB420074EB52 /* video.png in Resources */,
 				FAD967E619120C5E00C11F6F /* foto7.png in Resources */,
 				FAD968091912285D00C11F6F /* escudoPlata.png in Resources */,
 				FAE1FFE418E37E610066B4E6 /* botonLetraE.png in Resources */,
@@ -907,6 +916,7 @@
 				FA65E45F18E2607D00260BA6 /* main.m in Sources */,
 				FAD2A3DD1905FCB300E3EF84 /* Escudo.m in Sources */,
 				FA65E46318E2607D00260BA6 /* WoopAppDelegate.m in Sources */,
+				FA6C4CBD191CA08E0074EB52 /* VideoViewController.m in Sources */,
 				FAD968151912AC6800C11F6F /* creditosViewController.m in Sources */,
 				FAE1003C18E395EB0066B4E6 /* PuntajesViewController.m in Sources */,
 				FACC108F1902EC9C002F5C64 /* Modelo.xcdatamodeld in Sources */,

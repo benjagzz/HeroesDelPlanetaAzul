@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="QWw-p5-aY4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="QWw-p5-aY4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -642,6 +642,16 @@
                                 <rect key="frame" x="209" y="163" width="350" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWq-ew-Tex">
+                                <rect key="frame" x="338" y="319" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="video.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Tm6-dk-Ycq" kind="push" identifier="video" id="3uu-A6-tqn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -725,12 +735,58 @@
                         <outlet property="saltarFraseButton" destination="2Eo-bo-wCC" id="27K-PG-xOt"/>
                         <outlet property="siguienteButton" destination="Vbi-8q-M5L" id="X4t-sK-MMI"/>
                         <outlet property="twitterButton" destination="dt5-X9-IjH" id="ChN-pN-QP6"/>
+                        <outlet property="videoButton" destination="AWq-ew-Tex" id="ioZ-hX-j4q"/>
                         <segue destination="aYM-xf-B2N" kind="push" identifier="guardar" id="9c6-ej-oMy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14v-WP-3GW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-236" y="-1199"/>
+        </scene>
+        <!--Video View Controller-->
+        <scene sceneID="wRh-Nx-G5r">
+            <objects>
+                <viewController id="Tm6-dk-Ycq" customClass="VideoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NQz-kG-PJs"/>
+                        <viewControllerLayoutGuide type="bottom" id="3tP-Iq-Dg6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="W0g-FS-swS">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondoVacio.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xz6-XO-Vf3">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76J-MY-FL1">
+                                <rect key="frame" x="20" y="20" width="155" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                <state key="normal" title="Regresar" image="botonRegresar.png">
+                                    <color key="titleColor" red="0.29798586259999998" green="0.84853181010000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="regresarButton:" destination="Tm6-dk-Ycq" eventType="touchUpInside" id="i0T-aT-YVf"/>
+                                    <action selector="regresarButton:" destination="Txn-Fm-SqM" eventType="touchUpInside" id="vKo-Tc-4kW"/>
+                                </connections>
+                            </button>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ptR-qY-3fU">
+                                <rect key="frame" x="20" y="124" width="728" height="500"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wM2-Y7-uMI"/>
+                    <connections>
+                        <outlet property="webView" destination="ptR-qY-3fU" id="Gcj-5W-xvT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dUK-W4-xNi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="882" y="-1716"/>
         </scene>
         <!--Guardar View Controller-->
         <scene sceneID="MP5-cj-A2n">
@@ -817,7 +873,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K3l-eW-S0p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="759" y="-1199"/>
+            <point key="canvasLocation" x="875" y="-551"/>
         </scene>
         <!--Instr View Controller-->
         <scene sceneID="adB-dH-Tpq">
@@ -1324,6 +1380,7 @@
         <image name="planeta.png" width="512" height="512"/>
         <image name="sonido.png" width="210" height="70"/>
         <image name="twitterIcon.png" width="50" height="50"/>
+        <image name="video.png" width="75" height="75"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

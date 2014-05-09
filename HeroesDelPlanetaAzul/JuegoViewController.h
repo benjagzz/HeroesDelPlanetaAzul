@@ -17,6 +17,7 @@
 - (IBAction)regresarButton:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UIButton *siguienteButton;
+@property (weak, nonatomic) IBOutlet UIButton *videoButton;
 
 - (IBAction)siguienteButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *saltarFraseButton;
