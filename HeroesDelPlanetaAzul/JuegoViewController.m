@@ -1002,7 +1002,7 @@
         
     }
     if ([[segue identifier] isEqualToString:@"video"]) {
-        
+        [self sonidoBoton];
     }
 }
 @end

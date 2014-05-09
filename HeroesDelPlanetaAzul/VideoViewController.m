@@ -7,9 +7,13 @@
 //
 
 #import "VideoViewController.h"
+#import <MediaPlayer/MediaPlayer.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface VideoViewController (){
     NSMutableArray *videos;
+    AVAudioPlayer *audioPlayer;
+    NSString *boolSonido;
 }
 
 - (void)reproduceVideo;
@@ -17,6 +21,17 @@
 @end
 
 @implementation VideoViewController
+
+- (void)sonidoBoton
+{
+    Sonidos *servicios = [Sonidos sharedManager];
+    boolSonido = [servicios mandarSonido];
+    if ([boolSonido isEqualToString:@"on"]) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"click" ofType:@"mp3"];
+        audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+        [audioPlayer play];
+    }
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -85,5 +100,6 @@
 
 - (IBAction)regresarButton:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
+    [self sonidoBoton];
 }
 @end

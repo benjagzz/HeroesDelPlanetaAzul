@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Sonidos.h"
 
 @interface VideoViewController : UIViewController
 - (IBAction)regresarButton:(id)sender;
