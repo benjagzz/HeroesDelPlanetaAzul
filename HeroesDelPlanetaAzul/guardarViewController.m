@@ -15,6 +15,7 @@
     NSMutableArray *listaPartidas;
     NSMutableArray *listaEscudos;  //contiene las frases obtenidas del CoreData
     AVAudioPlayer *audioPlayer;
+    NSString *boolSonido;
 }
 
 -(void) cargarEscudo;
@@ -22,6 +23,17 @@
 @end
 
 @implementation guardarViewController
+
+- (void)sonidoBoton
+{
+    Sonidos *servicios = [Sonidos sharedManager];
+    boolSonido = [servicios mandarSonido];
+    if ([boolSonido isEqualToString:@"on"]) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"click" ofType:@"mp3"];
+        audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+        [audioPlayer play];
+    }
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -63,11 +75,6 @@
     [self cargarEscudo];
     
     self.puntosLabel.text = [NSString stringWithFormat:@"%@",[self.detailItem valueForKey:@"puntos"]];
-    
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"click" ofType:@"mp3"];
-    
-    audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
-
 }
 
 -(void) cargarEscudo{
@@ -115,7 +122,7 @@
 
 - (IBAction)guardarButton:(id)sender {
     
-    [audioPlayer play];
+    [self sonidoBoton];
     
     if([self.nombreTF.text isEqualToString:@""]){
         UIAlertView *error = [[UIAlertView alloc]
@@ -140,7 +147,7 @@
 }
 - (IBAction)postFacebook:(id)sender {
     
-    [audioPlayer play];
+    [self sonidoBoton];
     
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
     {
@@ -178,7 +185,7 @@
 
 - (IBAction)postTwitter:(id)sender {
     
-    [audioPlayer play];
+    [self sonidoBoton];
     
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
     {

@@ -24,6 +24,7 @@
     AVAudioPlayer *audioPlayer;
     AVAudioPlayer *audioEncontrado;
     AVAudioPlayer *audioNoEncontrado;
+    NSString *boolSonido;
     
     int errores;     //cantidad de errores cometidos
     int puntos;      //variable que lleva el acumulado de puntos
@@ -44,6 +45,40 @@
 @end
 
 @implementation JuegoViewController
+
+- (void)sonidoBoton
+{
+    Sonidos *servicios = [Sonidos sharedManager];
+    boolSonido = [servicios mandarSonido];
+    if ([boolSonido isEqualToString:@"on"]) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"click" ofType:@"mp3"];
+        audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+        [audioPlayer play];
+    }
+}
+
+- (void)sonidoEncontrado
+{
+    Sonidos *servicios = [Sonidos sharedManager];
+    boolSonido = [servicios mandarSonido];
+    if ([boolSonido isEqualToString:@"on"]) {
+        NSString *path1 = [[NSBundle mainBundle] pathForResource:@"gotItem" ofType:@"mp3"];
+        audioEncontrado = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path1] error:NULL];
+        [audioEncontrado play];
+    }
+}
+
+- (void)sonidoNOEncontrado
+{
+    Sonidos *servicios = [Sonidos sharedManager];
+    boolSonido = [servicios mandarSonido];
+    if ([boolSonido isEqualToString:@"on"]) {
+        NSString *path2 = [[NSBundle mainBundle] pathForResource:@"lostItem" ofType:@"mp3"];
+        audioNoEncontrado = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path2] error:NULL];
+        [audioNoEncontrado play];
+    }
+}
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -91,21 +126,6 @@
     [self preparaArreglo:x];
     
     [self acomodaLetras];
-    
-    
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"click" ofType:@"mp3"];
-    
-    audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
-
-    NSString *path1 = [[NSBundle mainBundle] pathForResource:@"gotItem" ofType:@"mp3"];
-    
-    audioEncontrado = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path1] error:NULL];
-
-    NSString *path2 = [[NSBundle mainBundle] pathForResource:@"lostItem" ofType:@"mp3"];
-    
-    audioNoEncontrado = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path2] error:NULL];
-
-    
 }
 
 - (void) preparaVista:(int)num{
@@ -505,7 +525,7 @@
     }
     if (encontradas == 0) {
         
-        [audioNoEncontrado play];
+        [self sonidoNOEncontrado];
         
         errores--;  //se suma un error porque no se encontró la letra
         
@@ -518,7 +538,7 @@
     
     else {  //si se encontró la letra, se suman 15 por letra
         
-        [audioEncontrado play];
+        [self sonidoEncontrado];
         
         puntos = puntos + 15;
         
@@ -800,7 +820,7 @@
 
 - (IBAction)regresarButton:(id)sender {
     
-    [audioPlayer play];
+    [self sonidoBoton];
     
     [self.navigationController popViewControllerAnimated:YES];
 
@@ -808,7 +828,7 @@
 
 - (IBAction)siguienteButton:(id)sender {  //boton que sirve para ir a la siguiente frase
     
-    [audioPlayer play];
+    [self sonidoBoton];
     
     if(x<listaFrases.count-1){
         x++;
@@ -829,7 +849,7 @@
 
 - (IBAction)salirButton:(id)sender {
     
-    [audioPlayer play];
+    [self sonidoBoton];
     
     NSNumber  *punt = [NSNumber numberWithInteger: puntos];
     
@@ -841,7 +861,7 @@
 
 - (IBAction)saltarFraseButton:(id)sender {
     
-    [audioPlayer play];
+    [self sonidoBoton];
     
     if(x<listaFrases.count-1){
         x++;
@@ -861,7 +881,7 @@
 
 - (IBAction)postFacebook:(id)sender {
     
-    [audioPlayer play];
+    [self sonidoBoton];
     
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
     {
@@ -915,7 +935,7 @@
 
 - (IBAction)postTwitter:(id)sender {
     
-    [audioPlayer play];
+    [self sonidoBoton];
     
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
     {

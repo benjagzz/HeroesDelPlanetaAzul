@@ -22,6 +22,7 @@
     NSMutableArray *listaEscudos;  //contiene las frases obtenidas del CoreData
     AVAudioPlayer *audioPlayer;
     AVAudioPlayer *audioFondo;
+    NSString *boolSonido;
 }
 -(void) cargarFrasesPlist;
 -(void) cargarEscudosPlist;
@@ -33,12 +34,26 @@
 
 - (void)sonidoFondo
 {
+    Sonidos *servicios = [Sonidos sharedManager];
+    [servicios buscarSonido:@"on"];
+    [servicios buscarMusica:@"on"];
     NSString *path = [[NSBundle mainBundle] pathForResource:@"fondo" ofType:@"mp3"];
     audioFondo = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
     audioFondo.numberOfLoops = -1; //infinite
     [audioFondo setVolume:1];
     [audioFondo play];
+}
+
+- (void)sonidoBoton
+{
+    Sonidos *servicios = [Sonidos sharedManager];
+    boolSonido = [servicios mandarSonido];
+    if ([boolSonido isEqualToString:@"on"]) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"click" ofType:@"mp3"];
+        audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+        [audioPlayer play];
     }
+}
 
 - (void)viewDidLoad
 {
@@ -75,10 +90,6 @@
     
     listaEscudos = servicios.listaEscudos;
 	// Do any additional setup after loading the view, typically from a nib.
-    
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"click" ofType:@"mp3"];
-    
-    audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
 }
 
 -(void) cargarFrasesPlist{
@@ -183,30 +194,30 @@
 
 - (IBAction)playButton:(id)sender {
     
-    [audioPlayer play];
+    [self  sonidoBoton];
     
 }
 
 - (IBAction)instrButton:(id)sender {
     
-    [audioPlayer play];
+    [self  sonidoBoton];
     
 }
 
 - (IBAction)puntButton:(id)sender {
     
-    [audioPlayer play];
+    [self  sonidoBoton];
     
 }
 
 - (IBAction)ajustButton:(id)sender {
     
-    [audioPlayer play];
+    [self  sonidoBoton];
     
 }
 
 - (IBAction)creditosButton:(id)sender {
     
-    [audioPlayer play];
+    [self  sonidoBoton];
 }
 @end

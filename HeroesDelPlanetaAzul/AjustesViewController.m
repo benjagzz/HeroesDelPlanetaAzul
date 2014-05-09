@@ -12,11 +12,24 @@
 
 @interface AjustesViewController (){
     AVAudioPlayer *audioPlayer;
+    NSString *boolSonido;
+    NSString *boolMusica;
 }
 
 @end
 
 @implementation AjustesViewController
+
+- (void)sonidoBoton
+{
+    Sonidos *servicios = [Sonidos sharedManager];
+    boolSonido = [servicios mandarSonido];
+    if ([boolSonido isEqualToString:@"on"]) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"click" ofType:@"mp3"];
+        audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+        [audioPlayer play];
+    }
+}
 
 - (void)setMusicaFondo:(id)newmusicaFondo
 {
@@ -39,13 +52,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     // Do any additional setup after loading the view.
-    
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"click" ofType:@"mp3"];
-    
-    audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
-
+    //Sonidos *servicios = [Sonidos sharedManager];
+    Sonidos *servicios = [Sonidos sharedManager];
+    boolMusica = [servicios mandarMusica];
+    boolSonido = [servicios mandarSonido];
+    if([boolMusica isEqualToString:@"on"]){
+        [self.musicaOutlet setOn:YES];
+    }
+    else {
+        [self.musicaOutlet setOn:NO];
+    }
+    if([boolSonido isEqualToString:@"on"]){
+        [self.sonidoOutlet setOn:YES];
+    }
+    else {
+        [self.sonidoOutlet setOn:NO];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,46 +84,54 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (IBAction)regresarButton:(id)sender {
     /*
-    if(sonido){
-        [audioPlayer play];
-    }
+     if(sonido){
+     [audioPlayer play];
+     }
      */
-    [audioPlayer play];
+    [self sonidoBoton];
     [self.navigationController popViewControllerAnimated:YES];
     
 }
 
 - (IBAction)sonidoSwitch:(id)sender {
-    
-    
-     if(self.sonidoOutlet.on){
-         NSLog(@"true");
+    Sonidos *servicios = [Sonidos sharedManager];
+    if(self.sonidoOutlet.on){
+        [servicios buscarSonido:@"on"];
+        boolSonido = [servicios mandarSonido];
+        [self sonidoBoton];
     }
     else {
-        NSLog(@"false");
+        [servicios buscarSonido:@"off"];
+        boolSonido = [servicios mandarSonido];
     }
     
 }
 
 - (IBAction)musicaSwitch:(id)sender {
-    
+    Sonidos *servicios = [Sonidos sharedManager];
     if(self.musicaOutlet.on){
-            [_musicaFondo setVolume:1];
+        [servicios buscarMusica:@"on"];
+        boolMusica = [servicios mandarMusica];
+        [_musicaFondo setVolume:1];
+        [self.musicaOutlet setOn:YES];
     }
     else {
-            [_musicaFondo setVolume:0];
+        [servicios buscarMusica:@"off"];
+        boolMusica = [servicios mandarMusica];
+        [_musicaFondo setVolume:0];
+        [self.musicaOutlet setOn:NO];
     }
     
 }

@@ -12,11 +12,23 @@
 
 @interface creditosViewController (){
     AVAudioPlayer *audioPlayer;
+    NSString *boolSonido;
 }
 
 @end
 
 @implementation creditosViewController
+
+- (void)sonidoBoton
+{
+    Sonidos *servicios = [Sonidos sharedManager];
+    boolSonido = [servicios mandarSonido];
+    if ([boolSonido isEqualToString:@"on"]) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"click" ofType:@"mp3"];
+        audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+        [audioPlayer play];
+    }
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,11 +43,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"click" ofType:@"mp3"];
-    
-    audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,7 +64,7 @@
 
 - (IBAction)regresarButton:(id)sender {
     
-    [audioPlayer play];
+    [self sonidoBoton];
     
     [self.navigationController popViewControllerAnimated:YES];
 

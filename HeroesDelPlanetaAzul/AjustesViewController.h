@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ProtocoloGuardar.h"
 #import "WoopViewController.h"
+#import "Sonidos.h"
 
 @interface AjustesViewController : UIViewController
 

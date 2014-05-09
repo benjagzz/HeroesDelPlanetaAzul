@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ProtocoloGuardar.h"
+#import "Sonidos.h"
 
 @interface InstrViewController : UIViewController
 

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ProtocoloGuardar.h"
 #import "BDmanejo.h"
+#import "Sonidos.h"
 
 @interface PuntajesViewController : UIViewController
 

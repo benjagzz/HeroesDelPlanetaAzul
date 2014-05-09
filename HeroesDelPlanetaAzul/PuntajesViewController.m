@@ -13,6 +13,7 @@
 @interface PuntajesViewController (){
     NSMutableArray *listaPartidas;
     AVAudioPlayer *audioPlayer;
+    NSString *boolSonido;
 }
 
 - (void)ordenaArreglo;
@@ -22,6 +23,17 @@
 @end
 
 @implementation PuntajesViewController
+
+- (void)sonidoBoton
+{
+    Sonidos *servicios = [Sonidos sharedManager];
+    boolSonido = [servicios mandarSonido];
+    if ([boolSonido isEqualToString:@"on"]) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"click" ofType:@"mp3"];
+        audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+        [audioPlayer play];
+    }
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -50,11 +62,6 @@
     [self ordenaArreglo];
     
     [self desplegarPuntajes];
-    
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"click" ofType:@"mp3"];
-    
-    audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
-
 }
 
 -(void)ordenaArreglo{
@@ -160,7 +167,7 @@
 
 - (IBAction)regresarButton:(id)sender {
     
-    [audioPlayer play];
+    [self sonidoBoton];
     
     [self.navigationController popViewControllerAnimated:YES];
 }

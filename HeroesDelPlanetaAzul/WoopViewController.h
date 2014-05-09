@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ProtocoloGuardar.h"
 #import "BDmanejo.h"
+#import "Sonidos.h"
 
 @interface WoopViewController : UIViewController
 - (IBAction)playButton:(id)sender;

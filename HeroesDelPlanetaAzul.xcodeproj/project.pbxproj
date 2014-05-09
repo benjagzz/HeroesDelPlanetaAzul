@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1500E939191D532000F1F713 /* Sonidos.m in Sources */ = {isa = PBXBuildFile; fileRef = 1500E938191D532000F1F713 /* Sonidos.m */; };
 		155175F41915A33600F1710C /* fondo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 155175F31915A33600F1710C /* fondo.mp3 */; };
 		FA03A9371904680900C8D8F0 /* BDmanejo.m in Sources */ = {isa = PBXBuildFile; fileRef = FA03A9361904680900C8D8F0 /* BDmanejo.m */; };
 		FA4004B418FC409000D74A56 /* escudos.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA4004B318FC409000D74A56 /* escudos.plist */; };
@@ -171,6 +172,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1500E937191D532000F1F713 /* Sonidos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sonidos.h; sourceTree = "<group>"; };
+		1500E938191D532000F1F713 /* Sonidos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sonidos.m; sourceTree = "<group>"; };
 		155175F31915A33600F1710C /* fondo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fondo.mp3; sourceTree = "<group>"; };
 		FA03A9351904680900C8D8F0 /* BDmanejo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDmanejo.h; sourceTree = "<group>"; };
 		FA03A9361904680900C8D8F0 /* BDmanejo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDmanejo.m; sourceTree = "<group>"; };
@@ -475,6 +478,8 @@
 				FAD2A3D61905FCB200E3EF84 /* Juego.m */,
 				FA03A9351904680900C8D8F0 /* BDmanejo.h */,
 				FA03A9361904680900C8D8F0 /* BDmanejo.m */,
+				1500E937191D532000F1F713 /* Sonidos.h */,
+				1500E938191D532000F1F713 /* Sonidos.m */,
 			);
 			name = "Modelo y Clases";
 			sourceTree = "<group>";
@@ -918,6 +923,7 @@
 				FA65E46318E2607D00260BA6 /* WoopAppDelegate.m in Sources */,
 				FA6C4CBD191CA08E0074EB52 /* VideoViewController.m in Sources */,
 				FAD968151912AC6800C11F6F /* creditosViewController.m in Sources */,
+				1500E939191D532000F1F713 /* Sonidos.m in Sources */,
 				FAE1003C18E395EB0066B4E6 /* PuntajesViewController.m in Sources */,
 				FACC108F1902EC9C002F5C64 /* Modelo.xcdatamodeld in Sources */,
 				FAD2A3D71905FCB200E3EF84 /* Juego.m in Sources */,

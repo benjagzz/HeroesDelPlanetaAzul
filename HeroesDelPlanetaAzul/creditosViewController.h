@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Sonidos.h"
 
 @interface creditosViewController : UIViewController
 - (IBAction)regresarButton:(id)sender;
