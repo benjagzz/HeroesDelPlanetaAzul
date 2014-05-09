@@ -14,6 +14,7 @@
 @interface JuegoViewController : UIViewController
 
 @property (strong, nonatomic) id detailItem;
+@property (strong, nonatomic) id musicaFondo;
 
 - (IBAction)regresarButton:(id)sender;
 

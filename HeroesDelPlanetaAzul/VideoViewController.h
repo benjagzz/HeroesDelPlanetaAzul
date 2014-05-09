@@ -12,5 +12,6 @@
 @interface VideoViewController : UIViewController
 - (IBAction)regresarButton:(id)sender;
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
+@property (strong, nonatomic) id musicaFondo;
 
 @end

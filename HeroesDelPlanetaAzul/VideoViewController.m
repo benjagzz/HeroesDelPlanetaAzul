@@ -14,6 +14,7 @@
     NSMutableArray *videos;
     AVAudioPlayer *audioPlayer;
     NSString *boolSonido;
+    NSString *boolMusica;
 }
 
 - (void)reproduceVideo;
@@ -21,6 +22,15 @@
 @end
 
 @implementation VideoViewController
+
+- (void)setMusicaFondo:(id)newmusicaFondo
+{
+    if (_musicaFondo != newmusicaFondo) {
+        _musicaFondo = newmusicaFondo;
+        
+        [self viewDidLoad];
+    }
+}
 
 - (void)sonidoBoton
 {
@@ -46,7 +56,11 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    Sonidos *servicios = [Sonidos sharedManager];
+    boolMusica = [servicios mandarMusica];
+    if([boolMusica isEqualToString:@"on"]){
+        [_musicaFondo setVolume:0];
+    }
     videos = [[NSMutableArray alloc] initWithObjects:@"Gq5Hvt3c0RY", @"VTfS_oHUHVs", @"TV5kTY--Yqk", @"1kFBrT3KZRE", @"tBAP_fqqbiE", @"PvijM0aUg8I", @"G5l5GCZ7pK8", @"BIGOx9I0zgw", @"NJQfZXwMSr8", @"O5V2Yr2AcJA", @"heumh_OKCOI", @"V2wccR9-PSc", @"kctBSJUBNBs", @"WEmlyG9iW0I", @"5jzaDj2pcWU", @"xTrRWsd5ns8", @"gqUJk26JxqY",nil];
     
     [self reproduceVideo];
@@ -99,6 +113,9 @@
 */
 
 - (IBAction)regresarButton:(id)sender {
+    if([boolMusica isEqualToString:@"on"]){
+        [_musicaFondo setVolume:1];
+    }
     [self.navigationController popViewControllerAnimated:YES];
     [self sonidoBoton];
 }

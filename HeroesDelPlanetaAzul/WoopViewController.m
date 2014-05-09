@@ -187,6 +187,8 @@
     }
     
     if ([[segue identifier] isEqualToString:@"jugar"]) {
+        AVAudioPlayer *object = audioFondo;
+        [[segue destinationViewController] setMusicaFondo:object];
     }
 }
 

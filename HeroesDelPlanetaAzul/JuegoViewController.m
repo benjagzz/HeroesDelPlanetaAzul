@@ -46,6 +46,15 @@
 
 @implementation JuegoViewController
 
+- (void)setMusicaFondo:(id)newmusicaFondo
+{
+    if (_musicaFondo != newmusicaFondo) {
+        _musicaFondo = newmusicaFondo;
+        
+        [self viewDidLoad];
+    }
+}
+
 - (void)sonidoBoton
 {
     Sonidos *servicios = [Sonidos sharedManager];
@@ -1002,6 +1011,8 @@
         
     }
     if ([[segue identifier] isEqualToString:@"video"]) {
+        AVAudioPlayer *object = _musicaFondo;
+        [[segue destinationViewController] setMusicaFondo:object];
         [self sonidoBoton];
     }
 }
