@@ -41,52 +41,16 @@
 - (void)acomodaLetras;
 - (void)buscaLetra:(NSString*) letra;
 - (void)terminaJuego;
+- (void)desordenaArreglo;
+- (void)setMusicaFondo:(id)newmusicaFondo;
+- (void)sonidoBoton;
+- (void)sonidoEncontrado;
+- (void)sonidoNOEncontrado;
 
 @end
 
 @implementation JuegoViewController
 
-- (void)setMusicaFondo:(id)newmusicaFondo
-{
-    if (_musicaFondo != newmusicaFondo) {
-        _musicaFondo = newmusicaFondo;
-        
-        [self viewDidLoad];
-    }
-}
-
-- (void)sonidoBoton
-{
-    Sonidos *servicios = [Sonidos sharedManager];
-    boolSonido = [servicios mandarSonido];
-    if ([boolSonido isEqualToString:@"on"]) {
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"click" ofType:@"mp3"];
-        audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
-        [audioPlayer play];
-    }
-}
-
-- (void)sonidoEncontrado
-{
-    Sonidos *servicios = [Sonidos sharedManager];
-    boolSonido = [servicios mandarSonido];
-    if ([boolSonido isEqualToString:@"on"]) {
-        NSString *path1 = [[NSBundle mainBundle] pathForResource:@"gotItem" ofType:@"mp3"];
-        audioEncontrado = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path1] error:NULL];
-        [audioEncontrado play];
-    }
-}
-
-- (void)sonidoNOEncontrado
-{
-    Sonidos *servicios = [Sonidos sharedManager];
-    boolSonido = [servicios mandarSonido];
-    if ([boolSonido isEqualToString:@"on"]) {
-        NSString *path2 = [[NSBundle mainBundle] pathForResource:@"lostItem" ofType:@"mp3"];
-        audioNoEncontrado = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path2] error:NULL];
-        [audioNoEncontrado play];
-    }
-}
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -126,6 +90,10 @@
     
     listaFrases = servicios.listaFrases;
     
+    [letrasArray removeAllObjects];
+    
+    [self desordenaArreglo];
+    
     self.fraseLabel.text = [NSString stringWithFormat:@"%@", [[listaFrases objectAtIndex:x] valueForKey:@"apoyo"]];
     
     nombreImagen = [NSString stringWithFormat:@"%@",[[listaFrases objectAtIndex:x] valueForKey:@"imagen"]];
@@ -135,6 +103,24 @@
     [self preparaArreglo:x];
     
     [self acomodaLetras];
+}
+
+- (void) desordenaArreglo{
+    static BOOL seeded = NO;
+    if(!seeded)
+    {
+        seeded = YES;
+        srandom(time(NULL));
+    }
+    
+    NSUInteger count = listaFrases.count;
+    for (NSUInteger i = 0; i < count; ++i) {
+        // Select a random element between i and end of array to swap with.
+        int nElements = count - i;
+        int n = (random() % nElements) + i;
+        [listaFrases exchangeObjectAtIndex:i withObjectAtIndex:n];
+        //[self exchangeObjectAtIndex:i withObjectAtIndex:n];
+    }
 }
 
 - (void) preparaVista:(int)num{
@@ -234,8 +220,6 @@
     self.imageView37.image = [UIImage imageNamed:NO];
     self.imageView38.image = [UIImage imageNamed:NO];
     self.imageView39.image = [UIImage imageNamed:NO];
-  
-    
     
     [letrasArray removeAllObjects];
     
@@ -998,6 +982,48 @@
     }
 }
 
+- (void)setMusicaFondo:(id)newmusicaFondo
+{
+    if (_musicaFondo != newmusicaFondo) {
+        _musicaFondo = newmusicaFondo;
+        
+        [self viewDidLoad];
+    }
+}
+
+
+- (void)sonidoBoton
+{
+    Sonidos *servicios = [Sonidos sharedManager];
+    boolSonido = [servicios mandarSonido];
+    if ([boolSonido isEqualToString:@"on"]) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"click" ofType:@"mp3"];
+        audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
+        [audioPlayer play];
+    }
+}
+
+- (void)sonidoEncontrado
+{
+    Sonidos *servicios = [Sonidos sharedManager];
+    boolSonido = [servicios mandarSonido];
+    if ([boolSonido isEqualToString:@"on"]) {
+        NSString *path1 = [[NSBundle mainBundle] pathForResource:@"gotItem" ofType:@"mp3"];
+        audioEncontrado = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path1] error:NULL];
+        [audioEncontrado play];
+    }
+}
+
+- (void)sonidoNOEncontrado
+{
+    Sonidos *servicios = [Sonidos sharedManager];
+    boolSonido = [servicios mandarSonido];
+    if ([boolSonido isEqualToString:@"on"]) {
+        NSString *path2 = [[NSBundle mainBundle] pathForResource:@"lostItem" ofType:@"mp3"];
+        audioNoEncontrado = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path2] error:NULL];
+        [audioNoEncontrado play];
+    }
+}
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
