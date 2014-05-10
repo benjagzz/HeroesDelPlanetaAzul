@@ -93,6 +93,7 @@
                            </html>", 728, 500, [videos objectAtIndex:i]];
     
     [self.webView loadHTMLString:embedHTML baseURL:[[NSBundle mainBundle] resourceURL]];
+
 }
 
 - (void)didReceiveMemoryWarning

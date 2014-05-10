@@ -202,6 +202,7 @@
 		FA6C4CBC191CA08E0074EB52 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		FA6C4CBE191CAB420074EB52 /* video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video.png; sourceTree = "<group>"; };
 		FA8DD55E18FB5C9600D97219 /* frases.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = frases.plist; sourceTree = "<group>"; };
+		FAA28B4B191E8FDD004D70FD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		FAC7DE1B18E3A8770097B4F4 /* AjustesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AjustesViewController.h; sourceTree = "<group>"; };
 		FAC7DE1C18E3A8770097B4F4 /* AjustesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AjustesViewController.m; sourceTree = "<group>"; };
 		FAC7DE2618E3AE9D0097B4F4 /* guardarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = guardarViewController.h; sourceTree = "<group>"; };
@@ -393,6 +394,7 @@
 		FA65E45118E2607D00260BA6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FAA28B4B191E8FDD004D70FD /* SystemConfiguration.framework */,
 				FAD9681A1912B71200C11F6F /* MediaPlayer.framework */,
 				FAD968181912B70800C11F6F /* AVFoundation.framework */,
 				FA65E45218E2607D00260BA6 /* Foundation.framework */,
