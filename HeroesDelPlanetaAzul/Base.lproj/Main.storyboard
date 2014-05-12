@@ -944,6 +944,18 @@
                                     <action selector="regresarButton:" destination="4bG-TH-uQs" eventType="touchUpInside" id="9lx-io-PEL"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo2.png" translatesAutoresizingMaskIntoConstraints="NO" id="yzk-p1-bIO">
+                                <rect key="frame" x="79" y="758" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo3.png" highlightedImage="logo1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="TXO-Vi-rfr">
+                                <rect key="frame" x="428" y="758" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xbg-Xu-Lu6">
+                                <rect key="frame" x="256" y="894" width="256" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -1365,6 +1377,10 @@
         <image name="ingresaNombre.png" width="370" height="50"/>
         <image name="intrucciones.png" width="768" height="963"/>
         <image name="logo.png" width="450" height="160"/>
+        <image name="logo1.jpg" width="835" height="311"/>
+        <image name="logo1.png" width="835" height="311"/>
+        <image name="logo2.png" width="1872" height="728"/>
+        <image name="logo3.png" width="1483" height="342"/>
         <image name="moneda.png" width="70" height="70"/>
         <image name="musica.png" width="210" height="70"/>
         <image name="num1.png" width="70" height="70"/>

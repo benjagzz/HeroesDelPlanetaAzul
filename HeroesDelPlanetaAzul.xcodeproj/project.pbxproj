@@ -28,6 +28,9 @@
 		FA6C4CBD191CA08E0074EB52 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6C4CBC191CA08E0074EB52 /* VideoViewController.m */; };
 		FA6C4CBF191CAB420074EB52 /* video.png in Resources */ = {isa = PBXBuildFile; fileRef = FA6C4CBE191CAB420074EB52 /* video.png */; };
 		FA8DD55F18FB5C9600D97219 /* frases.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA8DD55E18FB5C9600D97219 /* frases.plist */; };
+		FAA4B2CB1921804A00C0D69B /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA4B2CA1921804A00C0D69B /* logo2.png */; };
+		FAA4B2CD1921810E00C0D69B /* logo1.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA4B2CC1921810E00C0D69B /* logo1.png */; };
+		FAA4B2CF1921823A00C0D69B /* logo3.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA4B2CE1921823A00C0D69B /* logo3.png */; };
 		FAC7DE1D18E3A8770097B4F4 /* AjustesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC7DE1C18E3A8770097B4F4 /* AjustesViewController.m */; };
 		FAC7DE2818E3AE9D0097B4F4 /* guardarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC7DE2718E3AE9D0097B4F4 /* guardarViewController.m */; };
 		FAC7DE3518E3BB360097B4F4 /* InstrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC7DE3418E3BB360097B4F4 /* InstrViewController.m */; };
@@ -203,6 +206,9 @@
 		FA6C4CBE191CAB420074EB52 /* video.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video.png; sourceTree = "<group>"; };
 		FA8DD55E18FB5C9600D97219 /* frases.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = frases.plist; sourceTree = "<group>"; };
 		FAA28B4B191E8FDD004D70FD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		FAA4B2CA1921804A00C0D69B /* logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo2.png; sourceTree = "<group>"; };
+		FAA4B2CC1921810E00C0D69B /* logo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo1.png; sourceTree = "<group>"; };
+		FAA4B2CE1921823A00C0D69B /* logo3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo3.png; sourceTree = "<group>"; };
 		FAC7DE1B18E3A8770097B4F4 /* AjustesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AjustesViewController.h; sourceTree = "<group>"; };
 		FAC7DE1C18E3A8770097B4F4 /* AjustesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AjustesViewController.m; sourceTree = "<group>"; };
 		FAC7DE2618E3AE9D0097B4F4 /* guardarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = guardarViewController.h; sourceTree = "<group>"; };
@@ -565,6 +571,9 @@
 		FAD969141913728300C11F6F /* Otros */ = {
 			isa = PBXGroup;
 			children = (
+				FAA4B2CE1921823A00C0D69B /* logo3.png */,
+				FAA4B2CC1921810E00C0D69B /* logo1.png */,
+				FAA4B2CA1921804A00C0D69B /* logo2.png */,
 				FA6C4CBE191CAB420074EB52 /* video.png */,
 				FAD9678D19120C5E00C11F6F /* TuPuntajeEs.png */,
 				FAD9678C19120C5E00C11F6F /* sonido.png */,
@@ -805,6 +814,7 @@
 				FAE1002518E385520066B4E6 /* espacioJ.png in Resources */,
 				FAD967EB19120C5E00C11F6F /* logo.png in Resources */,
 				FAE1FFEE18E37E610066B4E6 /* botonLetraO.png in Resources */,
+				FAA4B2CB1921804A00C0D69B /* logo2.png in Resources */,
 				FAE1FFF818E37E610066B4E6 /* botonLetraY.png in Resources */,
 				FAD967F019120C5E00C11F6F /* num2.png in Resources */,
 				FAE1FFE318E37E610066B4E6 /* botonLetraD.png in Resources */,
@@ -869,6 +879,7 @@
 				FAD968231912C5A300C11F6F /* gotItem.mp3 in Resources */,
 				FAE1FFED18E37E610066B4E6 /* botonLetraN.png in Resources */,
 				FAE1FFF018E37E610066B4E6 /* botonLetraQ.png in Resources */,
+				FAA4B2CF1921823A00C0D69B /* logo3.png in Resources */,
 				FAD967E319120C5E00C11F6F /* foto4.png in Resources */,
 				FAD967B619120C5E00C11F6F /* botonSiguiente.png in Resources */,
 				FAE1FFE118E37E610066B4E6 /* botonLetraB.png in Resources */,
@@ -893,6 +904,7 @@
 				FAD968241912C5A300C11F6F /* lostItem.mp3 in Resources */,
 				FAE1002C18E385520066B4E6 /* espacioQ.png in Resources */,
 				FAD967F219120C5E00C11F6F /* num4.png in Resources */,
+				FAA4B2CD1921810E00C0D69B /* logo1.png in Resources */,
 				FAE1003418E385520066B4E6 /* espacioY.png in Resources */,
 				FAE1001F18E385520066B4E6 /* espacioE.png in Resources */,
 				FAD968071912285D00C11F6F /* escudoBronce.png in Resources */,
