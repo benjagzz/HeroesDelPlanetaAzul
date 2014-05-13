@@ -9,8 +9,8 @@
 #import "Sonidos.h"
 
 @implementation Sonidos{
-    NSString *boolSonido;
-    NSString *boolMusica;
+    NSString *boolSonido; //variable utilizada para determinar el estado del sonido
+    NSString *boolMusica; //variable utilizada para determinar el estado de la musica
 }
 @synthesize prueba;
 
@@ -32,6 +32,7 @@
     return self;
 }
 
+//se manda el estado y determina si esta on o off
 -(void)buscarSonido:(NSString *) buscar{
     if ([buscar isEqualToString:@"on"]) {
         boolSonido = @"on";
@@ -41,9 +42,10 @@
 };
 
 -(NSString *)mandarSonido{
-    return boolSonido;
+    return boolSonido; //regresa el valor on o off
 }
 
+//se manda el estado y determina si esta on o off
 -(void)buscarMusica:(NSString *) buscar{
     if ([buscar isEqualToString:@"on"]) {
         boolMusica = @"on";
@@ -53,6 +55,6 @@
 };
 
 -(NSString *)mandarMusica{
-    return boolMusica;
+    return boolMusica; //regresa el valor on o off
 }
 @end

@@ -20,30 +20,31 @@
     NSMutableArray *lista2;       //sirve para verificar que haya datos de los escudos en el CoreData
     NSMutableArray *listaFrases;  //contiene las frases obtenidas del CoreData
     NSMutableArray *listaEscudos;  //contiene las frases obtenidas del CoreData
-    AVAudioPlayer *audioPlayer;
-    AVAudioPlayer *audioFondo;
-    NSString *boolSonido;
+    AVAudioPlayer *audioPlayer; //sirve para obtener el sonido de los botones
+    AVAudioPlayer *audioFondo; //sirve para obtener el audio de fondo
+    NSString *boolSonido; //sirve para detectar si el sonido esta on o off
 }
--(void) cargarFrasesPlist;
--(void) cargarEscudosPlist;
+-(void) cargarFrasesPlist; //carga las frases del plist
+-(void) cargarEscudosPlist; //carga los escudos del plist
 
 @end
 
 @implementation WoopViewController
 
-
+//Función que activa el sonido de fondo
 - (void)sonidoFondo
 {
     Sonidos *servicios = [Sonidos sharedManager];
     [servicios buscarSonido:@"on"];
     [servicios buscarMusica:@"on"];
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"fondo" ofType:@"mp3"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"juego" ofType:@"mp3"];
     audioFondo = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:NULL];
     audioFondo.numberOfLoops = -1; //infinite
     [audioFondo setVolume:1];
     [audioFondo play];
 }
 
+//Función que activa los sonidos de los botones
 - (void)sonidoBoton
 {
     Sonidos *servicios = [Sonidos sharedManager];
@@ -92,6 +93,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+//función que carga las frases del plist
 -(void) cargarFrasesPlist{
     
     BDmanejo *servicios = [BDmanejo instancia];
@@ -128,6 +130,7 @@
 }
 
 
+//función que carga los escudos del plist
 -(void) cargarEscudosPlist{
     
     BDmanejo *servicios = [BDmanejo instancia];
@@ -169,10 +172,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+//va a ser utilizada para remover la vista cuando se encuentre en otra interfaz
 - (void) removerVista {
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
+//se mandan los datos por medio del segue
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"instrucciones"]) {
@@ -193,31 +198,35 @@
 }
 
 
-
+//acción del boton jugar
 - (IBAction)playButton:(id)sender {
     
     [self  sonidoBoton];
     
 }
 
+//acción del boton instrucciones
 - (IBAction)instrButton:(id)sender {
     
     [self  sonidoBoton];
     
 }
 
+//acción del boton puntaje
 - (IBAction)puntButton:(id)sender {
     
     [self  sonidoBoton];
     
 }
 
+//acción del boton ajustes
 - (IBAction)ajustButton:(id)sender {
     
     [self  sonidoBoton];
     
 }
 
+//acción del boton creditos
 - (IBAction)creditosButton:(id)sender {
     
     [self  sonidoBoton];

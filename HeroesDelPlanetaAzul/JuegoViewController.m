@@ -840,6 +840,7 @@
 
 }
 
+//función para salir del juego
 - (IBAction)salirButton:(id)sender {
     
     [self sonidoBoton];
@@ -852,6 +853,7 @@
     
 }
 
+//función para saltar la frase
 - (IBAction)saltarFraseButton:(id)sender {
     
     [self sonidoBoton];
@@ -872,6 +874,7 @@
     }
 }
 
+//función para postear en Facebook
 - (IBAction)postFacebook:(id)sender {
     
     [self sonidoBoton];
@@ -926,6 +929,7 @@
     }
 }
 
+//función para postear en Twitter
 - (IBAction)postTwitter:(id)sender {
     
     [self sonidoBoton];

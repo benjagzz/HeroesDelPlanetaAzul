@@ -12,10 +12,10 @@
 
 @implementation Escudo
 
-@dynamic foto;
-@dynamic nombre;
-@dynamic rangomax;
-@dynamic rangomin;
-@dynamic juegoRel;
+@dynamic foto; //variable que obtiene la imagen del escudo
+@dynamic nombre; //variable que registra el nombre del usuario ganador
+@dynamic rangomax; //variable max para definir el escudo
+@dynamic rangomin; //variable minima para definir el escudo
+@dynamic juegoRel; //relación del juego
 
 @end

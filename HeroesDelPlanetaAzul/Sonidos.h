@@ -16,9 +16,14 @@
 
 + (id)sharedManager;
 
+
+//función para buscar si los sonidos estan on/off
 -(void)buscarSonido:(NSString *) buscar;
+//función que regresa el estado
 -(NSString *)mandarSonido;
 
+//función para buscar si la musica esta on/off
 -(void)buscarMusica:(NSString *) buscar;
+//función que regresa el estado
 -(NSString *)mandarMusica;
 @end

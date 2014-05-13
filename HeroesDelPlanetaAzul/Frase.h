@@ -13,17 +13,17 @@
 
 @interface Frase : NSManagedObject
 
-@property (nonatomic, retain) NSString * apoyo;
-@property (nonatomic, retain) NSString * frase;
-@property (nonatomic, retain) NSString * imagen;
-@property (nonatomic, retain) NSSet *partidaRel;
+@property (nonatomic, retain) NSString * apoyo; //variable para obtener la frase apoyo.
+@property (nonatomic, retain) NSString * frase; //variable para identificar la frase por adivinar
+@property (nonatomic, retain) NSString * imagen; //variable para obtener la imagen de la frase
+@property (nonatomic, retain) NSSet *partidaRel; //relación de la partida
 @end
 
 @interface Frase (CoreDataGeneratedAccessors)
 
-- (void)addPartidaRelObject:(Partida *)value;
-- (void)removePartidaRelObject:(Partida *)value;
-- (void)addPartidaRel:(NSSet *)values;
-- (void)removePartidaRel:(NSSet *)values;
+- (void)addPartidaRelObject:(Partida *)value; //agregar partidad
+- (void)removePartidaRelObject:(Partida *)value; //remover partida
+- (void)addPartidaRel:(NSSet *)values; //agregar relación a partida
+- (void)removePartidaRel:(NSSet *)values; //remover relación a partida 
 
 @end

@@ -13,17 +13,17 @@
 
 @interface Partida : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * puntaje;
-@property (nonatomic, retain) NSString * nombre;
-@property (nonatomic, retain) NSSet *fraseRel;
-@property (nonatomic, retain) Juego *juegoRel;
+@property (nonatomic, retain) NSNumber * puntaje; //variable que obtiene el puntaje
+@property (nonatomic, retain) NSString * nombre; //variable que obtiene el nombre
+@property (nonatomic, retain) NSSet *fraseRel; //relación de la frase
+@property (nonatomic, retain) Juego *juegoRel; //relación del juego
 @end
 
 @interface Partida (CoreDataGeneratedAccessors)
 
-- (void)addFraseRelObject:(Frase *)value;
-- (void)removeFraseRelObject:(Frase *)value;
-- (void)addFraseRel:(NSSet *)values;
-- (void)removeFraseRel:(NSSet *)values;
+- (void)addFraseRelObject:(Frase *)value; //agregar frase a relación
+- (void)removeFraseRelObject:(Frase *)value; //remover frase
+- (void)addFraseRel:(NSSet *)values; //agregar relación
+- (void)removeFraseRel:(NSSet *)values; //remover relación
 
 @end

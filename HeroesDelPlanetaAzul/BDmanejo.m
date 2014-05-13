@@ -20,7 +20,7 @@
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 #pragma mark - Core Data stack
-
+//función que guarda lo mandado al BDmanejo.m
 - (void)saveContext
 {
     NSError *error = nil;
@@ -32,6 +32,7 @@
         }
     }
 }
+
 
 - (NSManagedObjectContext *)managedObjectContext
 {
@@ -89,11 +90,12 @@
 		[self setListaFrases:[[NSMutableArray alloc] init]];
         [self setListaPartidas:[[NSMutableArray alloc] init]];
         [self setListaEscudos:[[NSMutableArray alloc] init]];
-		//[self setListaVacunas:[[NSMutableArray alloc]init]];
 	}
 	
 	return self;
 }
+
+//declara una instancia de la base
 + (BDmanejo *)instancia
 {
 	static BDmanejo *_instancia = nil;
@@ -106,48 +108,53 @@
 	return _instancia;
 }
 
+
+//función para insertar la frase de acuerdo al id recibido
 -(void) insertarFrase:(id)datosFrase
 {
 	NSManagedObjectContext *context = self.managedObjectContext;
 	Frase *nueva = [NSEntityDescription insertNewObjectForEntityForName:@"Frase" inManagedObjectContext:context];
 	
 	NSDictionary *frase = (NSDictionary *)datosFrase;
-	nueva.frase = [frase objectForKey:@"frase"];
-	nueva.apoyo = [frase objectForKey:@"apoyo"];
-    nueva.imagen = [frase objectForKey:@"imagen"];
+	nueva.frase = [frase objectForKey:@"frase"]; //despliega frase
+	nueva.apoyo = [frase objectForKey:@"apoyo"]; //despliega apoyo
+    nueva.imagen = [frase objectForKey:@"imagen"]; //despliega imagen
     
-    [self saveContext];
+    [self saveContext]; //llama al save context
     
 }
 
+//función para insertar el escudo
 -(void) insertarEscudo:(id)datosEscudo
 {
 	NSManagedObjectContext *context = self.managedObjectContext;
 	Escudo *nueva = [NSEntityDescription insertNewObjectForEntityForName:@"Escudo" inManagedObjectContext:context];
 	
 	NSDictionary *frase = (NSDictionary *)datosEscudo;
-	nueva.nombre = [frase objectForKey:@"nombre"];
-	nueva.foto = [frase objectForKey:@"foto"];
-    nueva.rangomin = [frase objectForKey:@"rangomin"];
-    nueva.rangomax = [frase objectForKey:@"rangomax"];
+	nueva.nombre = [frase objectForKey:@"nombre"]; //lo busca por su nombre
+	nueva.foto = [frase objectForKey:@"foto"]; //lo busca por su imagen
+    nueva.rangomin = [frase objectForKey:@"rangomin"]; //lo busca por su rango max
+    nueva.rangomax = [frase objectForKey:@"rangomax"]; //lo busca por su rango minimo
     
     [self saveContext];
     
 }
 
+//función para insertar partidad
 - (void) insertarPartida:(id) datosPartida
 {
     NSManagedObjectContext *context = self.managedObjectContext;
 	Partida *nueva = [NSEntityDescription insertNewObjectForEntityForName:@"Partida" inManagedObjectContext:context];
 	
-	NSDictionary *partida = (NSDictionary *)datosPartida;
-	nueva.nombre = [partida objectForKey:@"nombre"];
-	nueva.puntaje = [partida objectForKey:@"puntos"];
+	NSDictionary *partida = (NSDictionary *)datosPartida; //busca la partida
+	nueva.nombre = [partida objectForKey:@"nombre"]; //guarda el nombre del usuario
+	nueva.puntaje = [partida objectForKey:@"puntos"]; //guarda el puntaje del usuario
     
-    [self saveContext];
+    [self saveContext]; //llama al save context
     
 }
 
+//función para cargar las frases
 -(NSMutableArray*)cargarFrases
 {
     NSManagedObjectContext *context = self.managedObjectContext;
@@ -159,6 +166,7 @@
 	NSMutableArray *results = (NSMutableArray*)[context executeFetchRequest:request error:&error];
     Frase *temp;
 	
+    //si el resultado de buscar la frase es igual a 0, no despleiga las frases
 	if(results.count==0){
 		NSLog(@"No hay frases guardadas...");
         return NULL;
@@ -169,16 +177,17 @@
         for (int i = 0; i < results.count; i++) {
             temp = results[i];
             NSMutableDictionary *miDicc = [[NSMutableDictionary alloc]initWithObjectsAndKeys:
-                                           [temp valueForKey:@"frase"], @"frase",
-                                           [temp valueForKey:@"apoyo"], @"apoyo",
-                                           [temp valueForKey:@"imagen"], @"imagen", nil];
+                                           [temp valueForKey:@"frase"], @"frase", //obtiene la frase a buscar
+                                           [temp valueForKey:@"apoyo"], @"apoyo", //obtiene el apoyo de la frase
+                                           [temp valueForKey:@"imagen"], @"imagen", nil]; //obtiene la imagen de la frase
             
-            [self.listaFrases addObject:miDicc];
+            [self.listaFrases addObject:miDicc]; //manda la lista de frases
         }
-        return self.listaFrases;
+        return self.listaFrases; //regresa la lista de la frase
 	}
 }
 
+//carga la partida
 -(NSMutableArray*)cargarPartida{
     
     NSManagedObjectContext *context = self.managedObjectContext;
@@ -190,6 +199,7 @@
 	NSMutableArray *results = (NSMutableArray*)[context executeFetchRequest:request error:&error];
     Partida *temp;
 	
+    //si el resultado de buscar la partida es igual a 0, no despleiga la partida
 	if(results.count==0){
 		NSLog(@"No hay partidas guardadas...");
         return NULL;
@@ -200,8 +210,8 @@
         for (int i = 0; i < results.count; i++) {
             temp = results[i];
             NSMutableDictionary *miDicc = [[NSMutableDictionary alloc]initWithObjectsAndKeys:
-                                           [temp valueForKey:@"nombre"], @"nombre",
-                                           [temp valueForKey:@"puntaje"], @"puntaje", nil];
+                                           [temp valueForKey:@"nombre"], @"nombre", //obtiene el nombre
+                                           [temp valueForKey:@"puntaje"], @"puntaje", nil]; //obtiene el puntaje
             
             [self.listaPartidas addObject:miDicc];
         }
@@ -210,6 +220,7 @@
 
 }
 
+//función para cargar los escudos
 -(NSMutableArray*)cargarEscudos
 {
     NSManagedObjectContext *context = self.managedObjectContext;
@@ -221,6 +232,7 @@
 	NSMutableArray *results = (NSMutableArray*)[context executeFetchRequest:request error:&error];
     Frase *temp;
 	
+    //si el resultado de buscar los escudos es igual a 0, no despleiga los escudos
 	if(results.count==0){
 		NSLog(@"No hay frases guardadas...");
         return NULL;
@@ -231,10 +243,10 @@
         for (int i = 0; i < results.count; i++) {
             temp = results[i];
             NSMutableDictionary *miDicc = [[NSMutableDictionary alloc]initWithObjectsAndKeys:
-                                           [temp valueForKey:@"nombre"], @"nombre",
-                                           [temp valueForKey:@"foto"], @"foto",
-                                           [temp valueForKey:@"rangomin"], @"rangomin",
-                                           [temp valueForKey:@"rangomax"], @"rangomax", nil];
+                                           [temp valueForKey:@"nombre"], @"nombre", //despliega el nombre
+                                           [temp valueForKey:@"foto"], @"foto", //despliega la foto
+                                           [temp valueForKey:@"rangomin"], @"rangomin", //despliega el rango min
+                                           [temp valueForKey:@"rangomax"], @"rangomax", nil]; //despliega el rango max
             
             [self.listaEscudos addObject:miDicc];
         }

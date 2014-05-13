@@ -12,7 +12,7 @@
 
 @interface InstrViewController : UIViewController
 
-@property (strong, nonatomic) id detailItem;
-- (IBAction)regresarButton:(id)sender;
+@property (strong, nonatomic) id detailItem; //manda la variable del estado on/off
+- (IBAction)regresarButton:(id)sender; //boton para regresar al menu principal
 
 @end

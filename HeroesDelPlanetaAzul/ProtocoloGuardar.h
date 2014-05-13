@@ -10,7 +10,8 @@
 
 @protocol ProtocoloGuardar <NSObject>
 
--(void) insertar: (id) datos;
--(void) removerVista;
+-(void) insertar: (id) datos; //Función utilizada para insertar los datos.
+
+-(void) removerVista; //Función utilizada para remover la vista.
 
 @end

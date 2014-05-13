@@ -11,7 +11,7 @@
 
 @interface VideoViewController : UIViewController
 - (IBAction)regresarButton:(id)sender;
-@property (strong, nonatomic) IBOutlet UIWebView *webView;
-@property (strong, nonatomic) id musicaFondo;
+@property (strong, nonatomic) IBOutlet UIWebView *webView; //variable para el webview, el cual enseñara el video
+@property (strong, nonatomic) id musicaFondo; //variable que detecta si la musica de fondo esta on/off
 
 @end

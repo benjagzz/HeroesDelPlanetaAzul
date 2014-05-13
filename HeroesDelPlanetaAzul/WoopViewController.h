@@ -12,11 +12,11 @@
 #import "Sonidos.h"
 
 @interface WoopViewController : UIViewController
-- (IBAction)playButton:(id)sender;
-- (IBAction)instrButton:(id)sender;
-- (IBAction)puntButton:(id)sender;
-- (IBAction)ajustButton:(id)sender;
-- (IBAction)creditosButton:(id)sender;
+- (IBAction)playButton:(id)sender; //boton para llevar a la interfaz de jugar
+- (IBAction)instrButton:(id)sender; //boton para llevar a la interfaz de instrucciones
+- (IBAction)puntButton:(id)sender; //boton para llevar a la interfaz de puntaje
+- (IBAction)ajustButton:(id)sender; //boton para llevar a la interfaz de ajustes
+- (IBAction)creditosButton:(id)sender; //boton para llevar a la interfaz de creditos
 
 
 @end

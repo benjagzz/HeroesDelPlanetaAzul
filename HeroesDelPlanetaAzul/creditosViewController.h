@@ -10,6 +10,6 @@
 #import "Sonidos.h"
 
 @interface creditosViewController : UIViewController
-- (IBAction)regresarButton:(id)sender;
+- (IBAction)regresarButton:(id)sender; //acción para regresar al menú principal
 
 @end

@@ -12,9 +12,9 @@
 
 @implementation Frase
 
-@dynamic apoyo;
-@dynamic frase;
-@dynamic imagen;
-@dynamic partidaRel;
+@dynamic apoyo; //variable para obtener la frase apoyo.
+@dynamic frase; //variable para identificar la frase por adivinar
+@dynamic imagen; //variable para obtener la imagen de la frase
+@dynamic partidaRel; //relación de la partida
 
 @end
