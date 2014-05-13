@@ -129,6 +129,8 @@
     
     self.siguienteButton.hidden = true;
     
+    self.saltarFraseButton.hidden = true;
+    
     self.felicidadesImageView.hidden = true;
     
     self.videoButton.hidden = true;
@@ -558,6 +560,7 @@
         //[self performSegueWithIdentifier:@"guardar" sender:self];
         self.siguienteButton.hidden = false;
         self.felicidadesImageView.hidden = false;
+        self.saltarFraseButton.hidden = true;
         self.videoButton.hidden = false;
         self.fotoImageView.hidden = true;
         self.fraseLabel.hidden = true;
