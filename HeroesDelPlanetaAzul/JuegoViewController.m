@@ -129,7 +129,7 @@
     
     self.siguienteButton.hidden = true;
     
-    self.saltarFraseButton.hidden = true;
+    self.saltarFraseButton.hidden = false;
     
     self.felicidadesImageView.hidden = true;
     
