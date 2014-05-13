@@ -13,9 +13,9 @@
 
 @implementation Partida
 
-@dynamic puntaje;
-@dynamic nombre;
-@dynamic fraseRel;
-@dynamic juegoRel;
+@dynamic puntaje; //variable que obtiene el puntaje
+@dynamic nombre; //variable que obtiene el nombre
+@dynamic fraseRel; //relación de la frase
+@dynamic juegoRel; //relación del juego
 
 @end

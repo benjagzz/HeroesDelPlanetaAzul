@@ -19,6 +19,7 @@
 
 @implementation InstrViewController
 
+//despliega el sonido por boton
 - (void)sonidoBoton
 {
     Sonidos *servicios = [Sonidos sharedManager];

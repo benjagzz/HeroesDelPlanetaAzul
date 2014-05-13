@@ -12,10 +12,10 @@
 #import <AVFoundation/AVFoundation.h>
 
 @interface guardarViewController (){
-    NSMutableArray *listaPartidas;
+    NSMutableArray *listaPartidas; //contiene las listas de las partidas
     NSMutableArray *listaEscudos;  //contiene las frases obtenidas del CoreData
-    AVAudioPlayer *audioPlayer;
-    NSString *boolSonido;
+    AVAudioPlayer *audioPlayer; //contiende en el audio de los botones
+    NSString *boolSonido; //contiene el valor on/off de los botones
 }
 
 -(void) cargarEscudo;
@@ -24,6 +24,7 @@
 
 @implementation guardarViewController
 
+//función para obtener los sonidos del boton
 - (void)sonidoBoton
 {
     Sonidos *servicios = [Sonidos sharedManager];

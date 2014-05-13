@@ -64,6 +64,7 @@
     [self desplegarPuntajes];
 }
 
+//ordena a los puntajes
 -(void)ordenaArreglo{
     NSSortDescriptor *SortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"puntaje" ascending:NO];
     NSArray *elArray = [[NSArray alloc]initWithArray:listaPartidas];
@@ -71,6 +72,7 @@
     listaPartidas = (NSMutableArray*)elArray;
 }
 
+//función que despliega los puntajes
 - (void)desplegarPuntajes{
     
     for (int i = 0; i < listaPartidas.count; i++){
@@ -135,6 +137,7 @@
     
 }
 
+//carga los escudos por el puntaje
 - (NSString*)cargarEscudos:(int) puntos{
     
     NSNumber  *punt = [NSNumber numberWithInteger: puntos];

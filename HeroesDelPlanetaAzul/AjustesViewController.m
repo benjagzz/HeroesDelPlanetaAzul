@@ -83,28 +83,14 @@
     }
 }
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
- {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
-
+//función para regresar al menu inicial
 - (IBAction)regresarButton:(id)sender {
-    /*
-     if(sonido){
-     [audioPlayer play];
-     }
-     */
     [self sonidoBoton];
     [self.navigationController popViewControllerAnimated:YES];
     
 }
 
+//activa los sonidos de los botones
 - (IBAction)sonidoSwitch:(id)sender {
     Sonidos *servicios = [Sonidos sharedManager];
     if(self.sonidoOutlet.on){
@@ -119,6 +105,7 @@
     
 }
 
+//activa la  musica de fondo
 - (IBAction)musicaSwitch:(id)sender {
     Sonidos *servicios = [Sonidos sharedManager];
     if(self.musicaOutlet.on){

@@ -13,21 +13,21 @@
 
 @interface Juego : NSManagedObject
 
-@property (nonatomic, retain) NSString * nombre;
-@property (nonatomic, retain) NSSet *escudoRel;
-@property (nonatomic, retain) NSSet *partidaRel;
+@property (nonatomic, retain) NSString * nombre; //variable para el nombre
+@property (nonatomic, retain) NSSet *escudoRel; //variable apra relación del escudo
+@property (nonatomic, retain) NSSet *partidaRel; //variable para relación de partida
 @end
 
 @interface Juego (CoreDataGeneratedAccessors)
 
-- (void)addEscudoRelObject:(Escudo *)value;
-- (void)removeEscudoRelObject:(Escudo *)value;
-- (void)addEscudoRel:(NSSet *)values;
-- (void)removeEscudoRel:(NSSet *)values;
+- (void)addEscudoRelObject:(Escudo *)value; //agregar relación
+- (void)removeEscudoRelObject:(Escudo *)value; //remover relacióne escudo
+- (void)addEscudoRel:(NSSet *)values; //agregar relación
+- (void)removeEscudoRel:(NSSet *)values; //remover relación
 
-- (void)addPartidaRelObject:(Partida *)value;
-- (void)removePartidaRelObject:(Partida *)value;
-- (void)addPartidaRel:(NSSet *)values;
-- (void)removePartidaRel:(NSSet *)values;
+- (void)addPartidaRelObject:(Partida *)value; //agregar partida
+- (void)removePartidaRelObject:(Partida *)value; //remover partida
+- (void)addPartidaRel:(NSSet *)values; //agregar partida relación
+- (void)removePartidaRel:(NSSet *)values; //remover partida relación
 
 @end

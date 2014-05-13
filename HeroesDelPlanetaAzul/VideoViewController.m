@@ -16,13 +16,14 @@
     NSString *boolSonido;
     NSString *boolMusica;
 }
-
+//función para reproducir el Video
 - (void)reproduceVideo;
 
 @end
 
 @implementation VideoViewController
 
+//obtiene el delegado mandado por el JuegoViewController
 - (void)setMusicaFondo:(id)newmusicaFondo
 {
     if (_musicaFondo != newmusicaFondo) {
@@ -32,6 +33,7 @@
     }
 }
 
+//sonido para el boton
 - (void)sonidoBoton
 {
     Sonidos *servicios = [Sonidos sharedManager];
@@ -66,6 +68,7 @@
     [self reproduceVideo];
 }
 
+//función para reproducir los videos
 - (void)reproduceVideo{
     
     int i = rand()%(videos.count-1)+0;
@@ -99,20 +102,9 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
+//regresa al menu inicial
 - (IBAction)regresarButton:(id)sender {
     if([boolMusica isEqualToString:@"on"]){
         [_musicaFondo setVolume:1];

@@ -17,8 +17,7 @@
 @property (strong, nonatomic) NSMutableArray *listaFrases;
 @property (strong, nonatomic) NSMutableArray *listaEscudos;
 @property (strong, nonatomic) NSMutableArray *listaPartidas;
-//@property (strong, nonatomic) NSMutableArray *listaVacunas;
-//@property (strong, nonatomic) NSMutableArray *listaMascotas;
+
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
@@ -30,19 +29,12 @@
 
 //Metodos para  insertar en la base de datos
 - (void) insertarFrase:(id) datosFrase;  //inserta frases del Plist al Core Data
-- (void) insertarEscudo:(id) datosEscudo;
-- (void) insertarPartida:(id) datosPartida;
-//- (void) insertarMascota:(id) datosMascota vacunas:(NSArray *) misVacunas;
+- (void) insertarEscudo:(id) datosEscudo; //inserta escudos
+- (void) insertarPartida:(id) datosPartida; //inserta datos de partida
 
 //Metodos para cargar los datos de la Base de datos
--(NSMutableArray*)cargarFrases;
--(NSMutableArray*)cargarPartida;
--(NSMutableArray*)cargarEscudos;
-//-(NSMutableArray*)cargarFrases;
-//- (void) cargarVacunas;
-
-//Metodos para buscar libros en la base de datos
-//- (NSArray *) buscarMascotas:(NSString *) nombre seg:(NSString *) raza;
-
+-(NSMutableArray*)cargarFrases; //cargar frases de partida
+-(NSMutableArray*)cargarPartida; //cargar partida
+-(NSMutableArray*)cargarEscudos; //cargar Escudos
 
 @end

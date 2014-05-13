@@ -17,9 +17,6 @@
 - (IBAction)regresarButton:(id)sender;
 - (IBAction)sonidoSwitch:(id)sender;
 - (IBAction)musicaSwitch:(id)sender;
-@property (weak, nonatomic) IBOutlet UISwitch *sonidoOutlet;
-@property (weak, nonatomic) IBOutlet UISwitch *musicaOutlet;
-//@property BOOL musica;
-//@property BOOL sonido;
-
+@property (weak, nonatomic) IBOutlet UISwitch *sonidoOutlet;//switch que maneja el sonido
+@property (weak, nonatomic) IBOutlet UISwitch *musicaOutlet;//switch que maneja la musica
 @end
